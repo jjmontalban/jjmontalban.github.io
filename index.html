@@ -1,60 +1,49 @@
-<html>
-  <head>
+
+<!doctype html>
+<html lang="en">
+<head>
     <meta charset="utf-8">
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="js/tabletop1.3.4.js"></script>
-    <script type="text/javascript" src="js/sheetsee.js"></script>
-    <script type="text/javascript" src="js/socialbits.js"></script>
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
-    <title>Hello World</title>
-  </head>
-  <body>
-    <!-- HTML -->
-    <div class="container">
-      <article id="instagram"><span class="load flash animated">LOADING...</span></article>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <title>Cover Template for Bootstrap</title>
 
-      <div class="bio">
-        <h1>Jessica Lord</h1>
-        <p>I am an open source designer and javascript developer living in Oakland, Ca. I work at GitHub, and it's hella rad. This is test text for this page. So, cool. Coffee, bikes and molé.</p>
-        <ul class="inline-list">
-          <li><a href="">Twitter</a></li>
-          <li><a href="">GitHub</a></li>
-          <li><a href="">Instagram</a></li>
-          <li><a href="">Dribble</a></li>
-        </ul>
-      </div>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
 
-      <article id="tweet"><span class="load flash animated">LOADING...</span></article>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    </div>
+    <!-- Custom styles for this template -->
+    <link href="css/cover.css" rel="stylesheet">
+</head>
 
-    <!-- Templates -->
-    <script id="instagram" type="text/html">
-      {{#rows}}
-        <div class="one-gram"><img src="{{instasource}}" width="150"></div>
+<body class="text-center">
 
-      {{/rows}}
-    </script>
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
 
-    <script id="tweet" type="text/html">
-      {{#rows}}
-        <p><span class="quote">&ldquo;</span> {{{tweet}}} <span class="quote"> &rdquo;</span></p>
+    </header>
 
-      {{/rows}}
-    </script>
+    <main role="main" class="inner cover">
+        <img src="images/logoJJ.png">
+        <p class="lead">it your own.</p>
+    </main>
 
-    <!-- JavaScript -->
-      <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-          var URL  = '0Ao5u1U6KYND7dG9CRWdjeVB6dGYyN3c3RktocExUV1E' // insta
-          var URL2 = '0Ao5u1U6KYND7dDd2RTBwajZrT3pEc2p2LVVWc0o0WVE' // tweet
+    <footer class="mastfoot mt-auto">
+        <div class="inner">
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="#">me </a>with <i class="far fa-heart" style="color: red;"></i></i>
+        </div>
+    </footer>
+</div>
 
-          Tabletop.init({ key: URL,  callback: buildInsta,  simpleSheet: true })
-          Tabletop.init({ key: URL2, callback: buildTweet,  simpleSheet: true })
-        })
-      </script>
 
-  </body>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/6c5408733b.js"></script>
+</body>
 </html>
