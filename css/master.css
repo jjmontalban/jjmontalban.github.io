@@ -2,11 +2,10 @@
 ul.social-network {
     list-style: none;
     margin-left:0 !important;
-    padding: 1;
+    padding-left:0 !important;
 }
 ul.social-network li {
     display: inline;
-    margin: 0 5px;
 }
 
 .social-network a.icoFlickr:hover {
@@ -21,16 +20,25 @@ ul.social-network li {
 .social-network a.icoBehance:hover {
     background-color:#000000;
 }
-.social-network a.ico:hover {
-    background-color:#0590B8;
-}
 .social-network a.icoLinkedin:hover {
     background-color:#007bb7;
 }
-.social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
-.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+.social-network a.icoSpotify:hover {
+    background-color:#1db954;
+}
+.social-network a.icoImdb:hover {
+    background-color:#f5de50;
+}
+.social-network a.icoChess:hover {
+    background-color:#769656;
+}
+
+.social-network a.icoFlickr:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoGithub:hover i,
+.social-network a.icoBehance:hover i, .social-network a.icoLinkedin:hover i, .social-network a.icoSpotify:hover i
+, .social-network a.icoImdb:hover i, .social-network a.icoChess:hover i{
     color:#fff;
 }
+
 a.socialIcon:hover, .socialHoverClass {
     color:#44BCDD;
 }
