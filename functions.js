@@ -1,3 +1,16 @@
+document.getElementById("work-button").addEventListener("click", () => {
+  document.getElementById("short").classList.add("hidden");
+  document.getElementById("contact").classList.add("hidden");
+  document.getElementById("work").classList.remove("hidden");
+})
+
+document.getElementById("contact-button").addEventListener("click", () => {
+  document.getElementById("work").classList.add("hidden");
+  document.getElementById("short").classList.add("hidden");
+  document.getElementById("contact").classList.remove("hidden");
+})
+
+// Social
 var TxtRotate = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
