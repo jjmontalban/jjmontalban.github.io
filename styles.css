@@ -37,12 +37,6 @@ body {
     animation: fadeIn 5s;
     
 }
-#social-networks {
-    max-width: 360px;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-}
 
 .main-language {
     color: rgb(245, 84, 111);
@@ -58,7 +52,6 @@ body {
 .content a:hover {
     background-color: #bbeffd;
 }
-
 
 .buttons {
     display: flex;
@@ -108,10 +101,6 @@ strong {
     visibility: hidden !important;
 }
 
-.red {
-    color: red;
-}
-
 .wave {
     animation-name: wave-animation;
     animation-duration: 2.5s;
@@ -120,23 +109,12 @@ strong {
     display: inline-block;
 }
 
-.highlighted {
-    background-color: yellow;
-    color: black;
-}
-
-#wizard {
-    cursor: pointer;
-    user-select: none;
-}
-
 .project {
     padding: 1em 0;
     display: flex;
 }
 
 .project img {
-   /*  height: 100%;  */
     width: 60%; 
     animation: fadeIn 2s;
     padding: 1em;
@@ -151,7 +129,7 @@ strong {
     width: 40%;
 }
 
-#contact p {
+#contact {
     text-align: center;
     animation: fadeIn 1s;
 }
@@ -172,55 +150,66 @@ strong {
 }
 
 /* social */
-.social-network {
-    text-align: center;
-}
-.social-network li {
-    display: inline;
-}
 
-.social-network li a {
-    color: #fff;
+.social li {
     display:inline-block;
     border-radius:10%;
     width: 40px;
     height: 40px;
     font-size:30px;
     background-color: rgb(245, 84, 111);
+    margin: 0.1em;
 }
 
-.social-network a.icoTwitter:hover {
+.social a {
+    background-color: transparent;
+    color: white;
+}
+
+.social a:hover{
+    background-color: transparent;
+}
+
+li.icoTwitter:hover {
     background-color: #1da1f2;
 }
-.social-network a.icoStack:hover {
+
+li.icoStack:hover {
     background-color: #F48024;
 }
-.social-network a.icoFlickr:hover {
+
+li.icoFlickr:hover {
     background-color: #FF0084;
 }
-.social-network a.icoFacebook:hover {
+
+li.icoFacebook:hover {
     background-color:#3B5998;
 }
-.social-network a.icoGithub:hover {
+
+li.icoGithub:hover {
     background-color:#000000;
 }
-.social-network a.icoBehance:hover {
+
+li.icoBehance:hover {
     background-color:#000000;
 }
-.social-network a.icoLinkedin:hover {
+
+li.icoLinkedin:hover {
     background-color:#007bb7;
 }
-.social-network a.icoSpotify:hover {
+
+li.icoSpotify:hover {
     background-color:#1db954;
 }
-.social-network a.icoImdb:hover {
+li.icoImdb:hover {
     background-color:#f5de50;
 }
-.social-network a.icoChess:hover {
+
+li.icoChess:hover {
     background-color:#769656;
 }
 
-.social-network li a:hover i {
+li:hover {
     -moz-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     -ms--transform: rotate(360deg);
@@ -231,7 +220,6 @@ strong {
     -ms-transition: all 0.2s;
     transition: all 0.2s;
 }
-
 
 /* No scrollbar */
 
@@ -261,20 +249,6 @@ strong {
 
 /* Mobile */
 @media screen and (max-width: 650px) {
-    
-    /* .page-top {
-        flex-direction: column;
-     */}
-
-    /* .page-top .titles {
-        text-align: center;
-        order: 1;
-    } */
-
-    .page-top .image-container {
-        text-align: center;
-        /* order: 0; */
-    }
 
     .project {
         font-size: 13px;
