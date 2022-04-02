@@ -152,6 +152,7 @@ strong {
 /* social */
 
 .social li {
+    text-align: center;
     display:inline-block;
     border-radius:10%;
     width: 40px;
@@ -207,6 +208,14 @@ li.icoImdb:hover {
 
 li.icoChess:hover {
     background-color:#769656;
+}
+
+li.icoUnsplash:hover {
+    background-color:#000000;
+}
+
+li.icoWordpress:hover {
+    background-color:#007bb7;
 }
 
 li:hover {
