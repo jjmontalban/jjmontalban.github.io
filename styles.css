@@ -109,6 +109,18 @@ strong {
     display: inline-block;
 }
 
+.services {
+    display: flex;
+    animation: fadeIn 2s;
+    padding: 0 0 0 10%;
+    margin: 1.5em auto;
+}
+
+.services p {
+    width: 50%;
+    animation: fadeIn 5s;
+}
+
 .project {
     padding: 1em 0;
     display: flex;
@@ -141,7 +153,11 @@ strong {
 
 .skills {
     display: flex;
+    color: rgb(36, 36, 36);
     padding: 0 0 0 10%;
+    margin: 1.5em auto;
+    background: #e3e3e3 url(/images/services-background.png);
+    border-radius: 10px;
 }
 
 #work .skills p {
@@ -150,6 +166,9 @@ strong {
 }
 
 /* social */
+ul{
+    padding-inline-start: 0;
+}
 
 .social li {
     text-align: center;
