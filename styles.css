@@ -22,7 +22,7 @@ body {
 }
 
 .content {
-    padding: 20px;
+    padding: 7px;
     margin: 20px auto 27px;
     max-width: 940px;
 }
@@ -112,7 +112,7 @@ strong {
 .services {
     display: flex;
     animation: fadeIn 2s;
-    padding: 0 0 0 10%;
+    padding: 0 0 0 15%;
     margin: 1.5em auto;
 }
 
@@ -281,10 +281,22 @@ li:hover {
     .project {
         font-size: 13px;
     }
-
     .skills {
         font-size: 13px;
-        padding: 0 0 0 5%;
+        padding: 1% 0 1% 5%;
     }
+    .skills p{
+        display: inline-block;
+    }
+    
+    .services{
+        display: block;
+        padding: 0;
+    }
+    .services p{
+        width: 100%;
+        text-align: center; 
+     }
 }
+
 /* End mobile */
