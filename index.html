@@ -1,35 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8C0HV452XT"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-8C0HV452XT');
-    </script>
-
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="JJMontalban, Software developer.">
+    <meta name="description" content="JJMontalban. Desarrollo de Software.">
     <meta property="og:title" content="JJMontalban">
     <meta property="og:url" content="https://jjmontalban.github.io/">
     <meta property="og:image" content="https://jjmontalban.github.io/images/profile.jpg">
-    <meta property="og:description" content="JJMontalban, Software developer.">
+    <meta property="og:description" content="JJMontalban. Desarrollo de Software.">
     <meta property="og:site_name" content="JJMontalban">
-
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;800&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
 
-    <title>JJ Montalban</title>
+    <title>JJMontalban. Desarrollo de Software.</title>
 </head>
 <body>
-    <section class="content">
+    <section id="content">
         <div class="page-top">
             <img src="images/logoJJ.png" alt="JJMontalban"> 
         </div>
@@ -44,21 +37,21 @@
             <p>Check my <a href="https://github.com/jjmontalban/" target="_blank">Github</a> to see some technologies I used.</p>
         </div>
 
-        <div id="work" class="hidden">
-            <div class="services">
-                <p>
+        <div class="hidden" id="work">
+            <div class="row" id="services">
+                <p class="col-md-6 col-12">
                     <i class="fa-solid fa-desktop"></i> Dev &amp; design Web<br><br>
                     <i class="fa-solid fa-wand-magic-sparkles"></i> WP themes & plugins<br><br>
                     <i class="fa-solid fa-cart-shopping"></i></i> WooCommerce Shops<br><br>
                 </p>
-                 <p>
+                 <p class="col-md-6 col-12">
                     <i class="fa-solid fa-file-lines"></i> SEO / UX design</br></br>
                     <i class="fa-solid fa-gear"></i> Support & Maintenance</br></br>
                     <i class="fa-solid fa-list-check"></i> Audit (SEO &amp; UX)<br></br>
                 </p>
             </div>
-            <div class="skills">
-                <p>
+            <div class="row" id="skills">
+                <p class="col-md-3 col-6">
                     <strong>LANGUAGES</strong>
                     <br><br>
                     PHP<br>
@@ -67,7 +60,7 @@
                     JS (ES6)<br>
                     SQL
                 </p>
-                <p>
+                <p class="col-md-3 col-6">
                     <strong>FRAMEWORKS</strong>
                     <br><br>
                     Wordpress<br>
@@ -76,7 +69,7 @@
                     jQuery<br>
                     Vuejs
                 </p>
-                <p>
+                <p class="col-md-3 col-6">
                     <strong>TOOLS</strong>
                     <br><br>
                     Git<br>
@@ -85,7 +78,7 @@
                     Bash<br>
                     Composer & npm
                 </p>
-                <p>
+                <p class="col-md-3 col-6">
                     <strong>DESIGN</strong>
                     <br><br>
                     Photoshop<br>
@@ -95,9 +88,9 @@
                     Wideframing
                 </p>
             </div>
-            <div class="project">
-                <img src="images/movie-match.png" alt="https://github.com/jjmontalban/filmder-front">
-                <p>
+            <div class="row" id="project">
+                <img class="col-8" src="images/movie-match.png" alt="https://github.com/jjmontalban/filmder-front">
+                <p class="col-4">
                     <strong>WP Headless & Api Rest</strong>
                     <br><br>
                     <span class="main-language">Wordpress</span>
@@ -109,9 +102,9 @@
                     <a href="https://filmder.jjmontalban.com" target="_blank">Visit site</a> 
                 </p>
             </div>
-            <div class="project">
-                <img src="images/floresjoseromero.png" alt="floresjoseromero.com">
-                <p>
+            <div class="row" id="project">
+                <img class="col-8" src="images/floresjoseromero.png" alt="floresjoseromero.com">
+                <p class="col-4">
                     <strong>Jose Romero</strong>
                     <br><br>
                     <span class="main-language">Wordpress</span>
@@ -123,9 +116,9 @@
                     <a href="https://floresjoseromero.com/" target="_blank">Visit site</a> 
                 </p>
             </div>
-            <div class="project">
-                <img src="images/rosaluxo.png" alt="rosaluxo.com">
-                <p>
+            <div class="row" id="project">
+                <img class="col-8" src="images/rosaluxo.png" alt="rosaluxo.com">
+                <p class="col-4">
                     <strong>Luxo CRM</strong>
                     <br><br>
                     <span class="main-language">Laravel</span>
@@ -137,9 +130,9 @@
                     <a href="https://rosaluxo.com/" target="_blank">Visit site</a> 
                 </p>
             </div>
-            <div class="project">
-                <img src="images/caramelotattoo.png" alt="caramelotattoo.com">
-                <p>
+            <div class="row" id="project">
+                <img class="col-8" src="images/caramelotattoo.png" alt="caramelotattoo.com">
+                <p class="col-4">
                     <strong>Caramelo Tattoo</strong>
                     <br><br>
                     <span class="main-language">Wordpress</span>
@@ -149,9 +142,9 @@
                     <a href="https://caramelotattoo.com/" target="_blank">Visit site</a> 
                 </p>
             </div>
-            <div class="project">
-                <img src="images/anitas-shop.png" alt="anitas-shop.com">
-                <p>
+            <div class="row" id="project">
+                <img class="col-8" src="images/anitas-shop.png" alt="anitas-shop.com">
+                <p class="col-4">
                     <strong>Anitas</strong>
                     <br><br>
                     <span class="main-language">Wordpress</span>
@@ -161,23 +154,22 @@
                     <a href="https://anitas-shop.com/" target="_blank">Visit site</a> 
                 </p>
             </div>
-            <div>
-                <p>
-                    Discover more projects in my <span class="wave"><a href="https://www.behance.net/jjmontalban" target="_blank">Behance</a></span> 
+            <div class="text-center">
+                <p>Discover more projects in my <span class="wave"><a href="https://behance.com/jjmontalban" target="_blank">Behance</a></span> 
                     or my <span class="wave"><a href="https://github.com/jjmontalban/" target="_blank">Github</a></span>.
                 </p>
-            </div> 
-            <p align="center">
-                Discover more projects in my <span class="wave"><a href="https://behance.com/jjmontalban" target="_blank">Behance</a></span> 
-                or my <span class="wave"><a href="https://github.com/jjmontalban/" target="_blank">Github</a></span>.
-            </p>
+            </div>
         </div>
-        
-        <div id="contact" class="hidden">
+            
+        <div class="hidden" id="contact">
             <p>Click on the links to find me on social media or email me: <a href="mailto:jjmontalban@gmail.com">click</a></p>
-            <ul class="social">
-                <li class="icoGithub"><a href="https://github.com/jjmontalban" target="_blank" title="Github"><i class="fab fa-github"></i></a></li>
-                <li class="icoFacebook" ><a href="https://www.facebook.com/jjm0ntalban" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a></li>
+            
+                <li class="icoGithub">
+                    <a href="https://github.com/jjmontalban" target="_blank" title="Github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="icoFacebook"><a href="https://www.facebook.com/jjm0ntalban" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a></li>
                 <li class="icoFlickr"><a href="https://www.flickr.com/photos/kinkijurado/" target="_blank"  title="Flickr"><i class="fab fa-flickr"></i></a></li>
                 <li class="icoBehance"><a href="https://www.behance.net/jjmontalban" target="_blank" title="Behance"><i class="fab fa-behance"></i></a></li>
                 <li class="icoLinkedin"><a href="https://www.linkedin.com/in/jjmontalban/" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
@@ -187,7 +179,7 @@
                 <li class="icoChess"><a href="https://www.chess.com/member/jjmontalban" target="_blank" title="Chess"><i class="fas fa-chess-king"></i></a></li>
                 <li class="icoUnsplash"><a href="https://unsplash.com/@jjmontalban" target="_blank" title="Unsplash"><i class="fa-brands fa-unsplash"></i></a></li>
                 <li class="icoWordpress"><a href="https://profiles.wordpress.org/jjmontalban/" target="_blank" title="Wordpress"><i class="fa-brands fa-wordpress"></i></a></li>
-            </ul>
+            
         </div>
     </section>
     <footer>

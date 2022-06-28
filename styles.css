@@ -14,6 +14,17 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 
+#content a {
+    background-color: rgba(187,239,253,0.3);
+    color: #1a1a1a;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+#content a:hover {
+    background-color: #bbeffd;
+}
+
 /* Remove black border of inputs on Chrome */
 *,
 *:focus,
@@ -21,7 +32,7 @@ body {
     outline:none;
 }
 
-.content {
+#content {
     padding: 7px;
     margin: 20px auto 27px;
     max-width: 940px;
@@ -40,17 +51,6 @@ body {
 
 .main-language {
     color: rgb(245, 84, 111);
-}
-
-.content a {
-    background-color: rgba(187,239,253,0.3);
-    color: #1a1a1a;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
-}
-
-.content a:hover {
-    background-color: #bbeffd;
 }
 
 .buttons {
@@ -109,17 +109,7 @@ strong {
     display: inline-block;
 }
 
-.services {
-    display: flex;
-    animation: fadeIn 2s;
-    padding: 0 0 0 15%;
-    margin: 1.5em auto;
-}
-
-.services p {
-    width: 50%;
-    animation: fadeIn 5s;
-}
+/* 
 
 .project {
     padding: 1em 0;
@@ -130,7 +120,7 @@ strong {
     width: 60%; 
     animation: fadeIn 2s;
     padding: 1em;
-} 
+}  
 
 .project p {
     animation: fadeIn 1s;
@@ -141,15 +131,9 @@ strong {
     width: 40%;
 }
 
-#contact {
-    text-align: center;
-    animation: fadeIn 1s;
-}
 
-#short p {
-    animation: fadeIn 1s;
-    text-align: justify;
-}
+
+
 
 .skills {
     column-count: 4;
@@ -166,14 +150,50 @@ strong {
     width: 25%;
     animation: fadeIn 5s;
 }
+*/
 
-/* social */
-ul{
-    padding-inline-start: 0;
+#short p {
+    animation: fadeIn 1s;
+    text-align: justify;
 }
 
-.social li {
+#services {
+    animation: fadeIn 2s;
     text-align: center;
+    padding-top: 5%;
+}
+
+#skills {
+    color: rgb(36, 36, 36);
+    padding: 2% 2% 2% 2%;
+    margin: 2% 2% 2% 2%;
+    background: #e3e3e3 url(images/services-background.png);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#project {
+    padding: 1em 0;
+}
+
+#project img {
+    padding: 1em;
+}  
+
+#project p {
+    text-rendering: optimizeLegibility;
+    padding: 8% 2% 2% 2%;
+}
+
+#contact {
+    text-align: center;
+    animation: fadeIn 1s;
+}
+
+
+/* social */
+
+#contact li {
     display:inline-block;
     border-radius:10%;
     width: 40px;
@@ -183,61 +203,67 @@ ul{
     margin: 0.1em;
 }
 
-.social a {
+#contact li a {
     background-color: transparent;
     color: white;
+    
 }
 
-.social a:hover{
+#contact li a:hover{
     background-color: transparent;
 }
 
-li.icoTwitter:hover {
-    background-color: #1da1f2;
+#contact li.icoGithub:hover{
+    background-color: black;
 }
 
-li.icoStack:hover {
+#contact li.icoStack:hover {
     background-color: #F48024;
 }
 
-li.icoFlickr:hover {
+#contact li.icoFlickr:hover {
     background-color: #FF0084;
 }
 
-li.icoFacebook:hover {
+#contact li.icoFacebook:hover {
     background-color:#3B5998;
 }
 
-li.icoGithub:hover {
+#contact li.icoBehance:hover {
     background-color:#000000;
 }
 
-li.icoBehance:hover {
-    background-color:#000000;
-}
-
-li.icoLinkedin:hover {
+#contact li.icoLinkedin:hover {
     background-color:#007bb7;
 }
 
-li.icoSpotify:hover {
+#contact li.icoSpotify:hover {
     background-color:#1db954;
 }
-li.icoImdb:hover {
+
+#contact li.icoImdb:hover {
     background-color:#f5de50;
 }
 
-li.icoChess:hover {
+#contact li.icoChess:hover {
     background-color:#769656;
 }
 
-li.icoUnsplash:hover {
+#contact li.icoUnsplash:hover {
     background-color:#000000;
 }
 
-li.icoWordpress:hover {
+#contact li.icoWordpress:hover {
     background-color:#007bb7;
 }
+
+
+/* No scrollbar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Effects */
 
 li:hover {
     -moz-transform: rotate(360deg);
@@ -251,14 +277,6 @@ li:hover {
     transition: all 0.2s;
 }
 
-/* No scrollbar */
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-
-/* Effects */
 
 @keyframes wave-animation {
     0% { transform: rotate( 0.0deg) }
@@ -277,35 +295,5 @@ li:hover {
 }
 /* end effects */
 
-/* Mobile */
-@media screen and (max-width: 650px) {
 
-    .project {
-        font-size: 13px;
-    }
-  
-    
-    .skills{
-        column-count: 2;
-        display: block;
-        padding: 40px;
-        
-    }
 
-    .skills p {
-        width: 25%;
-        text-align: center; 
-    }
-    
-    
-    .services{
-        display: block;
-        padding: 0;
-    }
-    .services p{
-        width: 100%;
-        text-align: center; 
-     }
-}
-
-/* End mobile */
