@@ -152,6 +152,7 @@ strong {
 }
 
 .skills {
+    column-count: 4;
     display: flex;
     color: rgb(36, 36, 36);
     padding: 0 0 0 10%;
@@ -160,7 +161,8 @@ strong {
     border-radius: 10px;
 }
 
-#work .skills p {
+
+.skills p {
     width: 25%;
     animation: fadeIn 5s;
 }
@@ -281,13 +283,20 @@ li:hover {
     .project {
         font-size: 13px;
     }
-    .skills {
-        font-size: 13px;
-        padding: 1% 0 1% 5%;
+  
+    
+    .skills{
+        column-count: 2;
+        display: block;
+        padding: 40px;
+        
     }
-    .skills p{
-        display: inline-block;
+
+    .skills p {
+        width: 25%;
+        text-align: center; 
     }
+    
     
     .services{
         display: block;
