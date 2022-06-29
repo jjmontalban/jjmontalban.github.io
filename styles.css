@@ -78,7 +78,6 @@ body {
 footer {
     text-align: center;
     background-color: rgb(245, 84, 111);
-
     padding: 2px;
     color: white;
     position: absolute;
@@ -130,7 +129,7 @@ strong {
 }
 
 #project {
-    padding: 1em 0;
+    padding-top: 12%;
 }
 
 #project img {
@@ -214,8 +213,8 @@ strong {
     background-color:#007bb7;
 }
 
-
 /* No scrollbar */
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -234,7 +233,6 @@ li:hover {
     transition: all 0.2s;
 }
 
-
 @keyframes wave-animation {
     0% { transform: rotate( 0.0deg) }
     10% { transform: rotate(14.0deg) }
@@ -250,11 +248,9 @@ li:hover {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
-/* end effects */
-
-
 
 /* Toggle Switch */
+
 .switch {
     display: block;
   margin-left: auto;
@@ -264,14 +260,16 @@ li:hover {
     height: 33px;
    
   }
-  .flex-fixed-width-item {
+
+.flex-fixed-width-item {
     flex: 0 0 100px;
 }
-  .switch input {
+
+.switch input {
     display: none;
-  }
+}
   
-  .slider {
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -282,9 +280,9 @@ li:hover {
     background-color: #ca2222;
     -webkit-transition: .4s;
     transition: .4s;
-  }
+}
   
-  .slider:before {
+.slider:before {
     position: absolute;
     content: "";
     height: 26px;
@@ -295,43 +293,42 @@ li:hover {
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 3px;
-
-  }
+}
   
-  input:checked+.slider {
+input:checked+.slider {
     background-color: #2196F3;
-  }
+}
   
-  input:focus+.slider {
+input:focus+.slider {
     box-shadow: 0 0 1px #2196F3;
-  }
+}
   
-  input:checked+.slider:before {
+input:checked+.slider:before {
     -webkit-transform: translateX(55px);
     -ms-transform: translateX(55px);
     transform: translateX(55px);
-  }
+}
   
   
   /*------ ADDED CSS ---------*/
   
-  .en {
+.en {
     display: none;
-  }
+}
   
-  .en, .es {
+.en, .es {
     color: white;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     font-size: 10px;
-  }
+}
   
-  input:checked+.slider .en {
+input:checked+.slider .en {
     display: block;
-  }
+}
   
-  input:checked+.slider .es {
+input:checked+.slider .es {
     display: none;
-  }
+}

@@ -1,16 +1,17 @@
 document.getElementById("work-button").addEventListener("click", () => {
-  document.getElementById("short").classList.add("hidden");
-  document.getElementById("contact").classList.add("hidden");
-  document.getElementById("work").classList.remove("hidden");
+    document.getElementById("short").classList.add("hidden");
+    document.getElementById("contact").classList.add("hidden");
+    document.getElementById("work").classList.remove("hidden");
 })
 
 document.getElementById("contact-button").addEventListener("click", () => {
-  document.getElementById("work").classList.add("hidden");
-  document.getElementById("short").classList.add("hidden");
-  document.getElementById("contact").classList.remove("hidden");
+    document.getElementById("work").classList.add("hidden");
+    document.getElementById("short").classList.add("hidden");
+    document.getElementById("contact").classList.remove("hidden");
 })
 
-// Social
+// Social icons
+
 var TxtRotate = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -71,8 +72,10 @@ window.onload = function() {
 
 
 /* TOGGLE SWITCH */
+
 let english = document.getElementsByName("english");
 let spanish = document.getElementsByName("spanish");
+
 document.addEventListener('DOMContentLoaded', function () {
     var checkbox = document.querySelector('input[type="checkbox"]');
 
@@ -97,25 +100,3 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-    /* document.getElementById("es").addEventListener("click", () => {
-   
-        document.getElementById("short-en").classList.add("hidden");
-        document.getElementById("short-es").classList.remove("hidden");
-}); */
-
-/* 
- else {
-    document.getElementById("short-es").classList.add("hidden");
-    document.getElementById("short-en").classList.remove("hidden");
-    alert("sdfsdfsdfsdfs");// To verify
-      
-  }
-  
-  document.getElementById("short-en").classList.add("hidden");
-  document.getElementById("short-es").classList.add("hidden");
-  document.getElementById("short-es").classList.remove("hidden");
-  document.getElementById("short-en").classList.remove("hidden");
-  document.getElementById("contact-es").classList.add("hidden");
-  document.getElementById("contact-en").classList.remove("hidden");
-  
-  } */
