@@ -23,36 +23,83 @@
 </head>
 <body>
     <section id="content">
+        
+                <label class="switch">
+                    <input type="checkbox">
+                    <div class="slider">
+                        <span class="en">EN</span>
+                        <span class="es">ES</span>
+                    </div>
+                </label>
+            
         <div class="page-top">
             <img src="images/logoJJ.png" alt="JJMontalban"> 
         </div>
+        
         <div class="buttons">
-            <button id="work-button">Work</button>
-            <button id="contact-button">Contact</button>
+            <button id="work-button"><span class="hidden" name="english">Work</span><span name="spanish">Trabajos</span></button>
+            <button id="contact-button"><span class="hidden" name="english">Contact</span><span name="spanish">Contacto</span></button>    
         </div>
         <div id="short">
-            <p>Hey <span class="wave">Hi</span>! My name is Joaquin Jurado Montalban, I'm a Wordpress developer who lives in Spain.
-            I'm currently working from <a href="https://es.wikipedia.org/wiki/Provincia_de_C%C3%A1diz" target="_blank">Cádiz</a>
-            remotely as a freelance using different techologies both backend and frontend.</p>
-            <p>Check my <a href="https://github.com/jjmontalban/" target="_blank">Github</a> to see some technologies I used.</p>
+            <div class="hidden" name="english">
+                <p><span class="wave">Hi</span>! My name is Joaquin Jurado Montalban, I'm a full-stack developer.
+                    I'm currently working from <a href="https://es.wikipedia.org/wiki/Provincia_de_C%C3%A1diz" target="_blank">Cádiz</a>
+                    remotely as a freelance using different techologies both backend and frontend.<br>Check my 
+                    <a href="https://github.com/jjmontalban/" target="_blank">Github</a> to see some technologies I used.
+                </p>
+                <p><strong>Wordpress Development</strong><br><br>
+                    Need create a web, custom functionality or add new features an existing plugin for your WordPress?
+                    I can help you with creation, design and dev for web & custom plugins for WordPress & Woocommerce.
+                    <br>Chequea mi <a href="https://github.com/jjmontalban/" target="_blank">Github</a> para saber más.
+                </p>
+            </div>
+            <div name="spanish">
+                <p><span class="wave">Hola</span>! Mi nombre es JJ Montalban, Soy desarrollador full-stack.
+                    Trabajo desde <a href="https://es.wikipedia.org/wiki/Provincia_de_C%C3%A1diz" target="_blank">Cádiz</a>
+                    remotamente como freelance usando diferentes teccnologías tanto del front como del backend.
+                </p><br>
+                <p><strong>Desarrollo Wordpress</strong><br><br>
+                    ¿Necesitas crear una web o una funcionalidad a medida para WordPress?
+                    ¿O modificar o añadir funciones a un plugin ya existente? 
+                    Creación, diseño, desarrollo y programación de web & plugins a medida para WordPress y Woocommerce.
+                    <br>Chequea mi <a href="https://github.com/jjmontalban/" target="_blank">Github</a> para saber más.
+                </p>
+            </div>
         </div>
 
         <div class="hidden" id="work">
-            <div class="row" id="services">
-                <p class="col-md-6 col-12">
-                    <i class="fa-solid fa-desktop"></i> Dev &amp; design Web<br><br>
-                    <i class="fa-solid fa-wand-magic-sparkles"></i> WP themes & plugins<br><br>
-                    <i class="fa-solid fa-cart-shopping"></i></i> WooCommerce Shops<br><br>
-                </p>
-                 <p class="col-md-6 col-12">
-                    <i class="fa-solid fa-file-lines"></i> SEO / UX design</br></br>
-                    <i class="fa-solid fa-gear"></i> Support & Maintenance</br></br>
-                    <i class="fa-solid fa-list-check"></i> Audit (SEO &amp; UX)<br></br>
-                </p>
+            <div class="hidden" name="english">
+                <div class="row" id="services">
+                    <p class="col-md-6 col-12">
+                        <i class="fa-solid fa-desktop"></i> Dev &amp; design Web<br><br>
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> WP themes & plugins<br><br>
+                        <i class="fa-solid fa-cart-shopping"></i></i> WooCommerce Shops<br><br>
+                    </p>
+                     <p class="col-md-6 col-12">
+                        <i class="fa-solid fa-file-lines"></i> SEO / UX design</br></br>
+                        <i class="fa-solid fa-gear"></i> Support & Maintenance</br></br>
+                        <i class="fa-solid fa-list-check"></i> Audit (SEO &amp; UX)<br></br>
+                    </p>
+                </div>  
             </div>
+            <div name="spanish">
+                <div class="row" id="services">
+                    <p class="col-md-6 col-12">
+                        <i class="fa-solid fa-desktop"></i> Desarrollo &amp; Diseño Web<br><br>
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> temas & Plugins WP<br><br>
+                        <i class="fa-solid fa-cart-shopping"></i></i>Tiendas WooCommerce<br><br>
+                    </p>
+                        <p class="col-md-6 col-12">
+                        <i class="fa-solid fa-file-lines"></i> SEO & UX</br></br>
+                        <i class="fa-solid fa-gear"></i> Soporte & mantenimiento</br></br>
+                        <i class="fa-solid fa-list-check"></i> Auditoría (SEO &amp; UX)<br></br>
+                    </p>
+                </div>
+            </div>  
             <div class="row" id="skills">
                 <p class="col-md-3 col-6">
-                    <strong>LANGUAGES</strong>
+                    <strong class="hidden" name="english">LANGUAGES</strong>
+                    <strong name="spanish">LENGUAJES</strong>
                     <br><br>
                     PHP<br>
                     HTML5<br>
@@ -70,7 +117,8 @@
                     Vuejs
                 </p>
                 <p class="col-md-3 col-6">
-                    <strong>TOOLS</strong>
+                    <strong class="hidden" name="english">TOOLS</strong>
+                    <strong name="spanish">HERRAMIENTAS</strong>
                     <br><br>
                     Git<br>
                     DevTools<br>
@@ -79,27 +127,28 @@
                     Composer & npm
                 </p>
                 <p class="col-md-3 col-6">
-                    <strong>DESIGN</strong>
+                    <strong class="hidden" name="english">DESIGN</strong>
+                    <strong name="spanish">DISEÑO</strong>
                     <br><br>
                     Photoshop<br>
                     Corel Draw<br>
                     InDesign<br>
                     Prototyping<br>
-                    Wideframing
+                    Wireframing
                 </p>
             </div>
             <div class="row" id="project">
                 <img class="col-8" src="images/movie-match.png" alt="https://github.com/jjmontalban/filmder-front">
                 <p class="col-4">
-                    <strong>WP Headless & Api Rest</strong>
+                    <strong>Filmder</strong>
                     <br><br>
-                    <span class="main-language">Wordpress</span>
+                    <span class="main-language">WP Api Rest</span>
                     <br>
                     <span class="main-language">Vuejs</span>
                      <br>
                     <span class="main-language">Vuetify</span>
                     <br><br>
-                    <a href="https://filmder.jjmontalban.com" target="_blank">Visit site</a> 
+                    <a href="https://filmder.jjmontalban.com" target="_blank">Link</a> 
                 </p>
             </div>
             <div class="row" id="project">
@@ -107,13 +156,13 @@
                 <p class="col-4">
                     <strong>Jose Romero</strong>
                     <br><br>
-                    <span class="main-language">Wordpress</span>
+                    <span class="main-language">Woocommerce</span>
                     <br>
                     <span class="main-language">Genesis Framework</span>
                     <br>
                     <span class="main-language">Adobe Ps</span>
                     <br><br>
-                    <a href="https://floresjoseromero.com/" target="_blank">Visit site</a> 
+                    <a href="https://floresjoseromero.com/" target="_blank">Link</a> 
                 </p>
             </div>
             <div class="row" id="project">
@@ -127,7 +176,7 @@
                     <br>
                     <span class="main-language">Bootstrap</span>
                     <br><br>
-                    <a href="https://rosaluxo.com/" target="_blank">Visit site</a> 
+                    <a href="https://rosaluxo.com/" target="_blank">Link</a> 
                 </p>
             </div>
             <div class="row" id="project">
@@ -135,15 +184,15 @@
                 <p class="col-4">
                     <strong>Caramelo Tattoo</strong>
                     <br><br>
-                    <span class="main-language">Wordpress</span>
+                    <span class="main-language">WP Custom Theme</span>
                     <br>
                     <span class="main-language">_underscores</span>
                     <br><br>
-                    <a href="https://caramelotattoo.com/" target="_blank">Visit site</a> 
+                    <a href="https://caramelotattoo.com/" target="_blank">Link</a> 
                 </p>
             </div>
             <div class="row" id="project">
-                <img class="col-8" src="images/anitas-shop.png" alt="anitas-shop.com">
+                <img class="col-8" src="images/anitas-shop.png" alt="anitas-shop.com" width="100%">
                 <p class="col-4">
                     <strong>Anitas</strong>
                     <br><br>
@@ -155,14 +204,18 @@
                 </p>
             </div>
             <div class="text-center">
-                <p>Discover more projects in my <span class="wave"><a href="https://behance.com/jjmontalban" target="_blank">Behance</a></span> 
+                <p class="hidden" name="english">Discover more projects in my <span class="wave"><a href="https://behance.com/jjmontalban" target="_blank">Behance</a></span> 
                     or my <span class="wave"><a href="https://github.com/jjmontalban/" target="_blank">Github</a></span>.
+                </p>
+                <p name="spanish">Chequea más proyectos en mi <span class="wave"><a href="https://behance.com/jjmontalban" target="_blank">Behance</a></span> 
+                    o mi <span class="wave"><a href="https://github.com/jjmontalban/" target="_blank">Github</a></span>.
                 </p>
             </div>
         </div>
             
         <div class="hidden" id="contact">
-            <p>Click on the links to find me on social media or email me: <a href="mailto:jjmontalban@gmail.com">click</a></p>
+            <p class="hidden" name="english">Click on the links to find me on social media or email me: <a href="mailto:jjmontalban@gmail.com">click</a></p>
+            <p name="spanish">Clica en los enlaces para encontrarme o envíame un email: <a href="mailto:jjmontalban@gmail.com">click</a></p>
             
                 <li class="icoGithub">
                     <a href="https://github.com/jjmontalban" target="_blank" title="Github">
@@ -183,7 +236,8 @@
         </div>
     </section>
     <footer>
-        <p><i class="fa-solid fa-code"></i> by <strong> JJMöntalBân</strong></p>
+        <p class="hidden" name="english"><i class="fa-solid fa-code"></i> by <strong> JJMöntalBân</strong></p>
+        <p name="spanish"><i class="fa-solid fa-code"></i> by <strong> JJMöntalBân</strong></p>
     </footer>
 
     <script src="functions.js"></script>
