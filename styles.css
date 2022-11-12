@@ -23,7 +23,8 @@ body {
 
 /* link logo */
 .logo a {
-    text-decoration: none;
+    background-color: 0;
+    border-bottom: 0;
 }
 
 #content a:hover {
