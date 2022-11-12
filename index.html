@@ -34,22 +34,27 @@
 <body>
     <section id="content">
         
-                <label class="switch">
-                    <input type="checkbox">
-                    <div class="slider">
-                        <span class="en">EN</span>
-                        <span class="es">ES</span>
-                    </div>
-                </label>
-            
+        <!-- Switcher -->
+        <label class="switch">
+            <input type="checkbox">
+            <div class="slider">
+                <span class="en">EN</span>
+                <span class="es">ES</span>
+            </div>
+        </label>
+        
+        <!-- Logo -->
         <div class="page-top">
             <img src="images/logoJJ.png" alt="JJMontalban"> 
         </div>
         
+        <!-- Menu -->
         <div class="buttons">
             <button id="work-button"><span class="hidden" name="english">Work</span><span name="spanish">Trabajos</span></button>
             <button id="contact-button"><span class="hidden" name="english">Contact</span><span name="spanish">Contacto</span></button>    
         </div>
+        
+         <!-- Short Description -->
         <div id="short">
             <div class="hidden" name="english">
                 <p><span class="wave">Hi</span>! My name is Joaquin Jurado Montalban, I'm a full-stack developer.
@@ -77,76 +82,10 @@
             </div>
         </div>
 
+        <!-- Work -->
         <div class="hidden" id="work">
-            <div class="hidden" name="english">
-                <div class="row" id="services">
-                    <p class="col-md-6 col-12">
-                        <i class="fa-solid fa-desktop"></i> Dev &amp; design Web<br><br>
-                        <i class="fa-solid fa-wand-magic-sparkles"></i> WP themes & plugins<br><br>
-                        <i class="fa-solid fa-cart-shopping"></i></i> WooCommerce Shops<br><br>
-                    </p>
-                     <p class="col-md-6 col-12">
-                        <i class="fa-solid fa-file-lines"></i> SEO / UX design</br></br>
-                        <i class="fa-solid fa-gear"></i> Support & Maintenance</br></br>
-                        <i class="fa-solid fa-list-check"></i> Audit (SEO &amp; UX)<br></br>
-                    </p>
-                </div>  
-            </div>
-            <div name="spanish">
-                <div class="row" id="services">
-                    <p class="col-md-6 col-12">
-                        <i class="fa-solid fa-desktop"></i> Desarrollo &amp; Diseño Web<br><br>
-                        <i class="fa-solid fa-wand-magic-sparkles"></i> temas & Plugins WP<br><br>
-                        <i class="fa-solid fa-cart-shopping"></i></i>Tiendas WooCommerce<br><br>
-                    </p>
-                        <p class="col-md-6 col-12">
-                        <i class="fa-solid fa-file-lines"></i> SEO & UX</br></br>
-                        <i class="fa-solid fa-gear"></i> Soporte & mantenimiento</br></br>
-                        <i class="fa-solid fa-list-check"></i> Auditoría (SEO &amp; UX)<br></br>
-                    </p>
-                </div>
-            </div>  
-            <div class="row" id="skills">
-                <p class="col-md-3 col-6">
-                    <strong class="hidden" name="english">LANGUAGES</strong>
-                    <strong name="spanish">LENGUAJES</strong>
-                    <br><br>
-                    PHP<br>
-                    HTML5<br>
-                    CSS3<br>
-                    JS (ES6)<br>
-                    SQL
-                </p>
-                <p class="col-md-3 col-6">
-                    <strong>FRAMEWORKS</strong>
-                    <br><br>
-                    Wordpress<br>
-                    Laravel<br>
-                    Bootstrap<br>
-                    jQuery<br>
-                    Vuejs
-                </p>
-                <p class="col-md-3 col-6">
-                    <strong class="hidden" name="english">TOOLS</strong>
-                    <strong name="spanish">HERRAMIENTAS</strong>
-                    <br><br>
-                    Git<br>
-                    DevTools<br>
-                    VSC & Ext<br>
-                    Bash<br>
-                    Composer & npm
-                </p>
-                <p class="col-md-3 col-6">
-                    <strong class="hidden" name="english">DESIGN</strong>
-                    <strong name="spanish">DISEÑO</strong>
-                    <br><br>
-                    Photoshop<br>
-                    Corel Draw<br>
-                    InDesign<br>
-                    Prototyping<br>
-                    Wireframing
-                </p>
-            </div>
+            
+            <!-- projects -->
             <div class="row" id="project">
                 <div class="col-8">
                     <img class="img-fluid" src="images/movie-match.png" alt="https://github.com/jjmontalban/filmder-front">
@@ -242,7 +181,81 @@
                 </p>
             </div>
         </div>
-            
+        
+        <!-- Services -->
+        <div class="hidden" name="english">
+            <div class="row" id="services">
+                <p class="col-md-6 col-12">
+                    <i class="fa-solid fa-desktop"></i> Dev &amp; design Web<br><br>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> WP themes & plugins<br><br>
+                    <i class="fa-solid fa-cart-shopping"></i></i> WooCommerce Shops<br><br>
+                </p>
+                 <p class="col-md-6 col-12">
+                    <i class="fa-solid fa-file-lines"></i> SEO / UX design</br></br>
+                    <i class="fa-solid fa-gear"></i> Support & Maintenance</br></br>
+                    <i class="fa-solid fa-list-check"></i> Audit (SEO &amp; UX)<br></br>
+                </p>
+            </div>  
+        </div>
+        <div name="spanish">
+            <div class="row" id="services">
+                <p class="col-md-6 col-12">
+                    <i class="fa-solid fa-desktop"></i> Desarrollo &amp; Diseño Web<br><br>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> temas & Plugins WP<br><br>
+                    <i class="fa-solid fa-cart-shopping"></i></i>Tiendas WooCommerce<br><br>
+                </p>
+                    <p class="col-md-6 col-12">
+                    <i class="fa-solid fa-file-lines"></i> SEO & UX</br></br>
+                    <i class="fa-solid fa-gear"></i> Soporte & mantenimiento</br></br>
+                    <i class="fa-solid fa-list-check"></i> Auditoría (SEO &amp; UX)<br></br>
+                </p>
+            </div>
+        </div>  
+
+        <!-- Skills -->
+        <div class="row" id="skills">
+            <p class="col-md-3 col-6">
+                <strong class="hidden" name="english">LANGUAGES</strong>
+                <strong name="spanish">LENGUAJES</strong>
+                <br><br>
+                PHP<br>
+                HTML5<br>
+                CSS3<br>
+                JS (ES6)<br>
+                SQL
+            </p>
+            <p class="col-md-3 col-6">
+                <strong>FRAMEWORKS</strong>
+                <br><br>
+                Wordpress<br>
+                Laravel<br>
+                Bootstrap<br>
+                jQuery<br>
+                Vuejs
+            </p>
+            <p class="col-md-3 col-6">
+                <strong class="hidden" name="english">TOOLS</strong>
+                <strong name="spanish">HERRAMIENTAS</strong>
+                <br><br>
+                Git<br>
+                DevTools<br>
+                VSC & Ext<br>
+                Bash<br>
+                Composer & npm
+            </p>
+            <p class="col-md-3 col-6">
+                <strong class="hidden" name="english">DESIGN</strong>
+                <strong name="spanish">DISEÑO</strong>
+                <br><br>
+                Photoshop<br>
+                Corel Draw<br>
+                InDesign<br>
+                Prototyping<br>
+                Wireframing
+            </p>
+        </div>
+          
+        <!-- Contact -->
         <div class="hidden" id="contact">
             <p class="hidden" name="english">Click on the links to find me on social media or email me: <a href="mailto:jjmontalban@gmail.com">click</a></p>
             <p name="spanish">Clica en los enlaces para encontrarme o envíame un email: <a href="mailto:jjmontalban@gmail.com">click</a></p>
@@ -262,9 +275,11 @@
                 <li class="icoChess"><a href="https://www.chess.com/member/jjmontalban" target="_blank" title="Chess"><i class="fas fa-chess-king"></i></a></li>
                 <li class="icoUnsplash"><a href="https://unsplash.com/@jjmontalban" target="_blank" title="Unsplash"><i class="fa-brands fa-unsplash"></i></a></li>
                 <li class="icoWordpress"><a href="https://profiles.wordpress.org/jjmontalban/" target="_blank" title="Wordpress"><i class="fa-brands fa-wordpress"></i></a></li>
-            
         </div>
+
     </section>
+
+    <!-- Footer -->
     <footer>
         <p class="hidden" name="english"><i class="fa-solid fa-code"></i> by <strong> JJMöntalBân</strong></p>
         <p name="spanish"><i class="fa-solid fa-code"></i> by <strong> JJMöntalBân</strong></p>
