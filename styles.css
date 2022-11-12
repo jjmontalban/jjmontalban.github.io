@@ -21,6 +21,11 @@ body {
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
+/* link logo */
+.logo a {
+    text-decoration: none;
+}
+
 #content a:hover {
     background-color: #bbeffd;
 }
