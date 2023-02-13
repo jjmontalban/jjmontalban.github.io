@@ -14,6 +14,12 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 
+#content {
+    padding: 14px;
+    margin: 10% auto 10%;
+    max-width: 940px;
+}
+
 #content a {
     background-color: rgba(187,239,253,0.3);
     color: #1a1a1a;
@@ -21,65 +27,14 @@ body {
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
-/* logo */
-.page-top a { 
-    border-bottom: 0 !important;
-    background-color: transparent !important;
-}
-
-
 #content a:hover {
     background-color: #bbeffd;
 }
 
-/* Remove black border of inputs on Chrome */
-*,
-*:focus,
-*:hover {
-    outline:none;
-}
-
-#content {
-    padding: 14px;
-    margin: 10% auto 10%;
-    max-width: 940px;
-}
-
-.page-top {
-    display: flex;
-    justify-content: space-around;
-    animation: fadeIn 5s;
-}
-
-.image-container img {
-    animation: fadeIn 5s;
-    
-}
-
-.main-language {
-    color: rgb(245, 84, 111);
-}
-
-.buttons {
-    display: flex;
-    justify-content: space-around;
-    max-width: 390px;
-    margin: 50px auto 20px;
-}
-
-.buttons button {   
-    cursor: pointer;
-    border-radius: 5px;
-    border: 2px solid #e7e7e7;
-    padding: 5px 10px;
-    color: #fb1e7b;
-    background: white;
-}
-
-.buttons button:hover {
-    color: white;
-    background:  #fb1e7b;
-    border: 2px solid #fb1e7b;
+/* logo */
+.page-top a { 
+    border-bottom: 0 !important;
+    background-color: transparent !important;
 }
 
 footer {
@@ -105,6 +60,50 @@ strong {
 .hidden {
     display: none !important;
     visibility: hidden !important;
+}
+
+/* Remove black border of inputs on Chrome */
+*,
+*:focus,
+*:hover {
+    outline:none;
+}
+
+.page-top {
+    display: flex;
+    justify-content: space-around;
+    animation: fadeIn 5s;
+}
+
+.image-container img {
+    animation: fadeIn 5s;   
+}
+
+.main-language {
+    color: rgb(245, 84, 111);
+}
+
+/* BOTONES */
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    max-width: 390px;
+    margin: 50px auto 20px;
+}
+
+.buttons button {   
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid #e7e7e7;
+    padding: 5px 10px;
+    color: #fb1e7b;
+    background: white;
+}
+
+.buttons button:hover {
+    color: white;
+    background:  #fb1e7b;
+    border: 2px solid #fb1e7b;
 }
 
 .wave {
@@ -154,8 +153,7 @@ strong {
 }
 
 
-/* social */
-
+/* SOCIAL  */
 #contact li {
     display:inline-block;
     border-radius:10%;
@@ -169,7 +167,6 @@ strong {
 #contact li a {
     background-color: transparent;
     color: white;
-    
 }
 
 #contact li a:hover{
@@ -227,7 +224,6 @@ strong {
 }
 
 /* Effects */
-
 li:hover {
     -moz-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
@@ -257,7 +253,6 @@ li:hover {
 }
 
 /* Toggle Switch */
-
 .switch {
     display: block;
   margin-left: auto;
@@ -318,7 +313,6 @@ input:checked+.slider:before {
   
   
   /*------ ADDED CSS ---------*/
-  
 .en {
     display: none;
 }
@@ -338,4 +332,16 @@ input:checked+.slider .en {
   
 input:checked+.slider .es {
     display: none;
+}
+
+
+/* MEDIA QUERIES */
+
+/* Móviles en horizontal o tablets en vertical */
+@media (max-width: 720px) {
+    
+    #work {
+        text-align: center;
+    }
+
 }
