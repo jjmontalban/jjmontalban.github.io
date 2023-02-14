@@ -344,4 +344,8 @@ input:checked+.slider .es {
         text-align: center;
     }
 
+    #project p {
+        padding-top: 0;
+    }
+
 }
