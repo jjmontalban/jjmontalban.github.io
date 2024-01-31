@@ -167,6 +167,7 @@ strong {
 #contact li a {
     background-color: transparent;
     color: white;
+    border-bottom: none;
 }
 
 #contact li a:hover{
@@ -254,14 +255,12 @@ li:hover {
 
 /* Toggle Switch */
 .switch {
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-    position:relative;
+    position: fixed;
+    top: 15px;
+    right: 15px;
     width: 89px;
     height: 33px;
-   
-  }
+}
 
 .flex-fixed-width-item {
     flex: 0 0 100px;

@@ -79,24 +79,35 @@ let spanish = document.getElementsByName("spanish");
 document.addEventListener('DOMContentLoaded', function () {
     var checkbox = document.querySelector('input[type="checkbox"]');
 
-    checkbox.addEventListener('change', function () {
-        
-        if (checkbox.checked) {
-            for(let i = 0;i < english.length; i++) {
-                english[i].classList.remove('hidden');
-            }
-            for(let i = 0;i < spanish.length; i++) {
-                spanish[i].classList.add('hidden');
-            }
-   
-        } else {
+    if (checkbox.checked) {
+        showEnglish();
+    } else {
+        showSpanish();
+    }
 
-            for(let i = 0;i < spanish.length; i++) {
-                spanish[i].classList.remove('hidden');
-            }
-            for(let i = 0;i < english.length; i++) {
-                english[i].classList.add('hidden');
-            }
-      }
+    checkbox.addEventListener('change', function () {
+        if (checkbox.checked) {
+            showEnglish();
+        } else {
+            showSpanish();
+        }
     });
-  });
+
+    function showEnglish() {
+        for (let i = 0; i < english.length; i++) {
+            english[i].classList.remove('hidden');
+        }
+        for (let i = 0; i < spanish.length; i++) {
+            spanish[i].classList.add('hidden');
+        }
+    }
+
+    function showSpanish() {
+        for (let i = 0; i < spanish.length; i++) {
+            spanish[i].classList.remove('hidden');
+        }
+        for (let i = 0; i < english.length; i++) {
+            english[i].classList.add('hidden');
+        }
+    }
+});
