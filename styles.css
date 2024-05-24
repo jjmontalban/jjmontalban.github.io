@@ -32,6 +32,13 @@ body {
 }
 
 /* logo */
+.page-top {
+    display: flex;
+    justify-content: space-around;
+    animation: fadeIn 5s;
+    padding-bottom: 60px;
+}
+
 .page-top a { 
     border-bottom: 0 !important;
     background-color: transparent !important;
@@ -69,11 +76,6 @@ strong {
     outline:none;
 }
 
-.page-top {
-    display: flex;
-    justify-content: space-around;
-    animation: fadeIn 5s;
-}
 
 .image-container img {
     animation: fadeIn 5s;   
@@ -117,21 +119,26 @@ strong {
 #short p {
     animation: fadeIn 1s;
     text-align: justify;
+    font-size: larger;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 #services {
     animation: fadeIn 2s;
     text-align: center;
-    padding-top: 5%;
-}
-
-#skills {
     color: rgb(36, 36, 36);
-    padding: 2% 2% 2% 2%;
+    padding: 4% 2% 0% 2%;
     margin: 2% 2% 2% 2%;
     background: #e3e3e3 url(images/services-background.png);
     border-radius: 10px;
-    text-align: center;
+}
+
+#skills p {
+    animation: fadeIn 1s;
+    text-align: justify;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 #project {
@@ -148,6 +155,11 @@ strong {
 }
 
 #contact {
+    text-align: center;
+    animation: fadeIn 1s;
+}
+
+#work {
     text-align: center;
     animation: fadeIn 1s;
 }
@@ -256,10 +268,11 @@ li:hover {
 /* Toggle Switch */
 .switch {
     position: fixed;
-    top: 15px;
+    bottom: 33px;
     right: 15px;
     width: 89px;
     height: 33px;
+    z-index: 9999;
 }
 
 .flex-fixed-width-item {
