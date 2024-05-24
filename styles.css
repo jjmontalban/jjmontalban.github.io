@@ -237,6 +237,15 @@ strong {
 }
 
 /* Effects */
+
+.prioritize {
+    font-size: larger;
+}
+
+.highlight {
+    font-size: x-large;
+}
+
 li:hover {
     -moz-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
