@@ -118,8 +118,6 @@ strong {
 
 #short p {
     animation: fadeIn 1s;
-    text-align: justify;
-    font-size: larger;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -136,7 +134,6 @@ strong {
 
 #skills p {
     animation: fadeIn 1s;
-    text-align: justify;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -160,7 +157,6 @@ strong {
 }
 
 #work {
-    text-align: center;
     animation: fadeIn 1s;
 }
 
@@ -240,10 +236,6 @@ strong {
 
 .prioritize {
     font-size: larger;
-}
-
-.highlight {
-    font-size: x-large;
 }
 
 li:hover {
