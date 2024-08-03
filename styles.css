@@ -1,8 +1,18 @@
-html,
-body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
+:root {
+    --main-color: rgb(245, 84, 111);
+    --background-color: #e3e3e3;
+    --link-bg-hover: #bbeffd;
+    --link-color: #1a1a1a;
+    --btn-border: #e7e7e7;
+    --btn-hover-bg: #fb1e7b;
+    --btn-hover-color: white;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
 }
 
 html {
@@ -10,43 +20,39 @@ html {
     min-height: 100%;
 }
 
-body {
-    font-family: 'Roboto Mono', monospace;
-}
-
 #content {
     padding: 14px;
-    margin: 10% auto 10%;
+    margin: 10% auto;
     max-width: 940px;
 }
 
 #content a {
-    background-color: rgba(187,239,253,0.3);
-    color: #1a1a1a;
+    background-color: rgba(187, 239, 253, 0.3);
+    color: var(--link-color);
     text-decoration: none;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 #content a:hover {
-    background-color: #bbeffd;
+    background-color: var(--link-bg-hover);
 }
 
-/* logo */
+/* Logo */
 .page-top {
     display: flex;
     justify-content: space-around;
-    animation: fadeIn 5s;
     padding-bottom: 60px;
 }
 
-.page-top a { 
+.page-top a {
     border-bottom: 0 !important;
     background-color: transparent !important;
 }
 
+/* Footer */
 footer {
     text-align: center;
-    background-color: rgb(245, 84, 111);
+    background-color: var(--main-color);
     padding: 2px;
     color: white;
     position: absolute;
@@ -60,6 +66,7 @@ footer p {
     margin: 0;
 }
 
+/* General */
 strong {
     font-weight: bold;
 }
@@ -73,19 +80,14 @@ strong {
 *,
 *:focus,
 *:hover {
-    outline:none;
-}
-
-
-.image-container img {
-    animation: fadeIn 5s;   
+    outline: none;
 }
 
 .main-language {
-    color: rgb(245, 84, 111);
+    color: var(--main-color);
 }
 
-/* BOTONES */
+/* Botones */
 .buttons {
     display: flex;
     justify-content: space-around;
@@ -93,83 +95,73 @@ strong {
     margin: 50px auto 20px;
 }
 
-.buttons button {   
+.buttons button {
     cursor: pointer;
     border-radius: 5px;
-    border: 2px solid #e7e7e7;
+    border: 2px solid var(--btn-border);
     padding: 5px 10px;
-    color: #fb1e7b;
+    color: var(--btn-hover-bg);
     background: white;
+    transition: background 0.3s, color 0.3s, border 0.3s;
 }
 
 .buttons button:hover {
-    color: white;
-    background:  #fb1e7b;
-    border: 2px solid #fb1e7b;
+    color: var(--btn-hover-color);
+    background: var(--btn-hover-bg);
+    border: 2px solid var(--btn-hover-bg);
 }
 
+/* Wave Animation */
 .wave {
-    animation-name: wave-animation;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
+    animation: wave-animation 2.5s infinite;
     transform-origin: 70% 70%;
     display: inline-block;
 }
 
-#short p {
-    animation: fadeIn 1s;
-    padding-left: 30px;
-    padding-right: 30px;
+#short p,
+#skills p {
+    padding: 0 30px;
 }
 
+/* Services */
 #services {
-    animation: fadeIn 2s;
     text-align: center;
     color: rgb(36, 36, 36);
     padding: 4% 2% 0% 2%;
-    margin: 2% 2% 2% 2%;
-    background: #e3e3e3 url(images/services-background.png);
+    margin: 2%;
+    background: var(--background-color) url(images/services-background.png);
     border-radius: 10px;
 }
 
-#skills p {
-    animation: fadeIn 1s;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
+/* Project */
 #project {
     padding-top: 12%;
 }
 
 #project img {
     padding: 1em;
-}  
+}
 
 #project p {
     text-rendering: optimizeLegibility;
     padding: 8% 2% 2% 2%;
 }
 
+/* Contact */
 #contact {
     text-align: center;
-    animation: fadeIn 1s;
 }
 
-#work {
-    animation: fadeIn 1s;
-}
-
-
-/* SOCIAL  */
+/* Social */
 #contact li {
-    display:inline-block;
-    border-radius:10%;
+    display: inline-block;
+    border-radius: 10%;
     width: 40px;
     height: 40px;
-    font-size:30px;
-    background-color: rgb(245, 84, 111);
+    font-size: 30px;
+    background-color: var(--main-color);
     margin: 0.1em;
+    transition: background 0.2s, transform 0.2s;
 }
 
 #contact li a {
@@ -178,11 +170,15 @@ strong {
     border-bottom: none;
 }
 
-#contact li a:hover{
+#contact li a:hover {
     background-color: transparent;
 }
 
-#contact li.icoGithub:hover{
+#contact li:hover {
+    transform: rotate(360deg);
+}
+
+#contact li.icoGithub:hover {
     background-color: black;
 }
 
@@ -195,75 +191,64 @@ strong {
 }
 
 #contact li.icoFacebook:hover {
-    background-color:#3B5998;
+    background-color: #3B5998;
 }
 
 #contact li.icoBehance:hover {
-    background-color:#000000;
+    background-color: #000000;
 }
 
 #contact li.icoLinkedin:hover {
-    background-color:#007bb7;
+    background-color: #007bb7;
 }
 
 #contact li.icoSpotify:hover {
-    background-color:#1db954;
+    background-color: #1db954;
 }
 
 #contact li.icoImdb:hover {
-    background-color:#f5de50;
+    background-color: #f5de50;
 }
 
 #contact li.icoChess:hover {
-    background-color:#769656;
+    background-color: #769656;
 }
 
 #contact li.icoUnsplash:hover {
-    background-color:#000000;
+    background-color: #000000;
 }
 
 #contact li.icoWordpress:hover {
-    background-color:#007bb7;
+    background-color: #007bb7;
 }
 
 /* No scrollbar */
-
 ::-webkit-scrollbar {
     display: none;
 }
 
 /* Effects */
-
 .prioritize {
     font-size: larger;
 }
 
-li:hover {
-    -moz-transform: rotate(360deg);
-    -webkit-transform: rotate(360deg);
-    -ms--transform: rotate(360deg);
-    transform: rotate(360deg);
-    -webkit-transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    -ms-transition: all 0.2s;
-    transition: all 0.2s;
-}
-
 @keyframes wave-animation {
-    0% { transform: rotate( 0.0deg) }
-    10% { transform: rotate(14.0deg) }
-    20% { transform: rotate(-8.0deg) }
-    30% { transform: rotate(14.0deg) }
-    40% { transform: rotate(-4.0deg) }
-    50% { transform: rotate(10.0deg) }
-    60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-    100% { transform: rotate( 0.0deg) }
+    0% { transform: rotate(0); }
+    10% { transform: rotate(14deg); }
+    20% { transform: rotate(-8deg); }
+    30% { transform: rotate(14deg); }
+    40% { transform: rotate(-4deg); }
+    50% { transform: rotate(10deg); }
+    60%, 100% { transform: rotate(0); }
 }
 
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1s;
 }
 
 /* Toggle Switch */
@@ -283,7 +268,7 @@ li:hover {
 .switch input {
     display: none;
 }
-  
+
 .slider {
     position: absolute;
     cursor: pointer;
@@ -293,10 +278,9 @@ li:hover {
     bottom: 0;
     border-radius: 5px;
     background-color: #ca2222;
-    -webkit-transition: .4s;
-    transition: .4s;
+    transition: background 0.4s;
 }
-  
+
 .slider:before {
     position: absolute;
     content: "";
@@ -305,31 +289,27 @@ li:hover {
     left: 4px;
     bottom: 4px;
     background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
     border-radius: 3px;
+    transition: transform 0.4s;
 }
-  
-input:checked+.slider {
+
+input:checked + .slider {
     background-color: #2196F3;
 }
-  
-input:focus+.slider {
+
+input:focus + .slider {
     box-shadow: 0 0 1px #2196F3;
 }
-  
-input:checked+.slider:before {
-    -webkit-transform: translateX(55px);
-    -ms-transform: translateX(55px);
+
+input:checked + .slider:before {
     transform: translateX(55px);
 }
-  
-  
-  /*------ ADDED CSS ---------*/
+
+/* Toggle Switch Labels */
 .en {
     display: none;
 }
-  
+
 .en, .es {
     color: white;
     position: absolute;
@@ -338,21 +318,18 @@ input:checked+.slider:before {
     left: 50%;
     font-size: 10px;
 }
-  
-input:checked+.slider .en {
+
+input:checked + .slider .en {
     display: block;
 }
-  
-input:checked+.slider .es {
+
+input:checked + .slider .es {
     display: none;
 }
 
-
-/* MEDIA QUERIES */
-
-/* Móviles en horizontal o tablets en vertical */
+/* Media Queries */
+/* Mobile landscape or tablets portrait */
 @media (max-width: 720px) {
-    
     #work {
         text-align: center;
     }
@@ -360,5 +337,4 @@ input:checked+.slider .es {
     #project p {
         padding-top: 0;
     }
-
 }
