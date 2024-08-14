@@ -8,7 +8,8 @@
     --btn-hover-color: white;
 }
 
-html, body {
+html, 
+body {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -21,8 +22,8 @@ html {
 }
 
 #content {
-    padding: 14px;
-    margin: 10% auto;
+    margin: 5% auto;
+    padding: 0% 4% 0% 4%;
     max-width: 940px;
 }
 
@@ -41,19 +42,13 @@ html {
 .page-top {
     display: flex;
     justify-content: space-around;
-    padding-bottom: 60px;
-}
-
-.page-top a {
-    border-bottom: 0 !important;
-    background-color: transparent !important;
+    margin-top: 10%;
 }
 
 /* Footer */
 footer {
     text-align: center;
     background-color: var(--main-color);
-    padding: 2px;
     color: white;
     position: absolute;
     bottom: 0;
@@ -62,18 +57,9 @@ footer {
     height: 27px;
 }
 
-footer p {
-    margin: 0;
-}
-
-/* General */
-strong {
-    font-weight: bold;
-}
-
 .hidden {
-    display: none !important;
-    visibility: hidden !important;
+    display: none;
+    visibility: hidden;
 }
 
 /* Remove black border of inputs on Chrome */
@@ -93,6 +79,12 @@ strong {
     justify-content: space-around;
     max-width: 390px;
     margin: 50px auto 20px;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.buttons.moved-up {
+    transform: translateY(-50px);
+    opacity: 0.8;
 }
 
 .buttons button {
@@ -111,16 +103,16 @@ strong {
     border: 2px solid var(--btn-hover-bg);
 }
 
+.buttons-up {
+    transform: translateY(-50px);
+    transition: transform 0.3s ease;
+}
+
 /* Wave Animation */
 .wave {
     animation: wave-animation 2.5s infinite;
     transform-origin: 70% 70%;
     display: inline-block;
-}
-
-#short p,
-#skills p {
-    padding: 0 30px;
 }
 
 /* Services */
@@ -144,7 +136,55 @@ strong {
 
 #project p {
     text-rendering: optimizeLegibility;
-    padding: 8% 2% 2% 2%;
+    padding-top: 4%;
+}
+
+/* Profile */
+#resume-content {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+#profile h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+#profile h3 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+#profile h4 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#profile p, #profile ul {
+    margin-bottom: 15px;
+}
+
+#profile ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.col-12.mb-3, .col-12.mb-3 {
+    background-color: #f8f9fa;
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 10px;
+}
+
+.row.mb-3 > .col-12 {
+    background-color: #f8f9fa; 
+    border-radius: 10px; 
+    padding: 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 /* Contact */

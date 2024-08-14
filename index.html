@@ -25,382 +25,577 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-8C0HV452XT');
-    </script>
+        </script>
+    <!-- Incluir html2canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Incluir html2pdf -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+
+
 </head>
 <body>
-    <section id="content">
-        <!-- Logo -->
-        <div class="page-top">
-            <a href="index.html"><img src="images/logoJJ.png" alt="JJMontalban"></a> 
+<!-- Header -->
+<header class="page-top">
+    <a href="index.html"><img src="images/logoJJ.png" alt="JJMontalban"></a> 
+    <!-- Switcher -->
+    <label class="switch">
+        <input type="checkbox" checked>
+        <div class="slider">
+            <span class="en">EN</span>
+            <span class="es">ES</span>
         </div>
-        <!-- Switcher -->
-        <label class="switch">
-            <input type="checkbox" checked>
-            <div class="slider">
-                <span class="en">EN</span>
-                <span class="es">ES</span>
-            </div>
-        </label>
-        <!-- Short Description -->
-        <div id="short">
-            <div class="hidden" name="english">
-                <p><span class="wave">Hi</span>! I'm JJ, I'm a web developer specialized in <a class="prioritize">Wordpress</a>.
-                    I'm currently working from <a class="prioritize">Cádiz</a>
-                    remotely as a freelance using different techologies both backend and frontend.
-                </p><br>
-                <p style="text-align: center;">Check my <a href="https://github.com/jjmontalban/" target="_blank"><span class="wave">Github</span></a> or my <a href="https://www.behance.net/jjmontalban"><span class="wave">Behance</span></a> to know more.</p>
-            </div>
-            <div name="spanish">
-                <p><span class="wave">Hola</span>! Soy JJ, Soy desarrollador <a class="prioritize">Wordpress</a>.
-                    Trabajo desde <a class="prioritize">Cádiz</a>
-                    remotamente como freelance usando diferentes tecnologías tanto del front como del backend.
-                </p><br>
-                <p style="text-align: center;">Chequea mi <a href="https://github.com/jjmontalban/" target="_blank"><span class="wave">Github</span></a> o mi <a href="https://www.behance.net/jjmontalban" target="_blank"><span class="wave">Behance</span></a> para saber más.</p>
-            </div>
-        </div>
+    </label>
+</header>
 
-        <!-- Menu -->
-        <div class="buttons">
-            <button id="work-button"><span class="hidden" name="english">Work</span><span name="spanish">Trabajos</span></button>
-            <button id="contact-button"><span class="hidden" name="english">Contact</span><span name="spanish">Contacto</span></button>    
-        </div>
+<!-- Main Content -->
+<main id="content">
 
-        <!-- Work -->
-        <div class="hidden" id="work">
-            
-            <p class="hidden" name="english">
-                A sample of my work. Add this Github Page you are browsing created with CSS & Typewriter JS
-                <a href="https://github.com/jjmontalban/jjmontalban.github.io" target="_blank"><i class="fab fa-github"></i> MyPortfolio</a> 
+    <!-- Short Description -->
+    <section id="short">
+        <div class="hidden" data-lang="english">
+            <p><span class="wave">Hi</span>! I'm JJ, I'm a web developer.
+                I'm currently working from <a href="#" class="prioritize">Cádiz</a>
+                remotely using different technologies both backend and frontend.
+            </p><br>
+            <p>Check my <a href="https://github.com/jjmontalban/" target="_blank"><span class="wave">Github</span></a> or my <a href="https://www.behance.net/jjmontalban"><span class="wave">Behance</span></a> to know more.</p>
+        </div>
+        <div data-lang="spanish">
+            <p><span class="wave">Hola</span>! Soy JJ y soy desarrollador web.
+                Trabajo desde <a class="prioritize">Cádiz</a>
+                remotamente usando diferentes tecnologías tanto del front como del backend.
+            </p><br>
+            <p>Chequea mi <a href="https://github.com/jjmontalban/" target="_blank"><span class="wave">Github</span></a> o mi <a href="https://www.behance.net/jjmontalban" target="_blank"><span class="wave">Behance</span></a> para saber más.</p>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section class="buttons">
+        <button id="work-button"><span class="hidden" data-lang="english">Work</span><span data-lang="spanish">Trabajos</span></button>
+        <button id="profile-button"><span class="hidden" data-lang="english">Profile</span><span data-lang="spanish">Perfil</span></button>
+        <button id="contact-button"><span class="hidden" data-lang="english">Contact</span><span data-lang="spanish">Contacto</span></button>    
+    </section>
+
+    <!-- Work Section -->
+    <section class="hidden" id="work">
+        <p class="hidden" data-lang="english">
+            A sample of my work. Add this Github Page you are browsing created with CSS & Typewriter JS
+            <a href="https://github.com/jjmontalban/jjmontalban.github.io" target="_blank"><i class="fab fa-github"></i> MyPortfolio</a> 
+        </p>
+
+        <p data-lang="spanish">
+            Una muestra de mi trabajo. Añade esta 
+            <a href="https://github.com/jjmontalban/jjmontalban.github.io" target="_blank"><i class="fab fa-github"></i> Github Page</a>
+            por la que estás navegando. 
+        </p>
+
+        <!-- projects -->
+        <div class="row justify-content-center" id="project">
+            <div class="col-12 col-md-8">
+                <img class="img-fluid" src="images/plugin-idealista.png" alt="plugin-idealista">
+            </div>
+            <p class="col-12 col-md-4">
+                <strong>Idealista Feed</strong>
+                <br><br>
+                <span class="main-language hidden" data-lang="english">
+                    <strong>Wordpress plugin for idealista properties integration</strong><br>
+                    Export properties from an external source to idealista website</span>
+                <span class="main-language" data-lang="spanish">
+                    <strong>Plugin Wordpress</strong> para la integración de un sistema de propiedades en<strong> idealista.com</strong><br>
+                </span>
+                <br><br>
+                <a href="https://wordpress.org/plugins/idealista-properties-feed/" target="_blank"><i class="fab fa-wordpress"></i> Wordpress.org</a> 
+                <a href="https://github.com/jjmontalban/idealista-feed/" target="_blank"><i class="fab fa-github"></i> Github</a>
             </p>
-
-            <p name="spanish">
-                Una muestra de mi trabajo. Añade esta 
-                <a href="https://github.com/jjmontalban/jjmontalban.github.io" target="_blank"><i class="fab fa-github"></i> Github Page</a>
-                por la que estás navegando. 
+        </div>
+        <div class="row justify-content-center" id="project">
+            <div class="col-12 col-md-8">
+                <img class="img-fluid" src="images/chipicasa.png" alt="rosaluxo.com">
+            </div>
+            <p class="col-12 col-md-4">
+                <strong>Chipicasa</strong>
+                <br><br>
+                <span class="main-language hidden" data-lang="english">
+                    <strong>Real State System built with Wordpress</strong><br>
+                    It consists of a front part with a <strong>custom theme</strong> and a <strong>plugin</strong> which make it a small but powerful <strong>CRM System</strong>
+                </span>
+                <span class="main-language" data-lang="spanish">
+                    <strong>CRM a medida creado con Wordpress.</strong><br>
+                    Consta de una parte front con un <strong>tema a medida</strong> y de un <strong>plugin</strong>  
+                    que lo convierten en un pequeño pero potente <strong>sistema CRM</strong>.
+                </span>
+                <br><br>
+                <a href="https://chipicasa.com/" target="_blank"><i class="fa fa-external-link"></i> Web</a> 
+                <a href="https://github.com/jjmontalban/inmuebles" target="_blank"><i class="fab fa-github"></i> Back</a> 
+                <a href="https://github.com/jjmontalban/inmuebles-theme" target="_blank"><i class="fab fa-github"></i> Front</a> 
             </p>
-
-            <!-- projects -->
-            <div class="row justify-content-center" id="project">
-                <div class="col-12 col-md-8">
-                    <img class="img-fluid" src="images/plugin-idealista.png" alt="plugin-idealista">
-                </div>
-                <p class="col-12 col-md-4">
-                    <strong>Idealista Feed</strong>
-                    <br><br>
-                    <span class="main-language hidden" name="english">
-                        <strong>Wordpress plugin for idealista properties integration</strong><br>
-                        Export properties from an external source to idealista website</span>
-                    <span class="main-language" name="spanish">
-                        <strong>Plugin Wordpress</strong> para la integración de un sistema de propiedades en<strong> idealista.com</strong><br>
-                    </span>
-                    <br><br>
-                    <a href="https://wordpress.org/plugins/idealista-properties-feed/" target="_blank"><i class="fab fa-wordpress"></i> Wordpress.org</a> 
-                    <a href="https://github.com/jjmontalban/idealista-feed/" target="_blank"><i class="fab fa-github"></i> Github</a>
-                </p>
-            </div>
-            <div class="row justify-content-center" id="project">
-                <div class="col-12 col-md-8">
-                    <img class="img-fluid" src="images/chipicasa.png" alt="rosaluxo.com">
-                </div>
-                <p class="col-12 col-md-4">
-                    <strong>Chipicasa</strong>
-                    <br><br>
-                    <span class="main-language hidden" name="english">
-                        <strong>Real State System built with Wordpress</strong><br>
-                        It consists of a front part with a <strong>custom theme</strong> and a <strong>plugin</strong> which make it a small but powerful <strong>CRM System</strong>
-                    </span>
-                    <span class="main-language" name="spanish">
-                        <strong>CRM a medida creado con Wordpress.</strong><br>
-                        Consta de una parte front con un <strong>tema a medida</strong> y de un <strong>plugin</strong>  
-                        que lo convierten en un pequeño pero potente <strong>sistema CRM</strong>.
-                    </span>
-                    <br><br>
-                    <a href="https://chipicasa.com/" target="_blank"><i class="fa fa-external-link"></i> Web</a> 
-                    <a href="https://github.com/jjmontalban/inmuebles" target="_blank"><i class="fab fa-github"></i> Back</a> 
-                    <a href="https://github.com/jjmontalban/inmuebles-theme" target="_blank"><i class="fab fa-github"></i> Front</a> 
-                </p>
-            </div>
-            <div class="row justify-content-center" id="project">
-                <div class="col-12 col-md-8">
-                    <img class="img-fluid" src="images/movie-match.png" alt="https://github.com/jjmontalban/filmder-front">
-                </div>
-                <p class="col-12 col-md-4">
-                    <strong>Filmder</strong>
-                    <br><br>
-                    <span class="main-language hidden" name="english">
-                        <strong>Headless Wordpress</strong>
-                        <br>Game Project with <strong>Vuejs</strong> & <strong>Wordress</strong> usign <strong>WP Api REST</strong> with plugins WP: Custom Post Type "Movies" & APi TMDB.  
-                    </span>
-                    <span class="main-language" name="spanish">
-                        <strong>Proyecto WP Descabezado</strong>
-                        <br>Juego interactivo con <strong>Vuejs</strong> & <strong>Wordress</strong> usando su <strong>Api REST</strong>
-                        mediante 2 plugins: CPT & APiTMDB.
-                    </span>
-                    <br><br>
-                    <a href="https://filmder-front-jjmontalban.vercel.app/" target="_blank"><i class="fa fa-external-link"></i> Web</a>
-                    <a href="https://github.com/jjmontalban/filmder-front" target="_blank"><i class="fab fa-github"></i> Front</a> 
-                    <a href="https://github.com/jjmontalban/filmder-back" target="_blank"><i class="fab fa-github"></i> Back</a> 
-                </p>
-            </div>
-            <div class="row justify-content-center" id="project">
-                <div class="col-12 col-md-8">
-                    <img class="img-fluid" src="images/plugin-wp.png" alt="product-quantity-settings">
-                </div>
-                <p class="col-12 col-md-4">
-                    <strong>Woo Product Quantity Settings</strong>
-                    <br><br>
-                    <span class="main-language hidden" name="english">
-                        <strong>Woocommerce Plugin</strong><br>
-                        To set a minimum, a maximum one or a quantity range of products.
-                    </span>
-                    <span class="main-language" name="spanish">
-                        <strong>Plugin WooCommerce</strong><br>
-                        Para definir una cantidad mínima y máxima de producto así como un rango establecido.
-                    </span>
-                    <br><br>
-                    <a href="https://wordpress.org/plugins/product-quantity-settings//" target="_blank"><i class="fab fa-wordpress"></i> Wordpress.org</a> 
-                </p>
-            </div>
-            <div class="row justify-content-center" id="project">
-                <div class="col-12 col-md-8">
-                    <img class="img-fluid" src="images/eresagua.png" alt="eresagua.com" width="100%">
-                </div>
-                <p class="col-12 col-md-4">
-                    <strong>Eres Agua</strong>
-                    <br><br>
-                    <span class="main-language hidden" name="english">
-                        <strong>Woocommerce Theme</strong><br>
-                        Custom theme for ecommerce built with <strong>Storefront</strong>.
-                    </span>
-                    <span class="main-language" name="spanish">
-                        <strong>Tema Woocommerce</strong><br>
-                        Realizado a medida para comercio electrónico desarrollado con <strong>Storefront</strong>.
-                    </span>
-                    <br><br>
-                    <a href="https://eresagua.com/" target="_blank"><i class="fa fa-external-link"></i> Web</a> 
-                    <a href="https://github.com/jjmontalban/eresagua" target="_blank"><i class="fab fa-github"></i> Github</a> 
-                </p>
-            </div>
-            <div class="row justify-content-center" id="project">
-                <div class="col-12 col-md-8">
-                    <img class="img-fluid" src="images/floramarket-theme.png" alt="floramarket.es" width="100%">
-                </div>
-                <p class="col-12 col-md-4">
-                    <strong>Floramarket</strong>
-                    <br><br>
-                    <span class="main-language hidden" name="english">
-                        <strong>Woocommerce Theme</strong><br>
-                        Custom theme for ecommerce built with <strong>Storefront</strong>.
-                    </span>
-                    <span class="main-language" name="spanish">
-                        <strong>Tema Woocommerce</strong><br>
-                        Realizado a medida para comercio electrónico desarrollado con <strong>Storefront</strong>.
-                    </span>
-                    <br><br>
-                    <a href="https://floramarket.es/" target="_blank"><i class="fa fa-external-link"></i> Web</a> 
-                    <a href="https://github.com/jjmontalban/floramarket-theme" target="_blank"><i class="fab fa-github"></i> Github</a> 
-                </p>
-            </div>
-            <div class="row justify-content-center" id="project">
-                <div class="col-12 col-md-8">
-                    <img class="img-fluid" src="images/plugin-vat.png" alt="simple-eu-vat-woocoomerce">
-                </div>
-                <p class="col-12 col-md-4">
-                    <strong>Simple EU VAT number for Woocommerce</strong>
-                    <br><br>
-                    <span class="main-language hidden" name="english">
-                        <strong>Woocommerce Plugin</strong><br>
-                        The easiest way to manage the intra-community VAT.
-                    </span>
-                    <span class="main-language" name="spanish">
-                        <strong>Plugin WooCommerce</strong><br>
-                        La manera más fácil de gestionar el iva intrcomunitario.
-                    </span>
-                    <br><br>
-                    <a href="https://wordpress.org/plugins/simple-eu-vat-number-for-woocommerce/" target="_blank"><i class="fab fa-wordpress"></i> Wordpress.org</a> 
-                </p>
-            </div>
-            <div class="row justify-content-center" id="project">
-                <div class="col-12 col-md-8">
-                    <img class="img-fluid" src="images/caramelotattoo.png" alt="caramelotattoo.com">
-                </div>
-                <p class="col-12 col-md-4">
-                    <strong>Caramelo Tattoo</strong>
-                    <br><br>
-                    <span class="main-language hidden" name="english">
-                        <strong>Wordpress Theme</strong><br>
-                        WP Custom Theme built with <strong>_underscores</strong>.
-                    </span>
-                    <span class="main-language" name="spanish">
-                        <strong>Tema Wordpress</strong><br>
-                        Realizado a medida y desarrollado con <strong>_underscores</strong>.
-                    </span>
-                    <br><br>
-                    <a href="https://caramelotattoo.com/" target="_blank"><i class="fa fa-external-link"></i> Web</a> 
-                    <a href="https://github.com/jjmontalban/caramelotattoo/" target="_blank"><i class="fab fa-github"></i> Github</a> 
-                </p>
-            </div>
-            <div class="row justify-content-center" id="project">
-                <div class="col-12 col-md-8">
-                    <img class="img-fluid" src="images/rosaluxo.png" alt="rosaluxo.com">
-                </div>
-                <p class="col-12 col-md-4">
-                    <strong>Luxo CRM</strong>
-                    <br><br>
-                    <span class="main-language hidden" name="english">
-                        <strong>CUSTOM CRM</strong><br>
-                        Built with <strong>Laravel</strong>, <strong>Vuejs</strong> & <strong>Bootstrap</strong>.
-                    </span>
-                    <span class="main-language" name="spanish">
-                        <strong>CRM a medida</strong><br>
-                        Hecho con <strong>Laravel</strong>, <strong>Vuejs</strong> & <strong>Bootstrap</strong>.
-                    </span>
-                    <br><br>
-                    <a href="https://rosaluxo.com/" target="_blank"><i class="fa fa-external-link"></i> Web</a> 
-                    <a href="https://github.com/jjmontalban/Luxo-CRM" target="_blank"><i class="fab fa-github"></i> Github</a> 
-                </p>
-            </div>
-            <div class="row justify-content-center" id="project">
-                <div class="col-12 col-md-8">
-                    <img class="img-fluid" src="images/emotionpills.png" alt="emotionpills.com" width="100%">
-                </div>
-                <p class="col-12 col-md-4">
-                    <strong>Emotion Pills</strong>
-                    <br><br>
-                    <span class="main-language hidden" name="english">
-                        <strong>Woocommerce Theme</strong><br>
-                        Custom theme for ecommerce built with <strong>Storefront</strong>.
-                    </span>
-                    <span class="main-language" name="spanish">
-                        <strong>Tema Woocommerce</strong><br>
-                        Realizado a medida para comercio electrónico desarrollado con <strong>Storefront</strong>.
-                    </span>
-                    <br><br>
-                    <a href="https://emotionpills.com/" target="_blank"><i class="fa fa-external-link"></i> Web</a> 
-                    <a href="https://github.com/jjmontalban/storefront-child" target="_blank"><i class="fab fa-github"></i> Github</a> 
-                </p>
-            </div>
-            <div class="row justify-content-center" id="project">
-                <div class="col-12 col-md-8">
-                    <img class="img-fluid" src="images/floramarket.png" alt="floramarket.es" width="100%">
-                </div>
-                <p class="col-10 col-md-4">
-                    <strong>FMK Register</strong>
-                    <br><br>
-                    <span class="main-language hidden" name="english">
-                        <strong>Wordpress Plugin</strong><br>
-                        Woocommerce register with custom fields and VAT number Validation via <strong>SOAP service</strong>.
-                    </span>
-                    <span class="main-language" name="spanish">
-                        <strong>Plugin Wordpress</strong><br>
-                        Registro Woocommerce a medida con validación del campo VAT number mediante <strong>SOAP Service</strong>.
-                    </span>
-                    <br><br>
-                    <a href="https://floramarket.es/mi-cuenta/" target="_blank"><i class="fa fa-external-link"></i> Web</a> 
-                    <a href="https://github.com/jjmontalban/fmk-register" target="_blank"><i class="fab fa-github"></i> Github</a> 
-                </p>
-            </div>
-            
-            <br>
-            <!-- Links more projects -->
-            <div class="text-center">
-                <p class="hidden" name="english">Discover more projects in my <span class="wave"><a href="https://behance.com/jjmontalban" target="_blank">Behance</a></span> 
-                    or my <span class="wave"><a href="https://github.com/jjmontalban/" target="_blank">Github</a></span>.
-                </p>
-                <p name="spanish">Chequea más proyectos en mi <span class="wave"><a href="https://behance.com/jjmontalban" target="_blank">Behance</a></span> 
-                    o mi <span class="wave"><a href="https://github.com/jjmontalban/" target="_blank">Github</a></span>.
-                </p>
-            </div>
-            <!-- End Projects -->
-            
-            <!-- Services -->
-            <div class="hidden" name="english">
-                <div class="row" id="services">
-                    <p class="col-md-6 col-12">
-                        <i class="fa-solid fa-desktop"></i> Dev &amp; design Web<br><br>
-                        <i class="fa-solid fa-wand-magic-sparkles"></i> WP themes & plugins<br><br>
-                    </p>
-                    <p class="col-md-6 col-12">
-                        <i class="fa-solid fa-gear"></i> Support & Maintenance</br></br>
-                        <i class="fa-solid fa-list-check"></i> Audit (SEO &amp; performance)<br></br>
-                    </p>
-                </div>  
-            </div>
-            <div name="spanish">
-                <div class="row" id="services">
-                    <p class="col-md-6 col-12">
-                        <i class="fa-solid fa-desktop"></i> Desarrollo &amp; Diseño Web<br><br>
-                        <i class="fa-solid fa-wand-magic-sparkles"></i> temas & Plugins WP<br><br>
-                    </p>
-                        <p class="col-md-6 col-12">
-                        <i class="fa-solid fa-gear"></i> Soporte & mantenimiento</br></br>
-                        <i class="fa-solid fa-list-check"></i> Auditoría (SEO &amp; rendimiento)<br></br>
-                    </p>
-                </div>
-            </div>  
-            <!-- End Services -->
-
-            <!-- Skills -->
-            <div id="skills">
-
-                <div class="hidden" name="english">
-                    <p>
-                        I use various languages and frameworks for web development. On the backend, I work with <a class="prioritize">PHP</a> and manage applications using <a>MySQL</a> databases. 
-                        On the frontend, I use <a>HTML5</a>, <a>CSS3</a>, and <a>JavaScript</a> with <a>jQuery</a>, and I have also done some work with <a>Vue</a> to create interactive and responsive interfaces. 
-                        In my projects, I rely on frameworks like <a class="prioritize">WordPress</a>, <a>Laravel</a>, and <a>Bootstrap</a>.
-                    </p>
-                    <p>
-                        I use tools like <a>Git</a>, <a>Composer</a>, <a>NPM</a>, etc. for project management and task automation. My main development environment is <a>Visual Studio Code</a> with extensions that optimize my workflow. 
-                        I develop wireframes to plan and structure user interfaces. I also enjoy photography and working with <a>Photoshop</a>, <a>Corel Draw</a>, and <a>InDesign</a> for interface design and layout.
-                    </p>
-                    
-                </div>
-
-                <div name="spanish">
-                    <p>
-                        Utilizo diversos lenguajes y frameworks para el desarrollo web. En el backend, empleo <a class="prioritize">PHP</a> y y bases de datos <a>MySQL</a> para la gestión de aplicaciones. 
-                        En el frontend, uso <a>HTML5</a>, <a>CSS3</a> y <a>JavaScript</a> con <a>jQuery</a> e incluso he hecho cosas con <a>Vue</a> para crear interfaces interactivas y responsivas. 
-                        En el desarrollo proyectos me baso en frameworks como <a class="prioritize">WordPress</a>, <a>Laravel</a> y <a>Bootstrap</a>.
-                    </p>
-                    <p>
-                        Uso herramientas como <a>Git</a>, <a>Composer</a>, <a>NPM</a>, etc. para la gestión de proyectos y la automatización de tareas. Mi entorno de desarrollo principal es <a>Visual Studio Code</a> con extensiones que optimizan mi flujo de trabajo. 
-                        Desarrollo wireframes para planificar y estructurar interfaces de usuario. También me gusta la fotografía y trabajar con <a>Photoshop</a>, <a>Corel Draw</a> o <a>inDesign</a> para el diseño de interfaces y maquetación. 
-                    </p>
-                </div>
-            </div>
-            <!-- End Skills -->
-
         </div>
-        <!-- End Work -->
-            
-        <!-- Contact -->
-        <div class="hidden" id="contact">
-            <p class="hidden" name="english">Click on the links to find me on social media or email me: <a href="mailto:jjmontalban@gmail.com">click</a></p>
-            <p name="spanish">Clica en los enlaces para encontrarme o envíame un email: <a href="mailto:jjmontalban@gmail.com">click</a></p>
-            
-                <li class="icoGithub"><a href="https://github.com/jjmontalban" target="_blank" title="Github"><i class="fab fa-github"></i></a></li>
-                <li class="icoWordpress"><a href="https://profiles.wordpress.org/jjmontalban/" target="_blank" title="Wordpress"><i class="fa-brands fa-wordpress"></i></a></li>
-                <li class="icoBehance"><a href="https://www.behance.net/jjmontalban" target="_blank" title="Behance"><i class="fab fa-behance"></i></a></li>
-                <li class="icoLinkedin"><a href="https://www.linkedin.com/in/jjmontalban/" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
-                <!--<li class="icoStack"><a href="https://stackoverflow.com/users/11540055/joaquin" target="_blank" title="Stack"><i class="fab fa-stack-overflow"></i></a></li>-->
-                <li class="icoFlickr"><a href="https://www.flickr.com/photos/kinkijurado/" target="_blank"  title="Flickr"><i class="fab fa-flickr"></i></a></li>
-                <li class="icoUnsplash"><a href="https://unsplash.com/@jjmontalban" target="_blank" title="Unsplash"><i class="fa-brands fa-unsplash"></i></a></li>
-                <li class="icoSpotify"><a href="https://open.spotify.com/user/kinorro/playlists" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a></li>
-                <li class="icoImdb"><a href="https://www.imdb.com/user/ur22137408/" target="_blank" title="Imdb"><i class="fab fa-imdb"></i></a></li>
-                <li class="icoChess"><a href="https://www.chess.com/member/jjmontalban" target="_blank" title="Chess"><i class="fas fa-chess-king"></i></a></li>
-                
+        <div class="row justify-content-center" id="project">
+            <div class="col-12 col-md-8">
+                <img class="img-fluid" src="images/movie-match.png" alt="https://github.com/jjmontalban/filmder-front">
+            </div>
+            <p class="col-12 col-md-4">
+                <strong>Filmder</strong>
+                <br><br>
+                <span class="main-language hidden" data-lang="english">
+                    <strong>Headless Wordpress</strong>
+                    <br>Game Project with <strong>Vuejs</strong> & <strong>Wordress</strong> usign <strong>WP Api REST</strong> with plugins WP: Custom Post Type "Movies" & APi TMDB.  
+                </span>
+                <span class="main-language" data-lang="spanish">
+                    <strong>Proyecto WP Descabezado</strong>
+                    <br>Juego interactivo con <strong>Vuejs</strong> & <strong>Wordress</strong> usando su <strong>Api REST</strong>
+                    mediante 2 plugins: CPT & APiTMDB.
+                </span>
+                <br><br>
+                <a href="https://filmder-front-jjmontalban.vercel.app/" target="_blank"><i class="fa fa-external-link"></i> Web</a>
+                <a href="https://github.com/jjmontalban/filmder-front" target="_blank"><i class="fab fa-github"></i> Front</a> 
+                <a href="https://github.com/jjmontalban/filmder-back" target="_blank"><i class="fab fa-github"></i> Back</a> 
+            </p>
         </div>
+        <div class="row justify-content-center" id="project">
+            <div class="col-12 col-md-8">
+                <img class="img-fluid" src="images/plugin-wp.png" alt="product-quantity-settings">
+            </div>
+            <p class="col-12 col-md-4">
+                <strong>Woo Product Quantity Settings</strong>
+                <br><br>
+                <span class="main-language hidden" data-lang="english">
+                    <strong>Woocommerce Plugin</strong><br>
+                    To set a minimum, a maximum one or a quantity range of products.
+                </span>
+                <span class="main-language" data-lang="spanish">
+                    <strong>Plugin WooCommerce</strong><br>
+                    Para definir una cantidad mínima y máxima de producto así como un rango establecido.
+                </span>
+                <br><br>
+                <a href="https://wordpress.org/plugins/product-quantity-settings//" target="_blank"><i class="fab fa-wordpress"></i> Wordpress.org</a> 
+            </p>
+        </div>
+        <div class="row justify-content-center" id="project">
+            <div class="col-12 col-md-8">
+                <img class="img-fluid" src="images/eresagua.png" alt="eresagua.com" width="100%">
+            </div>
+            <p class="col-12 col-md-4">
+                <strong>Eres Agua</strong>
+                <br><br>
+                <span class="main-language hidden" data-lang="english">
+                    <strong>Woocommerce Theme</strong><br>
+                    Custom theme for ecommerce built with <strong>Storefront</strong>.
+                </span>
+                <span class="main-language" data-lang="spanish">
+                    <strong>Tema Woocommerce</strong><br>
+                    Realizado a medida para comercio electrónico desarrollado con <strong>Storefront</strong>.
+                </span>
+                <br><br>
+                <a href="https://eresagua.com/" target="_blank"><i class="fa fa-external-link"></i> Web</a> 
+                <a href="https://github.com/jjmontalban/eresagua" target="_blank"><i class="fab fa-github"></i> Github</a> 
+            </p>
+        </div>
+        <div class="row justify-content-center" id="project">
+            <div class="col-12 col-md-8">
+                <img class="img-fluid" src="images/floramarket-theme.png" alt="floramarket.es" width="100%">
+            </div>
+            <p class="col-12 col-md-4">
+                <strong>Floramarket</strong>
+                <br><br>
+                <span class="main-language hidden" data-lang="english">
+                    <strong>Woocommerce Theme</strong><br>
+                    Custom theme for ecommerce built with <strong>Storefront</strong>.
+                </span>
+                <span class="main-language" data-lang="spanish">
+                    <strong>Tema Woocommerce</strong><br>
+                    Realizado a medida para comercio electrónico desarrollado con <strong>Storefront</strong>.
+                </span>
+                <br><br>
+                <a href="https://floramarket.es/" target="_blank"><i class="fa fa-external-link"></i> Web</a> 
+                <a href="https://github.com/jjmontalban/floramarket-theme" target="_blank"><i class="fab fa-github"></i> Github</a> 
+            </p>
+        </div>
+        <div class="row justify-content-center" id="project">
+            <div class="col-12 col-md-8">
+                <img class="img-fluid" src="images/plugin-vat.png" alt="simple-eu-vat-woocoomerce">
+            </div>
+            <p class="col-12 col-md-4">
+                <strong>Simple EU VAT number for Woocommerce</strong>
+                <br><br>
+                <span class="main-language hidden" data-lang="english">
+                    <strong>Woocommerce Plugin</strong><br>
+                    The easiest way to manage the intra-community VAT.
+                </span>
+                <span class="main-language" data-lang="spanish">
+                    <strong>Plugin WooCommerce</strong><br>
+                    La manera más fácil de gestionar el iva intrcomunitario.
+                </span>
+                <br><br>
+                <a href="https://wordpress.org/plugins/simple-eu-vat-number-for-woocommerce/" target="_blank"><i class="fab fa-wordpress"></i> Wordpress.org</a> 
+            </p>
+        </div>
+        <div class="row justify-content-center" id="project">
+            <div class="col-12 col-md-8">
+                <img class="img-fluid" src="images/caramelotattoo.png" alt="caramelotattoo.com">
+            </div>
+            <p class="col-12 col-md-4">
+                <strong>Caramelo Tattoo</strong>
+                <br><br>
+                <span class="main-language hidden" data-lang="english">
+                    <strong>Wordpress Theme</strong><br>
+                    WP Custom Theme built with <strong>_underscores</strong>.
+                </span>
+                <span class="main-language" data-lang="spanish">
+                    <strong>Tema Wordpress</strong><br>
+                    Realizado a medida y desarrollado con <strong>_underscores</strong>.
+                </span>
+                <br><br>
+                <a href="https://caramelotattoo.com/" target="_blank"><i class="fa fa-external-link"></i> Web</a> 
+                <a href="https://github.com/jjmontalban/caramelotattoo/" target="_blank"><i class="fab fa-github"></i> Github</a> 
+            </p>
+        </div>
+        <div class="row justify-content-center" id="project">
+            <div class="col-12 col-md-8">
+                <img class="img-fluid" src="images/rosaluxo.png" alt="rosaluxo.com">
+            </div>
+            <p class="col-12 col-md-4">
+                <strong>Luxo CRM</strong>
+                <br><br>
+                <span class="main-language hidden" data-lang="english">
+                    <strong>CUSTOM CRM</strong><br>
+                    Built with <strong>Laravel</strong>, <strong>Vuejs</strong> & <strong>Bootstrap</strong>.
+                </span>
+                <span class="main-language" data-lang="spanish">
+                    <strong>CRM a medida</strong><br>
+                    Hecho con <strong>Laravel</strong>, <strong>Vuejs</strong> & <strong>Bootstrap</strong>.
+                </span>
+                <br><br>
+                <a href="https://rosaluxo.com/" target="_blank"><i class="fa fa-external-link"></i> Web</a> 
+                <a href="https://github.com/jjmontalban/Luxo-CRM" target="_blank"><i class="fab fa-github"></i> Github</a> 
+            </p>
+        </div>
+        <div class="row justify-content-center" id="project">
+            <div class="col-12 col-md-8">
+                <img class="img-fluid" src="images/emotionpills.png" alt="emotionpills.com" width="100%">
+            </div>
+            <p class="col-12 col-md-4">
+                <strong>Emotion Pills</strong>
+                <br><br>
+                <span class="main-language hidden" data-lang="english">
+                    <strong>Woocommerce Theme</strong><br>
+                    Custom theme for ecommerce built with <strong>Storefront</strong>.
+                </span>
+                <span class="main-language" data-lang="spanish">
+                    <strong>Tema Woocommerce</strong><br>
+                    Realizado a medida para comercio electrónico desarrollado con <strong>Storefront</strong>.
+                </span>
+                <br><br>
+                <a href="https://emotionpills.com/" target="_blank"><i class="fa fa-external-link"></i> Web</a> 
+                <a href="https://github.com/jjmontalban/storefront-child" target="_blank"><i class="fab fa-github"></i> Github</a> 
+            </p>
+        </div>
+        <div class="row justify-content-center" id="project">
+            <div class="col-12 col-md-8">
+                <img class="img-fluid" src="images/floramarket.png" alt="floramarket.es" width="100%">
+            </div>
+            <p class="col-10 col-md-4">
+                <strong>FMK Register</strong>
+                <br><br>
+                <span class="main-language hidden" data-lang="english">
+                    <strong>Wordpress Plugin</strong><br>
+                    Woocommerce register with custom fields and VAT number Validation via <strong>SOAP service</strong>.
+                </span>
+                <span class="main-language" data-lang="spanish">
+                    <strong>Plugin Wordpress</strong><br>
+                    Registro Woocommerce a medida con validación del campo VAT number mediante <strong>SOAP Service</strong>.
+                </span>
+                <br><br>
+                <a href="https://floramarket.es/mi-cuenta/" target="_blank"><i class="fa fa-external-link"></i> Web</a> 
+                <a href="https://github.com/jjmontalban/fmk-register" target="_blank"><i class="fab fa-github"></i> Github</a> 
+            </p>
+        </div>
+        <br>
+        <!-- Links more projects -->
+        <div class="text-center">
+            <p class="hidden" data-lang="english">Discover more projects in my <span class="wave"><a href="https://behance.com/jjmontalban" target="_blank">Behance</a></span> 
+                or my <span class="wave"><a href="https://github.com/jjmontalban/" target="_blank">Github</a></span>.
+            </p>
+            <p data-lang="spanish">Chequea más proyectos en mi <span class="wave"><a href="https://behance.com/jjmontalban" target="_blank">Behance</a></span> 
+                o mi <span class="wave"><a href="https://github.com/jjmontalban/" target="_blank">Github</a></span>.
+            </p>
+        </div>
+        <!-- End Projects -->
 
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p class="hidden" name="english"><i class="fa-solid fa-code"></i> by <strong> JJMöntalBân</strong></p>
-        <p name="spanish"><i class="fa-solid fa-code"></i> by <strong> JJMöntalBân</strong></p>
-    </footer>
+    <!-- Profile Section -->
+    <section class="hidden" id="profile">
 
-    <script src="functions.js"></script>
-    <script src="https://kit.fontawesome.com/386275e973.js" crossorigin="anonymous"></script>
+        <button id="downloadCV" class="btn btn-primary">
+            <span class="hidden" data-lang="english">Download PDF</span><span data-lang="spanish">Descargar PDF</span>
+        </button>
+
+        <div id="pdf">
+
+            <!-- Work Experience Section -->
+            <div class="row">
+                <div class="col-12">
+                    <h3><span class="hidden" data-lang="english">Work Experience</span><span data-lang="spanish">Experiencia laboral</span></h3>
+                </div>
+            </div>
+            <!-- JJMöntalbân (profesional independiente) -->
+            <div class="col-12 mb-3">
+                <h4><a href="#" target="_blank">JJMöntalbân</a></h4>
+                <p>
+                    <span class="hidden" data-lang="english">Independent Professional | January 2014 – Present</span>
+                    <span data-lang="spanish">Profesional independiente | Enero 2014 – Presente</span>
+                </p>
+                <p><strong><span class="hidden" data-lang="english">Responsibilities:</span><span data-lang="spanish">Responsabilidades:</span></strong></p>
+                <ul>
+                    <li>
+                        <span class="hidden" data-lang="english">Web development and graphic design for independent clients.</span>
+                        <span data-lang="spanish">Desarrollo web y diseño gráfico para clientes independientes.</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="english">Photography and online portfolio management.</span>
+                        <span data-lang="spanish">Fotografía y gestión de portafolios online.</span>
+                    </li>
+                </ul>
+                <p><strong><span class="hidden" data-lang="english">Technologies:</span><span data-lang="spanish">Tecnologías:</span></strong> HTML5, Bootstrap, CSS3, jQuery, Wordpress, Adobe Suite</p>
+            </div>
+            <!-- Galacticblum SL -->
+            <div class="col-12 mb-3">
+                <h4><a target="_blank" href="https://galacticblum.com">Galacticblum SL</a></h4>
+                <p>
+                    <span class="hidden" data-lang="english">Crta. Sanlúcar km.3. Chipiona | Sept. 2019 - Present</span>
+                    <span data-lang="spanish">Crta. Sanlúcar km.3. Chipiona | Sept. 2019 - Presente</span>
+                </p>
+                <p><strong><span class="hidden" data-lang="english">Responsibilities:</span><span data-lang="spanish">Responsabilidades:</span></strong></p>
+                <ul>
+                    <li>
+                        <span class="hidden" data-lang="english">Development of websites in PHP using Laravel, Wordpress, and Prestashop.</span>
+                        <span data-lang="spanish">Desarrollo de sitios web en PHP usando Laravel, Wordpress y Prestashop.</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="english">Database management with MySQL and user interface development with HTML5, CSS3, and jQuery.</span>
+                        <span data-lang="spanish">Gestión de bases de datos MySQL y desarrollo de interfaces de usuario con HTML5, CSS3 y jQuery.</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="english">SEO and SEM optimization, and analysis with Google Analytics.</span>
+                        <span data-lang="spanish">Optimización de SEO y SEM, y análisis con Google Analytics.</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="english">Graphic design using tools like Photoshop, InDesign, Illustrator, or Corel Draw.</span>
+                        <span data-lang="spanish">Diseño gráfico utilizando herramientas como Photoshop, InDesign, Illustrator o Corel Draw.</span>
+                    </li>
+                </ul>
+                <p><strong><span class="hidden" data-lang="english">Technologies:</span><span data-lang="spanish">Tecnologías:</span></strong> PHP, Wordpress, Prestashop, jQuery, HTML5, CSS3, MySQL, SEO/SEM, Adobe Suite</p>
+                <p><strong><span class="hidden" data-lang="english">Featured Projects:</span><span data-lang="spanish">Proyectos destacados:</span></strong>
+                    <a href="https://www.galacticblum.com" target="_blank">Galacticblum</a>, 
+                    <a href="https://www.floramarket.es" target="_blank">Floramarket SL</a>, 
+                    <a href="https://www.provocateurroses.com" target="_blank">Provocateur Roses</a>, 
+                    <a href="https://www.ideefleur.com" target="_blank">IdeeFleur</a>
+                </p>
+            </div>
+            <!-- Piranha Designs -->
+            <div class="col-12 mb-3">
+                <h4><a href="https://www.piranhadesigns.com" target="_blank">Piranha Designs</a></h4>
+                <p>
+                    <span class="hidden" data-lang="english">Unit 6 Portland House Glacis Road. Gibraltar | March 2019 – Sept. 2019</span>
+                    <span data-lang="spanish">Unit 6 Portland House Glacis Road. Gibraltar | Marzo 2019 – Sept. 2019</span>
+                </p>
+                <p><strong><span class="hidden" data-lang="english">Responsibilities:</span><span data-lang="spanish">Responsabilidades:</span></strong></p>
+                <ul>
+                    <li>
+                        <span class="hidden" data-lang="english">Development of custom web applications using PHP with Laravel & jQuery.</span>
+                        <span data-lang="spanish">Desarrollo de aplicaciones web personalizadas utilizando PHP con Laravel & jQuery.</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="english">Collaboration with the design team to implement interactive and responsive functionalities.</span>
+                        <span data-lang="spanish">Colaboración con el equipo de diseño para implementar funcionalidades interactivas y responsivas.</span>
+                    </li>
+                </ul>
+                <p><strong><span class="hidden" data-lang="english">Technologies:</span><span data-lang="spanish">Tecnologías:</span></strong> PHP, Laravel, jQuery, HTML5, Bootstrap, CSS3, MySQL</p>
+                <p><strong><span class="hidden" data-lang="english">Featured Projects:</span><span data-lang="spanish">Proyectos destacados:</span></strong>
+                    <a href="https://www.propertygibraltar.com/" target="_blank">Property Gibraltar</a>, 
+                    <a href="https://www.gauchos.gi/" target="_blank">Gauchos</a>, 
+                    <a href="https://www.buytickets.gi/" target="_blank">Buytickets.gi</a>
+                </p>
+            </div>
+            <!-- Bloonde SL -->
+            <div class="col-12 mb-3">
+                <h4><a href="https://www.bloonde.com" target="_blank">Bloonde SL</a></h4>
+                <p>
+                    <span class="hidden" data-lang="english">c/José Galán Merino s/n. Edificio CREA. Sevilla | Feb. 2018 – March 2019</span>
+                    <span data-lang="spanish">c/José Galán Merino s/n. Edificio CREA. Sevilla | Feb. 2018 – Marzo 2019</span>
+                </p>
+                <p><strong><span class="hidden" data-lang="english">Responsibilities:</span><span data-lang="spanish">Responsabilidades:</span></strong></p>
+                <ul>
+                    <li>
+                        <span class="hidden" data-lang="english">Development of web applications with PHP and Laravel.</span>
+                        <span data-lang="spanish">Desarrollo de aplicaciones web con PHP y Laravel.</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="english">Implementation of user interfaces with Vue.js and Bootstrap.</span>
+                        <span data-lang="spanish">Implementación de interfaces de usuario con Vue.js y Bootstrap.</span>
+                    </li>
+                </ul>
+                <p><strong><span class="hidden" data-lang="english">Technologies:</span><span data-lang="spanish">Tecnologías:</span></strong> PHP, Laravel, Vue.js, jQuery, HTML5, Bootstrap, CSS3, MySQL</p>
+                <p><strong><span class="hidden" data-lang="english">Featured Projects:</span><span data-lang="spanish">Proyectos destacados:</span></strong>
+                    <a href="https://sevillarooms.com/" target="_blank">Sevilla Room</a>, 
+                    <a href="https://digital1to1.com/" target="_blank">digital1to1</a>
+                </p>
+            </div>
+            <!-- Komora -->
+            <div class="col-12 mb-3">
+                <h4><a href="http://www.camaradecomercio.sk" target="_blank">Hispanskó-Slovenska Obchodná Komora</a></h4>
+                <p>
+                    <span class="hidden" data-lang="english">Laurinská, 2. Bratislava (Slovakia) | Feb. 2013 – Oct. 2013</span>
+                    <span data-lang="spanish">Laurinská, 2. Bratislava (Slovakia) | Feb. 2013 – Oct. 2013</span>
+                </p>
+                <p><strong><span class="hidden" data-lang="english">Responsibilities:</span><span data-lang="spanish">Responsabilidades:</span></strong></p>
+                <ul>
+                    <li>
+                        <span class="hidden" data-lang="english">Website development using HTML5, Bootstrap, and Wordpress.</span>
+                        <span data-lang="spanish">Desarrollo de sitios web utilizando HTML5, Bootstrap y Wordpress.</span>
+                    </li>
+                    <li>
+                        <span class="hidden" data-lang="english">Graphic design with Adobe Suite.</span>
+                        <span data-lang="spanish">Diseño gráfico con Adobe Suite.</span>
+                    </li>
+                </ul>
+                <p><strong><span class="hidden" data-lang="english">Technologies:</span><span data-lang="spanish">Tecnologías:</span></strong> HTML5, Bootstrap, CSS3, jQuery, Wordpress, Adobe Suite</p>
+                <p><strong><span class="hidden" data-lang="english">Featured Projects:</span><span data-lang="spanish">Proyectos destacados:</span></strong>
+                    <a href="https://spanish-investments.com" target="_blank">Spanish Investments</a>, 
+                    <a href="https://capricornllc.com/" target="_blank">Capricorn LLC</a>
+                </p>
+            </div>
+            <!-- More experience -->
+            <div class="col-12 mb-3">
+                <p>
+                    <span class="hidden" data-lang="english">You can see more experiences on my LinkedIn</span>
+                    <span data-lang="spanish">Puedes ver más experiencias en mi </span>
+                    <a href="https://www.linkedin.com/in/tu-perfil-linkedin" target="_blank">LinkedIn</a>
+                </p>
+            </div>
+            <!-- Education Section -->
+            <div class="row">
+                <div class="col-12">
+                    <h3><span class="hidden" data-lang="english">Education</span><span data-lang="spanish">Formación académica</span></h3>
+                </div>
+            </div>
+            <!-- Universidad de Cádiz -->
+            <div class="col-12 mb-3">
+                <h4><span class="hidden" data-lang="english">BSc in Computer Science</span><span data-lang="spanish">Ingeniería Técnica Informática de Gestión</span></h4>
+                <p><a href="https://spanish-investments.com" target="_blank">Universidad de Cádiz</a> | 2008 - 2012</p>
+            </div>
+            <!-- CUJAE -->
+            <div class="col-12 mb-3">
+                <h4><span class="hidden" data-lang="english">PIMA Project</span><span data-lang="spanish">Proyecto PIMA</span></h4>
+                <p>
+                    <a href="https://www.linkedin.com/school/cujaeredsocial/" target="_blank">CUJAE</a> <a href="http://esingenieria.uca.es/wp-content/uploads/2014/06/NOTICIA.pdf?u" target="_blank">Link</a> | 2014</p>
+            </div> 
+            <!-- VSB - Technical University of Ostrava -->
+            <div class="col-12 mb-3">
+                <h4><span class="hidden" data-lang="english">Bachelor's Degree in Computer Science</span><span data-lang="spanish">Grado en Informática</span></h4>
+                <p><a href="https://www.vsb.cz/en" target="_blank">VSB - Technical University of Ostrava</a> | 2013 (Erasmus Grant)</p>
+            </div>
+            <!-- Certifications Section -->
+            <div class="row">
+                <div class="col-12">
+                    <h3><span class="hidden" data-lang="english">Certifications</span><span data-lang="spanish">Certificaciones</span></h3>
+                </div>
+            </div>
+            <div class="col-12 mb-3">
+                <h4><span class="hidden" data-lang="english">Telefónica Foundation</span><span data-lang="spanish">Fundación Telefónica</span></h4>
+                <p><a href="https://s3.amazonaws.com/pdf-certificate/10464918.pdf" target="_blank">Certification</a> - <a href="https://conectaempleo-formacion.fundaciontelefonica.com/web/es-gestion-de-proyectos-con-metodologias-agiles-y-enfoques-lean-ft-ed-3" target="_blank">Gestión de Proyectos con Metodologías Ágiles y Enfoques Lean</a></p>
+            </div>
+
+        </div>
+
+        <!-- Skills -->
+        <div id="skills">
+
+            <div class="hidden" data-lang="english">
+                <p>
+                    I use various languages and frameworks for web development. On the backend, I work with <a class="prioritize">PHP</a> and manage applications using <a>MySQL</a> databases. 
+                    On the frontend, I use <a>HTML5</a>, <a>CSS3</a>, and <a>JavaScript</a> with <a>jQuery</a>, and I have also done some work with <a>Vue</a> to create interactive and responsive interfaces. 
+                    In my projects, I rely on frameworks like <a class="prioritize">WordPress</a>, <a>Laravel</a>, and <a>Bootstrap</a>.
+                </p>
+                <p>
+                    I use tools like <a>Git</a>, <a>Composer</a>, <a>NPM</a>, etc. for project management and task automation. My main development environment is <a>Visual Studio Code</a> with extensions that optimize my workflow. 
+                    I develop wireframes to plan and structure user interfaces. I also enjoy photography and working with <a>Photoshop</a>, <a>Corel Draw</a>, and <a>InDesign</a> for interface design and layout.
+                </p>
+                
+            </div>
+
+            <div data-lang="spanish">
+                <p>
+                    Utilizo diversos lenguajes y frameworks para el desarrollo web. En el backend, empleo <a class="prioritize">PHP</a> y y bases de datos <a>MySQL</a> para la gestión de aplicaciones. 
+                    En el frontend, uso <a>HTML5</a>, <a>CSS3</a> y <a>JavaScript</a> con <a>jQuery</a> e incluso he hecho cosas con <a>Vue</a> para crear interfaces interactivas y responsivas. 
+                    En el desarrollo proyectos me baso en frameworks como <a class="prioritize">WordPress</a>, <a>Laravel</a> y <a>Bootstrap</a>.
+                </p>
+                <p>
+                    Uso herramientas como <a>Git</a>, <a>Composer</a>, <a>NPM</a>, etc. para la gestión de proyectos y la automatización de tareas. Mi entorno de desarrollo principal es <a>Visual Studio Code</a> con extensiones que optimizan mi flujo de trabajo. 
+                    Desarrollo wireframes para planificar y estructurar interfaces de usuario. También me gusta la fotografía y trabajar con <a>Photoshop</a>, <a>Corel Draw</a> o <a>inDesign</a> para el diseño de interfaces y maquetación. 
+                </p>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="hidden" data-lang="english">
+            <div class="row" id="services">
+                <p class="col-md-6 col-12">
+                    <i class="fa-solid fa-desktop"></i> Dev &amp; design Web<br><br>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> WP themes & plugins<br><br>
+                </p>
+                <p class="col-md-6 col-12">
+                    <i class="fa-solid fa-gear"></i> Support & Maintenance</br></br>
+                    <i class="fa-solid fa-list-check"></i> Audit (SEO &amp; performance)<br></br>
+                </p>
+            </div>  
+        </div>
+        <div data-lang="spanish">
+            <div class="row" id="services">
+                <p class="col-md-6 col-12">
+                    <i class="fa-solid fa-desktop"></i> Desarrollo &amp; Diseño Web<br><br>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> temas & Plugins WP<br><br>
+                </p>
+                    <p class="col-md-6 col-12">
+                    <i class="fa-solid fa-gear"></i> Soporte & mantenimiento</br></br>
+                    <i class="fa-solid fa-list-check"></i> Auditoría (SEO &amp; rendimiento)<br></br>
+                </p>
+            </div>
+        </div>  
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="hidden" id="contact">
+
+        <p class="hidden" data-lang="english">Click on the links to find me on social media or email me: <a href="mailto:jjmontalban@gmail.com">click</a></p>
+        <p data-lang="spanish">Clica en los enlaces para encontrarme o envíame un email: <a href="mailto:jjmontalban@gmail.com">click</a></p>
+        
+        <li class="icoGithub"><a href="https://github.com/jjmontalban" target="_blank" title="Github"><i class="fab fa-github"></i></a></li>
+        <li class="icoWordpress"><a href="https://profiles.wordpress.org/jjmontalban/" target="_blank" title="Wordpress"><i class="fa-brands fa-wordpress"></i></a></li>
+        <li class="icoBehance"><a href="https://www.behance.net/jjmontalban" target="_blank" title="Behance"><i class="fab fa-behance"></i></a></li>
+        <li class="icoLinkedin"><a href="https://www.linkedin.com/in/jjmontalban/" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+        <li class="icoFlickr"><a href="https://www.flickr.com/photos/kinkijurado/" target="_blank"  title="Flickr"><i class="fab fa-flickr"></i></a></li>
+        <li class="icoUnsplash"><a href="https://unsplash.com/@jjmontalban" target="_blank" title="Unsplash"><i class="fa-brands fa-unsplash"></i></a></li>
+        <li class="icoSpotify"><a href="https://open.spotify.com/user/kinorro/playlists" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a></li>
+        <li class="icoImdb"><a href="https://www.imdb.com/user/ur22137408/" target="_blank" title="Imdb"><i class="fab fa-imdb"></i></a></li>
+        <li class="icoChess"><a href="https://www.chess.com/member/jjmontalban" target="_blank" title="Chess"><i class="fas fa-chess-king"></i></a></li>
+
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer>
+
+    <p class="hidden" data-lang="english"><i class="fa-solid fa-code"></i> by <strong> JJMöntalBân</strong></p>
+    <p data-lang="spanish"><i class="fa-solid fa-code"></i> por <strong> JJMöntalBân</strong></p>
+
+</footer>
+
+<script src="functions.js"></script>
+<script src="https://kit.fontawesome.com/386275e973.js" crossorigin="anonymous"></script>
 </body>
 </html>
 
