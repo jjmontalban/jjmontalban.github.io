@@ -16,13 +16,21 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 
+
+h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 4em;
+    font-optical-sizing: auto;
+    font-weight: 700;
+}
+
 html {
     position: relative;
     min-height: 100%;
 }
 
 #content {
-    padding: 0% 0% 5% 4%;
+    padding: 4% 0% 5% 4%;
     max-width: 940px;
 }
 
@@ -37,12 +45,6 @@ html {
     background-color: var(--link-bg-hover);
 }
 
-/* Logo */
-.page-top {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10%;
-}
 
 /* Footer */
 footer {
@@ -73,6 +75,8 @@ footer {
 }
 
 /* Botones */
+
+
 .buttons {
     display: flex;
     justify-content: space-around;
@@ -187,12 +191,10 @@ footer {
 }
 
 /* Contact */
-#contact {
-    text-align: center;
-}
 
 /* Social */
 #contact li {
+    text-align: center;
     display: inline-block;
     border-radius: 10%;
     width: 40px;
@@ -304,45 +306,30 @@ footer {
     flex: 0 0 100px;
 }
 
-.switch input {
-    display: none;
+.content-container {
+    position: relative; /* Define el contenedor como referencia para el botón */
+    padding: 20px; /* Ajusta el padding si quieres espacio adicional */
 }
 
-/* .slider {
+.close-button {
     position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 5px;
-    background-color: #ca2222;
-    transition: background 0.4s;
-} */
-
-/* .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
     background-color: white;
-    border-radius: 3px;
-    transition: transform 0.4s;
-} */
-
-/* input:checked + .slider {
-    background-color: #2196F3;
+    top: 10px; /* Ajusta según tu preferencia */
+    right: 10px;
+    color: black;
+    border: none;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none; /* Oculto por defecto */
 }
 
-input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+
+#work:not(.hidden) .close-button,
+#profile:not(.hidden) .close-button {
+    display: block; /* Mostrar solo cuando la sección esté visible */
 }
 
-input:checked + .slider:before {
-    transform: translateX(55px);
-} */
 
 /* Toggle Switch Labels */
 .en {
@@ -358,13 +345,6 @@ input:checked + .slider:before {
     font-size: 10px;
 }
 
-/* input:checked + .slider .en {
-    display: block;
-}
-
-input:checked + .slider .es {
-    display: none;
-} */
 
 /* Media Queries */
 /* Mobile landscape or tablets portrait */

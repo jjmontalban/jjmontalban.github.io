@@ -17,6 +17,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,800&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8C0HV452XT"></script>
@@ -35,45 +36,50 @@
 
 </head>
 <body>
-<!-- Header -->
-<header class="page-top">
-    <!-- Switcher -->
-    <label class="switch">
-        <input type="checkbox" checked>
-        <div class="slider">
-            <span class="en">EN</span>
-            <span class="es">ES</span>
-        </div>
-    </label>
-</header>
-
 <!-- Main Content -->
 <main id="content">
 
     <!-- Short Description -->
     <section id="short">
         <div>
-            <h1><span class="wave">Hi</span>! I'm JJ, I'm a web developer.
-                I'm currently working from <a href="#" class="prioritize">Cádiz</a>
-                
+            <h1><span class="wave">Hi</span>! I'm JJ, a web developer and designer from Cádiz.
             </h1><br>
-            <p>remotely using different technologies both backend and frontend. Check my <a href="https://github.com/jjmontalban/" target="_blank"><span class="wave">Github</span></a> or my <a href="https://www.behance.net/jjmontalban"><span class="wave">Behance</span></a> to know more.</p>
+            <p>I work remotely using different technologies both backend and frontend.</p>
+            <p>
+            Check A sample of my work. Add this Github Page you are browsing created with CSS & Typewriter JS
+            <a href="https://github.com/jjmontalban/jjmontalban.github.io" target="_blank"><i class="fab fa-github"></i> MyPortfolio</a>
+            Also you see mi profile. 
+        </p>
         </div>
-    </section>
-
-    <!-- Menu -->
+        <!-- Menu -->
     <section class="buttons">
         <button id="work-button"><span>Work</span></button>
         <button id="profile-button"><span>Profile</span></button>
-        <button id="contact-button"><span>Contact</span></button>    
+    </section>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+
+        <p>Click on the links to find me on social media or email me: <a href="mailto:jjmontalban@gmail.com">click</a>
+                
+        <li class="icoGithub"><a href="https://github.com/jjmontalban" target="_blank" title="Github"><i class="fab fa-github"></i></a></li>
+        <li class="icoWordpress"><a href="https://profiles.wordpress.org/jjmontalban/" target="_blank" title="Wordpress"><i class="fa-brands fa-wordpress"></i></a></li>
+        <li class="icoBehance"><a href="https://www.behance.net/jjmontalban" target="_blank" title="Behance"><i class="fab fa-behance"></i></a></li>
+        <li class="icoLinkedin"><a href="https://www.linkedin.com/in/jjmontalban/" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+        <li class="icoFlickr"><a href="https://www.flickr.com/photos/kinkijurado/" target="_blank"  title="Flickr"><i class="fab fa-flickr"></i></a></li>
+        <li class="icoUnsplash"><a href="https://unsplash.com/@jjmontalban" target="_blank" title="Unsplash"><i class="fa-brands fa-unsplash"></i></a></li>
+        <li class="icoSpotify"><a href="https://open.spotify.com/user/kinorro/playlists" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a></li>
+        <li class="icoImdb"><a href="https://www.imdb.com/user/ur22137408/" target="_blank" title="Imdb"><i class="fab fa-imdb"></i></a></li>
+        <li class="icoChess"><a href="https://www.chess.com/member/jjmontalban" target="_blank" title="Chess"><i class="fas fa-chess-king"></i></a></li>
+</p>
     </section>
 
     <!-- Work Section -->
-    <section id="work">
-        <p>
-            A sample of my work. Add this Github Page you are browsing created with CSS & Typewriter JS
-            <a href="https://github.com/jjmontalban/jjmontalban.github.io" target="_blank"><i class="fab fa-github"></i> MyPortfolio</a> 
-        </p>
+    <section class="hidden" id="work">
+        <div class="content-container">
+            <button class="close-button" onclick="closeSection()">X</button>
+            <!-- Contenido de la sección Work -->
+        </div>
 
         <!-- projects -->
         <div class="row justify-content-center" id="project">
@@ -268,7 +274,10 @@
 
     <!-- Profile Section -->
     <section class="hidden" id="profile">
-
+        <div class="content-container">
+            <button class="close-button" onclick="closeSection()">X</button>
+            <!-- Contenido de la sección Work -->
+        </div>
         <button id="downloadCV" class="btn btn-primary">
             <span>Download PDF</span>
         </button>
@@ -504,22 +513,7 @@
 
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-
-        <p>Click on the links to find me on social media or email me: <a href="mailto:jjmontalban@gmail.com">click</a></p>
-                
-        <li class="icoGithub"><a href="https://github.com/jjmontalban" target="_blank" title="Github"><i class="fab fa-github"></i></a></li>
-        <li class="icoWordpress"><a href="https://profiles.wordpress.org/jjmontalban/" target="_blank" title="Wordpress"><i class="fa-brands fa-wordpress"></i></a></li>
-        <li class="icoBehance"><a href="https://www.behance.net/jjmontalban" target="_blank" title="Behance"><i class="fab fa-behance"></i></a></li>
-        <li class="icoLinkedin"><a href="https://www.linkedin.com/in/jjmontalban/" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
-        <li class="icoFlickr"><a href="https://www.flickr.com/photos/kinkijurado/" target="_blank"  title="Flickr"><i class="fab fa-flickr"></i></a></li>
-        <li class="icoUnsplash"><a href="https://unsplash.com/@jjmontalban" target="_blank" title="Unsplash"><i class="fa-brands fa-unsplash"></i></a></li>
-        <li class="icoSpotify"><a href="https://open.spotify.com/user/kinorro/playlists" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a></li>
-        <li class="icoImdb"><a href="https://www.imdb.com/user/ur22137408/" target="_blank" title="Imdb"><i class="fab fa-imdb"></i></a></li>
-        <li class="icoChess"><a href="https://www.chess.com/member/jjmontalban" target="_blank" title="Chess"><i class="fas fa-chess-king"></i></a></li>
-
-    </section>
+    
 
 </main>
 

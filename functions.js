@@ -1,35 +1,8 @@
 (function() {
-    let english, spanish;
-
-    document.addEventListener('DOMContentLoaded', function () {
-        // Inicializa las variables con los elementos correspondientes a cada idioma
-        english = document.querySelectorAll("[data-lang='english']");
-        spanish = document.querySelectorAll("[data-lang='spanish']");
-        // Selecciona el checkbox para el cambio de idioma
-        const checkbox = document.querySelector('input[type="checkbox"]');  
-        toggleLanguage(checkbox.checked ? 'english' : 'spanish');
-        // Añade un listener para el cambio de idioma
-        checkbox.addEventListener('change', function () {
-            toggleLanguage(checkbox.checked ? 'english' : 'spanish');
-        });
-    });
-
-    // Función para alternar el idioma
-    function toggleLanguage(language) {
-        applyFadeInAnimation();
-        english.forEach(el => {
-            el.classList.toggle('hidden', language !== 'english');
-            el.setAttribute('aria-hidden', language !== 'english');
-        });
-        spanish.forEach(el => {
-            el.classList.toggle('hidden', language !== 'spanish');
-            el.setAttribute('aria-hidden', language !== 'spanish');
-        });
-    }
 
     // Función para aplicar la animación de fade-in
     function applyFadeInAnimation() {
-        const elements = document.querySelectorAll("#short, #work, #contact, #profile, [data-lang='english'], [data-lang='spanish']");
+        const elements = document.querySelectorAll("#short, #work, #profile");
         elements.forEach(el => {
             el.classList.remove("fade-in");
             void el.offsetWidth;
@@ -45,7 +18,6 @@
         if (targetButton) {
             const sections = {
                 "work-button": "work",
-                "contact-button": "contact",
                 "profile-button": "profile"
             };
             const targetSection = sections[targetButton.id];
@@ -58,13 +30,21 @@
         }
     });
 
+
+    function closeSection() {
+        resetSectionVisibility(); // Oculta todas las secciones
+        document.getElementById("short").classList.remove("hidden");
+        document.getElementById("contact").classList.remove("hidden");
+    }
+    // Hacer que la función sea accesible globalmente
+    window.closeSection = closeSection;
+    
     // Función para ocultar todas las secciones
     function resetSectionVisibility() {
         document.getElementById("short").classList.add("hidden");
         document.getElementById("work").classList.add("hidden");
-        document.getElementById("contact").classList.add("hidden");
-        document.getElementById("contact").classList.add("hidden");
         document.getElementById("profile").classList.add("hidden");
+        document.getElementById("contact").classList.add("hidden");
     }
 
     // Función para mostrar una sección específica con animación
@@ -153,11 +133,4 @@
         }).save();
     });
     
-    
-    
-    
-    
-    
-    
-
 })();
