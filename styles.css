@@ -30,7 +30,7 @@ html {
 }
 
 #content {
-    padding: 4% 0% 5% 4%;
+    padding: 4% 2% 5% 2%;
     max-width: 940px;
 }
 
@@ -76,6 +76,20 @@ footer {
 
 /* Botones */
 
+.inline-button {
+    color: var(--btn-hover-bg); /* Cambia el color al pasar el mouse, como un enlace */
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.inline-button:hover {
+    color: var(--btn-hover-bg); /* Cambia el color al pasar el mouse, como un enlace */
+    text-decoration: underline;
+}
 
 .buttons {
     display: flex;
