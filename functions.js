@@ -1,14 +1,14 @@
 (function() {
     function closeSection() {
         resetSectionVisibility();
-        /* document.getElementById("short").classList.remove("hidden");
-        document.getElementById("contact").classList.remove("hidden"); */
+        document.getElementById("short").classList.remove("hidden");
+        document.getElementById("contact").classList.remove("hidden");
     }
     window.closeSection = closeSection;
 
     function resetSectionVisibility() {
-        /* document.getElementById("short").classList.add("hidden");
-        document.getElementById("work").classList.add("hidden"); */
+        document.getElementById("short").classList.add("hidden");
+        document.getElementById("work").classList.add("hidden");
         document.getElementById("profile").classList.add("hidden");
         document.getElementById("contact").classList.add("hidden");
     }
