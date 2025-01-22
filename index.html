@@ -26,19 +26,18 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-8C0HV452XT');
-        </script>
+    </script>
     <!-- Incluir html2canvas -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <!-- Incluir html2pdf -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
-
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.birds.min.js"></script>
 </head>
 <body>
+
 <!-- Main Content -->
 <main id="content">
-
     <!-- Short Description -->
     <section id="short">
         <div>
@@ -55,21 +54,22 @@
     <section id="contact">
 
         <p>Click on the links to find me on social media or email me: <a href="mailto:jjmontalban@gmail.com">click</a>
-                
-        <li class="icoGithub"><a href="https://github.com/jjmontalban" target="_blank" title="Github"><i class="fab fa-github"></i></a></li>
-        <li class="icoWordpress"><a href="https://profiles.wordpress.org/jjmontalban/" target="_blank" title="Wordpress"><i class="fa-brands fa-wordpress"></i></a></li>
-        <li class="icoBehance"><a href="https://www.behance.net/jjmontalban" target="_blank" title="Behance"><i class="fab fa-behance"></i></a></li>
-        <li class="icoLinkedin"><a href="https://www.linkedin.com/in/jjmontalban/" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
-        <li class="icoFlickr"><a href="https://www.flickr.com/photos/kinkijurado/" target="_blank"  title="Flickr"><i class="fab fa-flickr"></i></a></li>
-        <li class="icoUnsplash"><a href="https://unsplash.com/@jjmontalban" target="_blank" title="Unsplash"><i class="fa-brands fa-unsplash"></i></a></li>
-        <li class="icoSpotify"><a href="https://open.spotify.com/user/kinorro/playlists" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a></li>
-        <li class="icoImdb"><a href="https://www.imdb.com/user/ur22137408/" target="_blank" title="Imdb"><i class="fab fa-imdb"></i></a></li>
-        <li class="icoChess"><a href="https://www.chess.com/member/jjmontalban" target="_blank" title="Chess"><i class="fas fa-chess-king"></i></a></li>
-</p>
+            <li class="icoGithub"><a href="https://github.com/jjmontalban" target="_blank" title="Github"><i class="fab fa-github"></i></a></li>
+            <li class="icoWordpress"><a href="https://profiles.wordpress.org/jjmontalban/" target="_blank" title="Wordpress"><i class="fa-brands fa-wordpress"></i></a></li>
+            <li class="icoBehance"><a href="https://www.behance.net/jjmontalban" target="_blank" title="Behance"><i class="fab fa-behance"></i></a></li>
+            <li class="icoLinkedin"><a href="https://www.linkedin.com/in/jjmontalban/" target="_blank" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+            <li class="icoFlickr"><a href="https://www.flickr.com/photos/kinkijurado/" target="_blank"  title="Flickr"><i class="fab fa-flickr"></i></a></li>
+            <li class="icoUnsplash"><a href="https://unsplash.com/@jjmontalban" target="_blank" title="Unsplash"><i class="fa-brands fa-unsplash"></i></a></li>
+            <li class="icoSpotify"><a href="https://open.spotify.com/user/kinorro/playlists" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a></li>
+            <li class="icoImdb"><a href="https://www.imdb.com/user/ur22137408/" target="_blank" title="Imdb"><i class="fab fa-imdb"></i></a></li>
+            <li class="icoChess"><a href="https://www.chess.com/member/jjmontalban" target="_blank" title="Chess"><i class="fas fa-chess-king"></i></a></li>
+        </p>
+
     </section>
 
     <!-- Work Section -->
     <section class="hidden" id="work">
+
         <div class="content-container">
             <button class="close-button" onclick="closeSection()">X</button>
             <!-- Contenido de la sección Work -->
@@ -92,6 +92,7 @@
                 <a href="https://github.com/jjmontalban/idealista-feed/" target="_blank"><i class="fab fa-github"></i> Github</a>
             </p>
         </div>
+
         <div class="row justify-content-center" id="project">
             <div class="col-8 col-md-5 image-project">
                 <img class="img-fluid" src="images/chipicasa.png" alt="wordpress.org">
@@ -109,6 +110,7 @@
                 <a href="https://github.com/jjmontalban/inmuebles-theme" target="_blank"><i class="fab fa-github"></i> Front</a> 
             </p>
         </div>
+
         <div class="row justify-content-center" id="project">
             <div class="col-8 col-md-5 image-project">
                 <img class="img-fluid" src="images/movie-match.png" alt="https://github.com/jjmontalban/filmder-front">
@@ -126,6 +128,7 @@
                 <a href="https://github.com/jjmontalban/filmder-back" target="_blank"><i class="fab fa-github"></i> Back</a> 
             </p>
         </div>
+
         <div class="row justify-content-center" id="project">
             <div class="col-8 col-md-5 image-project">
                 <img class="img-fluid" src="images/plugin-wp.png" alt="product-quantity-settings">
@@ -141,6 +144,7 @@
                 <a href="https://wordpress.org/plugins/product-quantity-settings//" target="_blank"><i class="fab fa-wordpress"></i> Wordpress.org</a> 
             </p>
         </div>
+
         <div class="row justify-content-center" id="project">
             <div class="col-8 col-md-5 image-project">
                 <img class="img-fluid" src="images/eresagua.png" alt="eresagua.com" width="100%">
@@ -157,6 +161,7 @@
                 <a href="https://github.com/jjmontalban/eresagua" target="_blank"><i class="fab fa-github"></i> Github</a> 
             </p>
         </div>
+
         <div class="row justify-content-center" id="project">
             <div class="col-8 col-md-5 image-project">
                 <img class="img-fluid" src="images/floramarket-theme.png" alt="floramarket.es" width="100%">
@@ -173,6 +178,7 @@
                 <a href="https://github.com/jjmontalban/floramarket-theme" target="_blank"><i class="fab fa-github"></i> Github</a> 
             </p>
         </div>
+
         <div class="row justify-content-center" id="project">
             <div class="col-8 col-md-5 image-project">
                 <img class="img-fluid" src="images/plugin-vat.png" alt="simple-eu-vat-woocoomerce">
@@ -188,6 +194,7 @@
                 <a href="https://wordpress.org/plugins/simple-eu-vat-number-for-woocommerce/" target="_blank"><i class="fab fa-wordpress"></i> Wordpress.org</a> 
             </p>
         </div>
+
         <div class="row justify-content-center" id="project">
             <div class="col-8 col-md-5 image-project">
                 <img class="img-fluid" src="images/caramelotattoo.png" alt="caramelotattoo.com">
@@ -204,6 +211,7 @@
                 <a href="https://github.com/jjmontalban/caramelotattoo/" target="_blank"><i class="fab fa-github"></i> Github</a> 
             </p>
         </div>
+
         <div class="row justify-content-center" id="project">
             <div class="col-8 col-md-5 image-project">
                 <img class="img-fluid" src="images/rosaluxo.png" alt="luxoflowers.com">
@@ -220,6 +228,7 @@
                 <a href="https://github.com/jjmontalban/Luxo-CRM" target="_blank"><i class="fab fa-github"></i> Github</a> 
             </p>
         </div>
+
         <div class="row justify-content-center" id="project">
             <div class="col-8 col-md-5 image-project">
                 <img class="img-fluid" src="images/emotionpills.png" alt="emotionpills.com" width="100%">
@@ -236,6 +245,7 @@
                 <a href="https://github.com/jjmontalban/storefront-child" target="_blank"><i class="fab fa-github"></i> Github</a> 
             </p>
         </div>
+        
         <div class="row justify-content-center" id="project">
             <div class="col-8 col-md-5 image-project">
                 <img class="img-fluid" src="images/floramarket.png" alt="floramarket.es" width="100%">
