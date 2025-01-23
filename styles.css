@@ -16,41 +16,45 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 
+
+h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 3em;
+    font-optical-sizing: auto;
+    font-weight: 700;
+}
+
 html {
     position: relative;
     min-height: 100%;
 }
 
-#content {
-    margin: 5% auto;
-    padding: 0% 4% 5% 4%;
-    max-width: 940px;
-}
-
-#content a {
-    background-color: rgba(187, 239, 253, 0.3);
+a {
+    background-color: var(--background-color);
     color: var(--link-color);
     text-decoration: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-#content a:hover {
+a:hover {
     background-color: var(--link-bg-hover);
+    text-decoration: none;
 }
 
-/* Logo */
-.page-top {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10%;
+
+#content {
+    padding: 4% 2% 5% 2%;
+    max-width: 940px;
 }
+
+
 
 /* Footer */
 footer {
     text-align: center;
     background-color: var(--main-color);
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
@@ -74,38 +78,20 @@ footer {
 }
 
 /* Botones */
-.buttons {
-    display: flex;
-    justify-content: space-around;
-    max-width: 390px;
-    margin: 50px auto 20px;
-    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
 
-.buttons.moved-up {
-    transform: translateY(-50px);
-    opacity: 0.8;
-}
-
-.buttons button {
-    cursor: pointer;
-    border-radius: 5px;
-    border: 2px solid var(--btn-border);
-    padding: 5px 10px;
+.inline-button {
     color: var(--btn-hover-bg);
-    background: white;
-    transition: background 0.3s, color 0.3s, border 0.3s;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
 }
 
-.buttons button:hover {
-    color: var(--btn-hover-color);
-    background: var(--btn-hover-bg);
-    border: 2px solid var(--btn-hover-bg);
-}
-
-.buttons-up {
-    transform: translateY(-50px);
-    transition: transform 0.3s ease;
+.inline-button:hover {
+    color: var(--btn-hover-bg); /* Cambia el color al pasar el mouse, como un enlace */
+    text-decoration: underline;
 }
 
 /* Wave Animation */
@@ -115,15 +101,6 @@ footer {
     display: inline-block;
 }
 
-/* Services */
-#services {
-    text-align: center;
-    color: rgb(36, 36, 36);
-    padding: 4% 2% 0% 2%;
-    margin: 2%;
-    background: var(--background-color) url(images/services-background.png);
-    border-radius: 10px;
-}
 
 /* Project */
 #project {
@@ -137,6 +114,12 @@ footer {
 #project p {
     text-rendering: optimizeLegibility;
     padding-top: 4%;
+        padding-left: 8%;
+}
+
+
+.image-project {
+    align-self: center;
 }
 
 /* Profile */
@@ -188,12 +171,10 @@ footer {
 }
 
 /* Contact */
-#contact {
-    text-align: center;
-}
 
 /* Social */
 #contact li {
+    text-align: center;
     display: inline-block;
     border-radius: 10%;
     width: 40px;
@@ -305,45 +286,30 @@ footer {
     flex: 0 0 100px;
 }
 
-.switch input {
-    display: none;
+.content-container {
+    position: relative; /* Define el contenedor como referencia para el botón */
+    padding: 20px; /* Ajusta el padding si quieres espacio adicional */
 }
 
-.slider {
+.close-button {
     position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 5px;
-    background-color: #ca2222;
-    transition: background 0.4s;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
     background-color: white;
-    border-radius: 3px;
-    transition: transform 0.4s;
+    top: 10px; /* Ajusta según tu preferencia */
+    right: 10px;
+    color: black;
+    border: none;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none; /* Oculto por defecto */
 }
 
-input:checked + .slider {
-    background-color: #2196F3;
+
+#work:not(.hidden) .close-button,
+#profile:not(.hidden) .close-button {
+    display: block; /* Mostrar solo cuando la sección esté visible */
 }
 
-input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-    transform: translateX(55px);
-}
 
 /* Toggle Switch Labels */
 .en {
@@ -359,22 +325,12 @@ input:checked + .slider:before {
     font-size: 10px;
 }
 
-input:checked + .slider .en {
-    display: block;
-}
-
-input:checked + .slider .es {
-    display: none;
-}
 
 /* Media Queries */
 /* Mobile landscape or tablets portrait */
 @media (max-width: 720px) {
-    #work {
-        text-align: center;
-    }
-
-    #project p {
-        padding-top: 0;
+    
+    h1 {
+        font-size: 3em;
     }
 }
