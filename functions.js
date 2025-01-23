@@ -70,7 +70,7 @@
             backgroundColor: 0xffffff
 
         });
-    });
+    }); 
 
     
 })();

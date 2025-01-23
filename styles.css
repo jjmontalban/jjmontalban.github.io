@@ -50,6 +50,18 @@ a:hover {
 
 
 /* Footer */
+
+h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 4em;
+    font-optical-sizing: auto;
+    font-weight: 700;
+}
+
+.text-block {
+    padding: 7% 2% 5% 2%;
+}
+
 footer {
     text-align: center;
     background-color: var(--main-color);
@@ -66,6 +78,14 @@ footer {
     visibility: hidden;
 }
 
+
+#content {
+    padding: 4% 2% 5% 2%;
+    max-width: 940px;
+}
+
+
+
 /* Remove black border of inputs on Chrome */
 *,
 *:focus,
@@ -76,6 +96,7 @@ footer {
 .main-language {
     color: var(--main-color);
 }
+
 
 /* Botones */
 
@@ -102,7 +123,8 @@ footer {
 }
 
 
-/* Project */
+/* Projects */
+
 #project {
     padding-top: 12%;
 }
@@ -114,12 +136,36 @@ footer {
 #project p {
     text-rendering: optimizeLegibility;
     padding-top: 4%;
-        padding-left: 8%;
+    padding-left: 8%;
+    padding-left: 8%;
 }
 
 
 .image-project {
     align-self: center;
+}
+
+.content-container {
+    position: relative;
+    padding: 20px;
+}
+
+.close-button {
+    position: absolute;
+    background-color: white;
+    top: 10px;
+    right: 10px;
+    color: black;
+    border: none;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+}
+
+#work:not(.hidden) .close-button,
+#profile:not(.hidden) .close-button {
+    display: block;
 }
 
 /* Profile */
@@ -270,16 +316,6 @@ footer {
 
 .fade-in {
     animation: fadeIn 1s;
-}
-
-/* Toggle Switch */
-.switch {
-    position: fixed;
-    bottom: 33px;
-    right: 15px;
-    width: 89px;
-    height: 33px;
-    z-index: 9999;
 }
 
 .flex-fixed-width-item {
