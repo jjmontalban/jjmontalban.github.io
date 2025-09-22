@@ -292,3 +292,13 @@ input:checked + .slider:before { transform: translateX(30px); }
   opacity: 0;
 }
 
+.quote {
+    font-style: italic;
+}
+
+.pquote {
+    text-align: right;
+    margin-top: -1.5rem;  
+    margin-right: 1rem;
+}
+
