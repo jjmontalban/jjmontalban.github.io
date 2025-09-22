@@ -91,7 +91,7 @@ footer {
 
 /* Projects */
 #project {
-    padding-top: 12%;
+    padding-top: 2rem;
 }
 
 #project img {
@@ -248,15 +248,47 @@ input:checked + .slider:before { transform: translateX(30px); }
   pointer-events: auto;
 }
 
-.detalle-caso {
+
+/* Top-level sections */
+.section-fade {
   opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  display: none;
+  visibility: hidden;
+  max-height: 0;
+  overflow: hidden;
+  pointer-events: none;   
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
 }
 
-.detalle-caso.visible {
+.section-fade.is-visible {
+  opacity: 1;
+  visibility: visible;
+  max-height: 9999px;
+  overflow: visible;
+  pointer-events: auto;
+}
+
+
+/* Case details */
+.detalle-caso {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+}
+
+.detalle-caso.is-visible {
   display: block;
   opacity: 1;
-  transform: translateY(0);
+  visibility: visible;
 }
+
+/* Fade for "ver-detalle" buttons */
+.ver-detalle {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.ver-detalle.fade-out {
+  opacity: 0;
+}
+

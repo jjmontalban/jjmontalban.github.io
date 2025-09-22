@@ -1,115 +1,121 @@
-(function() {
-    function closeSection() {
-        resetSectionVisibility();
-        document.getElementById("short").classList.remove("hidden");
-        document.getElementById("contact").classList.remove("hidden");
+(function () {
+  // Show section with fade
+  function showSection(id) {
+    const el = document.getElementById(id);
+    if (el) el.classList.add('is-visible');
+  }
+
+  // Hide section with fade
+  function hideSection(id) {
+    const el = document.getElementById(id);
+    if (el) el.classList.remove('is-visible');
+  }
+
+  // Hide all top sections
+  function resetSectionVisibility() {
+    hideSection('short');
+    hideSection('work');
+    hideSection('contact');
+  }
+
+  // Close Work and return to home sections
+  function closeSection() {
+    resetSectionVisibility();
+    showSection('short');
+    showSection('contact');
+  }
+  window.closeSection = closeSection;
+
+  // Event delegation for all clicks
+  document.addEventListener('click', (e) => {
+    // Open Work from "Check Success Stories" / "Ver Casos de Éxito"
+    const workBtn = e.target.closest('.work-button');
+    if (workBtn) {
+      resetSectionVisibility();
+      showSection('work');
+      return;
     }
-    window.closeSection = closeSection;
 
-    function resetSectionVisibility() {
-        document.getElementById("short").classList.add("hidden");
-        document.getElementById("work").classList.add("hidden");
-        document.getElementById("contact").classList.add("hidden");
+    // Open case detail
+    const openBtn = e.target.closest('.ver-detalle');
+    if (openBtn) {
+      const caseId = openBtn.getAttribute('data-case');
+      const detalle = document.getElementById('detalle-' + caseId);
+      if (detalle) {
+        detalle.classList.add('is-visible'); // fade in detail
+
+        // fade out and then hide the open button
+        openBtn.classList.add('fade-out');
+        setTimeout(() => {
+          openBtn.classList.add('hidden');
+          openBtn.classList.remove('fade-out');
+        }, 300);
+      }
+      return;
     }
 
-    function showSection(sectionId) {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.classList.remove("hidden");
-        }
+    // Close case detail
+    const closeBtn = e.target.closest('.cerrar-detalle');
+    if (closeBtn) {
+      document.querySelectorAll('.detalle-caso.is-visible').forEach((el) => {
+        el.classList.remove('is-visible'); // fade out detail
+      });
+
+      // bring back all "open detail" buttons
+      document.querySelectorAll('.ver-detalle.hidden').forEach((btn) => {
+        btn.classList.remove('hidden');
+        btn.classList.add('fade-out'); // quick fade-in effect
+        setTimeout(() => btn.classList.remove('fade-out'), 50);
+      });
     }
+  });
 
-    document.body.addEventListener("click", function (e) {
-        // show detail view
-        if (e.target.classList.contains("ver-detalle")) {
-            const caseId = e.target.getAttribute("data-case");
-            const detalle = document.getElementById("detalle-" + caseId);
+  // Language switcher
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('toggle-language');
+    const savedLang = localStorage.getItem('lang') || 'es';
 
-            if (detalle) {
-                detalle.classList.remove("hidden");
-                setTimeout(() => detalle.classList.add("visible"), 10);
+    function switchLanguage(lang) {
+      const spanish = document.querySelectorAll('[data-lang="spanish"]');
+      const english = document.querySelectorAll('[data-lang="english"]');
+      const leftLabel = document.querySelector('.lang-left');
+      const rightLabel = document.querySelector('.lang-right');
 
-                e.target.classList.add("hidden");
-            }
-        }
-
-        // return to summary view
-        if (e.target.classList.contains("cerrar-detalle")) {
-            document.querySelectorAll(".detalle-caso.visible").forEach(el => {
-                el.classList.remove("visible");
-                setTimeout(() => el.classList.add("hidden"), 400);
-            });
-
-            document.querySelectorAll(".ver-detalle").forEach(btn => btn.classList.remove("hidden"));
-        }
-    });
-
-    function assignWorkButton() {
-        const workButtons = document.querySelectorAll('.work-button');
-        workButtons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                resetSectionVisibility();
-                showSection("work");
-            });
+      const show = (nodes) => nodes.forEach((el) => el.classList.add('lang-visible'));
+      const hide = (nodes) =>
+        nodes.forEach((el) => {
+          el.classList.remove('lang-visible');
+          setTimeout(() => {
+            el.style.display = 'none';
+          }, 400);
         });
+      const unhide = (nodes) => nodes.forEach((el) => (el.style.display = ''));
+
+      if (lang === 'es') {
+        unhide(spanish);
+        hide(english);
+        setTimeout(() => show(spanish), 50);
+        localStorage.setItem('lang', 'es');
+        leftLabel.style.opacity = '1';
+        rightLabel.style.opacity = '0.3';
+      } else {
+        unhide(english);
+        hide(spanish);
+        setTimeout(() => show(english), 50);
+        localStorage.setItem('lang', 'en');
+        leftLabel.style.opacity = '0.3';
+        rightLabel.style.opacity = '1';
+      }
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
-        // Inicializa idioma desde localStorage
-        const toggle = document.getElementById('toggle-language');
-        const savedLang = localStorage.getItem('lang') || 'es';
-
-        function switchLanguage(lang) {
-            const spanishElements = document.querySelectorAll('[data-lang="spanish"]');
-            const englishElements = document.querySelectorAll('[data-lang="english"]');
-            const leftLabel = document.querySelector('.lang-left');
-            const rightLabel = document.querySelector('.lang-right');
-
-            const show = (elements) => {
-                elements.forEach(el => el.classList.add('lang-visible'));
-            };
-
-            const hide = (elements) => {
-                elements.forEach(el => {
-                    el.classList.remove('lang-visible');
-                    setTimeout(() => {
-                        el.style.display = 'none';
-                    }, 400);
-                });
-            };
-
-            const unhide = (elements) => {
-                elements.forEach(el => {
-                    el.style.display = '';
-                });
-            };
-
-            if (lang === 'es') {
-                unhide(spanishElements);
-                hide(englishElements);
-                setTimeout(() => show(spanishElements), 50);
-                localStorage.setItem('lang', 'es');
-                leftLabel.style.opacity = '1';
-                rightLabel.style.opacity = '0.3';
-            } else {
-                unhide(englishElements);
-                hide(spanishElements);
-                setTimeout(() => show(englishElements), 50);
-                localStorage.setItem('lang', 'en');
-                leftLabel.style.opacity = '0.3';
-                rightLabel.style.opacity = '1';
-            }
-        }
-
-        if (toggle) {
-            toggle.checked = savedLang === 'en';
-            switchLanguage(savedLang);
-            assignWorkButton();
-            toggle.addEventListener('change', function () {
-                const newLang = this.checked ? 'en' : 'es';
-                switchLanguage(newLang);
-                setTimeout(assignWorkButton, 500);
-            });
-        }
-    });
+    if (toggle) {
+      toggle.checked = savedLang === 'en';
+      switchLanguage(savedLang);
+      // No need to rebind click handlers thanks to event delegation
+      toggle.addEventListener('change', function () {
+        const newLang = this.checked ? 'en' : 'es';
+        switchLanguage(newLang);
+      });
+    }
+  });
 })();
