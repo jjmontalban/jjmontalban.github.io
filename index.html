@@ -34,14 +34,14 @@
     <body>
 
         <!-- Swtich lang -->
-        <div style="position: fixed; top: 10px; right: 10px; z-index: 999;">
-        <label class="switch">
-            <input type="checkbox" id="toggle-language">
-            <span class="slider">
-            <span class="lang-left">EN</span>
-            <span class="lang-right">ES</span>
-            </span>
-        </label>
+        <div class="lang-btn">
+            <label class="switch">
+                <input type="checkbox" id="toggle-language">
+                <span class="slider">
+                <span class="lang-left">EN</span>
+                <span class="lang-right">ES</span>
+                </span>
+            </label>
         </div>
 
         <!-- Main Content -->
@@ -57,6 +57,10 @@
                     <p>I turn WordPress into business tools: CRMs, marketplaces, LMSs, booking systems and more.
                         <button class="inline-button work-button">Check Success Stories</button>
                     </p>
+                    <p>
+                        Besides client projects, I actively contribute to the WordPress ecosystem with plugins published in the official repository and personal technical experiments. 
+                        <button class="inline-button contributions-button">View Contributions</button>
+                    </p>
                 </div>
                 <!-- SPANISH -->
                 <div data-lang="spanish">
@@ -65,7 +69,12 @@
                     <p>Transformo WordPress en herramientas de negocio: CRMs, marketplaces, LMS, sistemas de reservas y más.
                         <button class="inline-button work-button">Ver Casos de Éxito</button>
                     </p>
+                    <p>Además de proyectos para clientes, contribuyo activamente al ecosistema WordPress con 
+                        <button class="inline-button contributions-button">Plugins publicados</button> 
+                        en el repositorio oficial y proyectos personales de experimentación técnica.
+                    </p>
                 </div>
+
             </div>
             </section>
 
@@ -88,7 +97,12 @@
             <section id="work" class="section-fade">
 
                 <div class="content-container">
-                    <button class="close-button" onclick="closeSection()">X</button>
+                    <button class="close-button" onclick="closeSection()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </button>
                 </div>
 
                 <!-- Brunimarsa -->
@@ -507,16 +521,50 @@
                             <p><button class="inline-button cerrar-detalle">← Cerrar</button></p>
                         </div>
                     </div>
-
+                    <!-- Links more projects -->
+                    <p>Discover more projects in my <span class="wave"><a href="https://behance.com/jjmontalban" target="_blank">Behance</a></span> 
+                        or my <span class="wave"><a href="https://github.com/jjmontalban/" target="_blank">Github</a></span>.
+                    </p>
+                    
                 </div>
                 <!-- End Projects -->
 
+            </section>
+            <!-- Contributions -->
+            <section id="contributions" class="section-fade">
 
+                <div class="content-container">
+                    <button class="close-button" onclick="closeSection()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                    </button>
+                </div>
+                <br><br>
+                <!-- Woo Quantity Settings -->
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-8 col-md-5 image-project">
+                            <img class="img-fluid" src="images/plugin-wp.png" alt="plugin woo quantity settings" />
+                        </div>
+                        <div class="col-12 col-md-7">
+                            <strong>Woo Product Quantity Settings</strong>
+                            <br><br>
+                            <span data-lang="english" class="lang-visible">Set minimum, maximum or range quantity in WooCommerce products.</span>
+                            <span data-lang="spanish">Permite establecer una cantidad mínima, máxima o un rango de productos en WooCommerce.</span>
+                            <br><br>
+                            <a href="https://wordpress.org/plugins/product-quantity-settings/" target="_blank" title="lugin woo quantity settings">
+                                <i class="fa-brands fa-wordpress"></i> WordPress.org
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                    
             </section>
 
         </main>
-
-       
 
         <script src="functions.js"></script>
         <script src="https://kit.fontawesome.com/386275e973.js" crossorigin="anonymous"></script>

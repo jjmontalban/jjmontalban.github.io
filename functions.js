@@ -16,59 +16,70 @@
     hideSection('short');
     hideSection('work');
     hideSection('contact');
+    hideSection('contributions');
   }
 
   // Close Work and return to home sections
-  function closeSection() {
+  function closeSection(sectionId) {
     resetSectionVisibility();
+    if (sectionId) hideSection(sectionId);
     showSection('short');
     showSection('contact');
   }
   window.closeSection = closeSection;
 
   // Event delegation for all clicks
-  document.addEventListener('click', (e) => {
-    // Open Work from "Check Success Stories" / "Ver Casos de Éxito"
-    const workBtn = e.target.closest('.work-button');
-    if (workBtn) {
-      resetSectionVisibility();
-      showSection('work');
-      return;
+document.addEventListener('click', (e) => {
+  // Open Work from "Check Success Stories" / "Ver Casos de Éxito"
+  const workBtn = e.target.closest('.work-button');
+  if (workBtn) {
+    resetSectionVisibility();
+    showSection('work');
+    return;
+  }
+
+  // Open Contributions from "Plugins publicados"
+  const contribBtn = e.target.closest('.contributions-button');
+  if (contribBtn) {
+    resetSectionVisibility();
+    showSection('contributions');
+    return;
+  }
+
+  // Open case detail
+  const openBtn = e.target.closest('.ver-detalle');
+  if (openBtn) {
+    const caseId = openBtn.getAttribute('data-case');
+    const detalle = document.getElementById('detalle-' + caseId);
+    if (detalle) {
+      detalle.classList.add('is-visible'); // fade in detail
+
+      // fade out and then hide the open button
+      openBtn.classList.add('fade-out');
+      setTimeout(() => {
+        openBtn.classList.add('hidden');
+        openBtn.classList.remove('fade-out');
+      }, 300);
     }
+    return;
+  }
 
-    // Open case detail
-    const openBtn = e.target.closest('.ver-detalle');
-    if (openBtn) {
-      const caseId = openBtn.getAttribute('data-case');
-      const detalle = document.getElementById('detalle-' + caseId);
-      if (detalle) {
-        detalle.classList.add('is-visible'); // fade in detail
+  // Close case detail
+  const closeBtn = e.target.closest('.cerrar-detalle');
+  if (closeBtn) {
+    document.querySelectorAll('.detalle-caso.is-visible').forEach((el) => {
+      el.classList.remove('is-visible'); // fade out detail
+    });
 
-        // fade out and then hide the open button
-        openBtn.classList.add('fade-out');
-        setTimeout(() => {
-          openBtn.classList.add('hidden');
-          openBtn.classList.remove('fade-out');
-        }, 300);
-      }
-      return;
-    }
+    // bring back all "open detail" buttons
+    document.querySelectorAll('.ver-detalle.hidden').forEach((btn) => {
+      btn.classList.remove('hidden');
+      btn.classList.add('fade-out'); // quick fade-in effect
+      setTimeout(() => btn.classList.remove('fade-out'), 50);
+    });
+  }
+});
 
-    // Close case detail
-    const closeBtn = e.target.closest('.cerrar-detalle');
-    if (closeBtn) {
-      document.querySelectorAll('.detalle-caso.is-visible').forEach((el) => {
-        el.classList.remove('is-visible'); // fade out detail
-      });
-
-      // bring back all "open detail" buttons
-      document.querySelectorAll('.ver-detalle.hidden').forEach((btn) => {
-        btn.classList.remove('hidden');
-        btn.classList.add('fade-out'); // quick fade-in effect
-        setTimeout(() => btn.classList.remove('fade-out'), 50);
-      });
-    }
-  });
 
   // Language switcher
   document.addEventListener('DOMContentLoaded', function () {
