@@ -55,6 +55,10 @@ a.link-btn {
   padding-top: 5px;
 }
 
+ul {
+  padding-left: 0;
+}
+
 #content {
     padding: 4% 2% 5% 2%;
     max-width: 940px;
@@ -215,7 +219,10 @@ footer {
 /* Media Queries */
 @media (max-width: 720px) {
     h1 { font-size: 3em; }
+    .pquote { margin-top: 0; }
 }
+
+
 
 /* Language Switch */
 .lang-btn {
