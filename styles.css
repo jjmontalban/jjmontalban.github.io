@@ -27,6 +27,13 @@ h2 {
     font-weight: 700;
 }
 
+h3 {
+  font-size: 1.1rem;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
 html {
     position: relative;
     min-height: 100%;
@@ -42,6 +49,10 @@ a {
 a:hover {
     background-color: var(--link-bg-hover);
     text-decoration: none;
+}
+
+a.link-btn {
+  padding-top: 5px;
 }
 
 #content {
@@ -96,15 +107,15 @@ footer {
 }
 
 /* Projects */
-#project {
+.project-item {
     padding-top: 2rem;
 }
 
-#project img {
+.project-item img {
     padding: 1em;
 }
 
-#project p {
+.project-item p {
     text-rendering: optimizeLegibility;
     padding-top: 4%;
     padding-left: 8%;
@@ -141,6 +152,7 @@ footer {
   width: 60%;   /* ajusta el tamaño */
   height: 60%;
 }
+
 
 
 .section-fade.is-visible .close-button { display: block !important; }
@@ -312,9 +324,10 @@ input:checked + .slider:before { transform: translateX(30px); }
   transition: opacity 0.3s ease-in-out;
 }
 
-.ver-detalle.fade-out {
+.ver-detalle.hidden {
   opacity: 0;
 }
+
 
 .quote {
     font-style: italic;
@@ -337,13 +350,6 @@ input:checked + .slider:before { transform: translateX(30px); }
   font-size: 2rem;
   margin-bottom: 30px;
   font-weight: 800;
-}
-
-#contributions h3 {
-  font-size: 1.4rem;
-  margin-top: 20px;
-  margin-bottom: 15px;
-  font-weight: 600;
 }
 
 #contributions ul {

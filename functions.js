@@ -51,15 +51,15 @@ document.addEventListener('click', (e) => {
   if (openBtn) {
     const caseId = openBtn.getAttribute('data-case');
     const detalle = document.getElementById('detalle-' + caseId);
+
+    // Close any other open detail before showing the new one
+    document.querySelectorAll('.detalle-caso.is-visible').forEach((el) => {
+        el.classList.remove('is-visible');
+    });
+
     if (detalle) {
       detalle.classList.add('is-visible'); // fade in detail
-
-      // fade out and then hide the open button
-      openBtn.classList.add('fade-out');
-      setTimeout(() => {
-        openBtn.classList.add('hidden');
-        openBtn.classList.remove('fade-out');
-      }, 300);
+      openBtn.classList.add('hidden'); // hide the button
     }
     return;
   }
@@ -74,8 +74,6 @@ document.addEventListener('click', (e) => {
     // bring back all "open detail" buttons
     document.querySelectorAll('.ver-detalle.hidden').forEach((btn) => {
       btn.classList.remove('hidden');
-      btn.classList.add('fade-out'); // quick fade-in effect
-      setTimeout(() => btn.classList.remove('fade-out'), 50);
     });
   }
 });
