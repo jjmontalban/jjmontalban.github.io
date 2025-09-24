@@ -19,12 +19,15 @@ h1 {
     font-family: "Inter", sans-serif;
     font-size: 2.5em;
     font-weight: 700;
+    margin-bottom: 0.5rem;
 }
 
 h2 {
     font-family: "Inter", sans-serif;
     font-size: 2.0em;
     font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
 }
 
 h3 {
@@ -206,6 +209,10 @@ footer {
 /* Effects */
 .prioritize { font-size: larger; }
 
+.bio-section {
+    margin-bottom: 2rem;
+}
+
 @keyframes wave-animation {
     0% { transform: rotate(0); }
     10% { transform: rotate(14deg); }
@@ -377,4 +384,8 @@ input:checked + .slider:before { transform: translateX(30px); }
 
 #contributions a:hover {
   text-decoration: underline;
+}
+
+.more {
+  margin: 40px;
 }
