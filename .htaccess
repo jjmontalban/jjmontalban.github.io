@@ -1,0 +1,11 @@
+# Activa rewrite
+RewriteEngine On
+RewriteBase /
+
+# Si el recurso físico existe (archivo o carpeta), sírvelo tal cual (CSS, JS, imágenes, etc.)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Si NO existe, entrega index.html (SPA con History API)
+RewriteRule ^ index.html [L]
