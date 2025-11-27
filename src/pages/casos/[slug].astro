@@ -1,0 +1,55 @@
+---
+import Header from "../../components/Header.astro";
+import Project from "../../components/Project.astro";
+import Sidebar from "../../components/Sidebar.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const casos = await getCollection("casos");
+
+  return casos.map(caso=>({
+    params:{slug:caso.slug},
+    props:{caso}
+  }));
+}
+
+const { caso } = Astro.props;
+const project = caso.data;
+---
+
+<!DOCTYPE html>
+<html>
+  <Header title={`${project.title} | JJ Montalban`} />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="casos" />
+      <nav class="main">
+        <div class="container">
+
+          <div class="back-nav-container">
+            <a href="/casos" class="back-nav-button w-inline-block">
+              <img src="/assets/back.svg" alt="" />
+              <div>Volver</div>
+            </a>
+          </div>
+
+          <div class="content-container">
+            <h1>{project.title}</h1>
+
+            <section class="items-container">
+              <div class="resouce-items">
+                <Project title={project.title} desc={project.desc} tech={project.tech} />
+              </div>
+
+              {project.image && (
+                <img src={project.image} alt={project.title} class="case-image" />
+              )}
+            </section>
+
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>
