@@ -1,7 +1,6 @@
 ---
 import Header from "../components/Header.astro";
 import Project from "../components/Project.astro";
-import Sidebar from "../components/Sidebar.astro";
 const projects = [
   {
     title: "CodeCraft",
@@ -35,37 +34,33 @@ const projects = [
 ---
 
 <!DOCTYPE html>
-<html
->
-  <Header title="Software Development | Sam Bernstein" />
+<html>
+  <Header title="Casos de Éxito | Sam Bernstein" />
   <body>
-    <div class="content">
-        <Sidebar selectedItem="software-development" />
-      <nav class="main">
-        <div class="container">
-          <div class="back-nav-container">
-            <a href="/" class="back-nav-button w-inline-block"
-              ><img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
-              <div>Back</div></a
-            >
-          </div>
-          <div class="content-container">
-            <h1>Software Development</h1>
-            <section class="items-container">
-                <div class="resouce-items">
-                    {projects.map(project => (
-                      <Project 
-                        title={project.title} 
-                        desc={project.desc}
-                        tech={project.tech}
-                      />
-                    ))}
-                  </div>
-            </section>
-          </div>
+    <nav class="main">
+      <div class="container">
+        <div class="back-nav-container">
+          <a href="/" class="back-nav-button w-inline-block"
+            ><img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
+            <div>Back</div></a
+          >
         </div>
-      </nav>
-    </div>
+        <div class="content-container">
+          <h1>Casos de éxito</h1>
+          <section class="items-container">
+            <div class="resouce-items">
+              {projects.map(project => (
+                <Project
+                  title={project.title}
+                  desc={project.desc}
+                  tech={project.tech}
+                />
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+    </nav>
 
     <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
   </body>
