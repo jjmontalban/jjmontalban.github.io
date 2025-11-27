@@ -35,11 +35,12 @@ const projects = [
 ---
 
 <!DOCTYPE html>
-<html>
-  <Header title="Casos de Éxito | JJ Montalban" />
+<html
+>
+  <Header title="Software Development | JJ Montalban" />
   <body>
     <div class="content">
-      <Sidebar selectedItem="casos" />
+        <Sidebar selectedItem="software-development" />
       <nav class="main">
         <div class="container">
           <div class="back-nav-container">
@@ -49,17 +50,17 @@ const projects = [
             >
           </div>
           <div class="content-container">
-            <h1>Casos de éxito</h1>
+            <h1>Software Development</h1>
             <section class="items-container">
-              <div class="resouce-items">
-                {projects.map(project => (
-                  <Project
-                    title={project.title}
-                    desc={project.desc}
-                    tech={project.tech}
-                  />
-                ))}
-              </div>
+                <div class="resouce-items">
+                    {projects.map(project => (
+                      <Project 
+                        title={project.title} 
+                        desc={project.desc}
+                        tech={project.tech}
+                      />
+                    ))}
+                  </div>
             </section>
           </div>
         </div>
