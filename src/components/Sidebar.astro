@@ -43,12 +43,12 @@ const { selectedItem } = Astro.props;
         <div>Home</div>
       </a>
       <a
-        href="/software-development"
+        href="/casos"
         class={`nav-link-container w-inline-block ${
-          selectedItem === 'software-development' ? 'w--current' : ''
+          selectedItem === 'casos' ? 'w--current' : ''
         }`}
         aria-current={
-          selectedItem === 'software-development' ? 'page' : undefined
+          selectedItem === 'casos' ? 'page' : undefined
         }
       >
         <img
@@ -57,12 +57,12 @@ const { selectedItem } = Astro.props;
           alt=""
           class="nav-link-image"
         />
-        <div>Software development</div>
+        <div>Casos de éxito</div>
       </a>
       <a
-        href="/devops"
+        href="/plugins"
         class={`nav-link-container w-inline-block ${
-          selectedItem === 'devops' ? 'w--current' : ''
+          selectedItem === 'plugins' ? 'w--current' : ''
         }`}
       >
         <img
@@ -71,12 +71,12 @@ const { selectedItem } = Astro.props;
           alt=""
           class="nav-link-image"
         />
-        <div>DevOps</div>
+        <div>Plugins publicados</div>
       </a>
       <a
-        href="/personal-projects"
+        href="/contacto"
         class={`nav-link-container w-inline-block ${
-          selectedItem === 'personal-projects' ? 'w--current' : ''
+          selectedItem === 'contacto' ? 'w--current' : ''
         }`}
       >
         <img
@@ -85,7 +85,7 @@ const { selectedItem } = Astro.props;
           alt=""
           class="nav-link-image"
         />
-        <div>Personal projects</div>
+        <div>Contacto</div>
       </a>
     </nav>
 
@@ -107,7 +107,7 @@ const { selectedItem } = Astro.props;
 
   <script>
     import { setupNav } from '../scripts/nav.js';
-    
+
     let cleanup;
     document.addEventListener('astro:page-load', () => {
       if (cleanup) cleanup();
