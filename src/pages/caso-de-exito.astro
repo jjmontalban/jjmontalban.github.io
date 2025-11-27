@@ -17,24 +17,27 @@ const project = {
 <html>
   <Header title="Caso de éxito | Sam Bernstein" />
   <body>
-    <nav class="main">
-      <div class="container">
-        <div class="back-nav-container">
-          <a href="/casos" class="back-nav-button w-inline-block"
-            ><img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
-            <div>Volver</div></a
-          >
+    <div class="content">
+      <Sidebar selectedItem="casos" />
+      <nav class="main">
+        <div class="container">
+          <div class="back-nav-container">
+            <a href="/casos" class="back-nav-button w-inline-block"
+              ><img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
+              <div>Volver</div></a
+            >
+          </div>
+          <div class="content-container">
+            <h1>Caso de éxito</h1>
+            <section class="items-container">
+              <div class="resouce-items">
+                <Project title={project.title} desc={project.desc} tech={project.tech} />
+              </div>
+            </section>
+          </div>
         </div>
-        <div class="content-container">
-          <h1>Caso de éxito</h1>
-          <section class="items-container">
-            <div class="resouce-items">
-              <Project title={project.title} desc={project.desc} tech={project.tech} />
-            </div>
-          </section>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
 
     <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
   </body>
