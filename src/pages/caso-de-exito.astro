@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro";
+import Navbar from "../components/Navbar.astro";
 import Project from "../components/Project.astro";
-import Sidebar from "../components/Sidebar.astro";
 const project = {
   title: "CodeCraft",
   desc: [
@@ -18,27 +18,25 @@ const project = {
 <html>
   <Header title="Caso de éxito | JJ Montalban" />
   <body>
-    <div class="content">
-      <Sidebar selectedItem="casos" />
-      <nav class="main">
-        <div class="container">
-          <div class="back-nav-container">
-            <a href="/casos" class="back-nav-button w-inline-block"
-              ><img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
-              <div>Volver</div></a
-            >
-          </div>
-          <div class="content-container">
-            <h1>Caso de éxito</h1>
-            <section class="items-container">
-              <div class="resouce-items">
-                <Project title={project.title} desc={project.desc} tech={project.tech} />
-              </div>
-            </section>
-          </div>
+    <Navbar selectedItem="casos" />
+    <nav class="main">
+      <div class="container">
+        <div class="back-nav-container">
+          <a href="/casos" class="back-nav-button w-inline-block"
+            ><img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
+            <div>Volver</div></a
+          >
         </div>
-      </nav>
-    </div>
+        <div class="content-container">
+          <h1>Caso de éxito</h1>
+          <section class="items-container">
+            <div class="resouce-items">
+              <Project title={project.title} desc={project.desc} tech={project.tech} />
+            </div>
+          </section>
+        </div>
+      </div>
+    </nav>
 
     <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
   </body>
