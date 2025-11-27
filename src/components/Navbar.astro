@@ -2,17 +2,9 @@
 const { selectedItem } = Astro.props;
 ---
 
-<aside
-  data-animation="default"
-  data-collapse="medium"
-  data-duration="400"
-  data-easing="ease"
-  data-easing2="ease"
-  role="banner"
-  class="sidebar w-nav"
->
+<nav class="navbar">
   <div class="nav-content">
-    <a href="/" class="w-nav-brand" aria-label="home">
+    <a href="/" class="nav-brand" aria-label="home">
       <div class="niv-data">
         <img
           src="/assets/sam.jpg"
@@ -27,7 +19,7 @@ const { selectedItem } = Astro.props;
       </div>
     </a>
 
-    <nav role="navigation" class="w-nav-menu">
+    <div class="nav-links">
       <a
         href="/"
         class={`nav-link-container w-inline-block ${
@@ -87,35 +79,6 @@ const { selectedItem } = Astro.props;
         />
         <div>Contacto</div>
       </a>
-    </nav>
-
-    <div
-      class="navbar-icon-button w-nav-button"
-      style="-webkit-user-select: text;"
-      aria-label="menu"
-      role="button"
-      tabindex="0"
-    >
-      <img
-        src="/assets/menu.svg"
-        loading="eager"
-        alt=""
-        class="navbar-icon"
-      />
     </div>
   </div>
-
-  <script>
-    import { setupNav } from '../scripts/nav.js';
-
-    let cleanup;
-    document.addEventListener('astro:page-load', () => {
-      if (cleanup) cleanup();
-      cleanup = setupNav();
-    });
-
-    document.addEventListener('astro:before-swap', () => {
-      if (cleanup) cleanup();
-    });
-  </script>
-</aside>
+</nav>
