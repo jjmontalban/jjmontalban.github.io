@@ -1,88 +1,84 @@
 ---
 import Header from "../components/Header.astro";
-import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 ---
 
-<!DOCTYPE html>
-<html
->
-  <Header title="JJ Montalban" />
-  <body>
-    <div class="content">
-      <Sidebar selectedItem="home" />
-      <nav class="main">
-        <div class="container">
-          <main class="fold-content-container">
-            <div class="fold-content">
-              <h1>Hi, I'm JJ.<br />I build things for the web.</h1>
-              <p class="lead">
-                Experienced backend developer and cloud architect. A proactive team member dedicated to continuous learning, problem-solving, and aiding teammates in achieving quicker outcomes.
-              </p>
-            </div>
-          <a href="/contacto" class="button w-button">Contacto</a>
-        </main>
-        <div class="projects-section">
-          <!-- Casos de éxito -->
-          <a href="/casos" class="projects-container">
-            <div class="single-projects-category">
-              <div class="projects-category-image-container">
-                <img src="./assets/browser.svg" loading="lazy" alt="" class="projects-category-image" />
-              </div>
-            </div>
-            <div class="single-projects-content">
-              <h4>Casos de éxito</h4>
-              <div class="tech-tools-container">
-                <div class="mini-label-white gray-color">Technologies &amp; tools</div>
-                <div class="chips-container chips-container-small-width">
-                  <div class="single-chip small-chip">React</div>
-                  <div class="single-chip small-chip">Next.js</div>
-                  <div class="single-chip small-chip">Node.js</div>
-                  <div class="single-chip small-chip">MongoDB</div>
-                  <div class="single-chip small-chip">Heroku</div>
-                  <div class="single-chip small-chip">RabbitMQ</div>
-                  <div class="single-chip small-chip">Express.js</div>
-                  <div class="single-chip small-chip">TypeScript</div>
-                  <div class="single-chip small-chip">NestJS</div>
-                  <div class="single-chip small-chip">Angular</div>
-                  <div class="single-chip small-chip">Postgres</div>
-                  <div class="single-chip small-chip">Linode</div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!-- Plugins publicados -->
-          <a href="/plugins" class="projects-container">
-            <div class="single-projects-category">
-              <div class="projects-category-image-container devops-img">
-                <img src="./assets/database.svg" loading="lazy" alt="" class="projects-category-image" />
-              </div>
-            </div>
-            <div class="single-projects-content">
-              <h4>Plugins publicados</h4>
-              <div class="tech-tools-container">
-                <div class="mini-label-white gray-color">Technologies &amp; tools</div>
-                <div class="chips-container chips-container-small-width">
-                  <div class="single-chip small-chip">Terraform</div>
-                  <div class="single-chip small-chip">Azure</div>
-                  <div class="single-chip small-chip">AWS</div>
-                  <div class="single-chip small-chip">Docker</div>
-                  <div class="single-chip small-chip">Kubernetes</div>
-                  <div class="single-chip small-chip">GitLab CI/CD</div>
-                  <div class="single-chip small-chip">RKE</div>
-                  <div class="single-chip small-chip">Node.js</div>
-                  <div class="single-chip small-chip">RabbitMQ</div>
-                  <div class="single-chip small-chip">Linux</div>
-                  <div class="single-chip small-chip">Bash</div>
-                  <div class="single-chip small-chip">Grafana</div>
-                  <div class="single-chip small-chip">Prometheus</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </nav>
+<Header />
 
-    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
-  </body>
-</html>
+<main id="content">
+
+    <!-- Intro -->
+    <section id="short" class="section-fade is-visible">
+        <div style="position:relative;min-height:200px;">
+            <div data-lang="spanish" class="lang-visible">
+                <h1><span class="wave">Hola</span>, soy JJ</h1>
+                <h2>Desarrollo de aplicaciones web con WordPress</h2>
+
+                <p class="prioritize">
+                    Plugins personalizados, integraciones complejas y soluciones avanzadas
+                    para empresas que necesitan más que una web.
+                </p>
+
+                <p class="bio-section">
+                    Transformo WordPress en herramientas de negocio con soluciones a medida:
+                    CRMs, sistemas de gestión integrados, reservas y más.
+                    Revisa algunos
+                    <button class="inline-button work-button">casos de éxito</button>.
+                </p>
+
+                <p class="bio-section">
+                    Además de proyectos para clientes, contribuyo activamente al ecosistema WordPress con
+                    <button class="inline-button contributions-button">plugins publicados</button>
+                    en el repositorio oficial y proyectos personales.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="section-fade is-visible">
+        <p data-lang="spanish" class="lang-visible">
+            Pincha en los links para encontrarme o envíame un email:
+            <a href="mailto:jjmontalban@gmail.com">click</a>
+        </p>
+
+        <nav>
+            <ul>
+                <li class="icoGithub">
+                    <a href="https://github.com/jjmontalban" target="_blank" title="Github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="icoWordpress">
+                    <a href="https://profiles.wordpress.org/jjmontalban/" target="_blank" title="Wordpress">
+                        <i class="fa-brands fa-wordpress"></i>
+                    </a>
+                </li>
+                <li class="icoBehance">
+                    <a href="https://www.behance.net/jjmontalban" target="_blank" title="Behance">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                </li>
+                <li class="icoLinkedin">
+                    <a href="https://www.linkedin.com/in/jjmontalban/" target="_blank" title="Linkedin">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="icoUnsplash">
+                    <a href="https://unsplash.com/@jjmontalban" target="_blank" title="Unsplash">
+                        <i class="fa-brands fa-unsplash"></i>
+                    </a>
+                </li>
+                <li class="icoChess">
+                    <a href="https://www.chess.com/member/jjmontalban" target="_blank" title="Chess">
+                        <i class="fas fa-chess-king"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+</main>
+
+<Footer />
