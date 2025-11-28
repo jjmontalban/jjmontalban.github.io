@@ -442,6 +442,48 @@ p {
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
 }
 
+.case-detail {
+  margin-top: 48px;
+  grid-row-gap: 24px;
+  flex-direction: column;
+  display: flex;
+}
+
+.case-detail-section {
+  background-color: rgba(28, 28, 28, 0.32);
+  border: 1px solid #353535;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
+.case-detail-section h3 {
+  color: #fff;
+  margin-top: 0;
+}
+
+.case-detail-section p {
+  color: #dcdcdc;
+  line-height: 24px;
+  margin-bottom: 0;
+}
+
+.case-quote {
+  border-left: 3px solid #f5546f;
+}
+
+.case-quote-text {
+  color: #fff;
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 8px;
+}
+
+.case-quote-author {
+  color: #a8a8a8;
+  margin-bottom: 0;
+}
+
 .resouce-items {
   grid-column-gap: 64px;
   grid-row-gap: 64px;
