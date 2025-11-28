@@ -38,7 +38,12 @@ const project = caso.data;
 
             <section class="items-container">
               <div class="resouce-items">
-                <Project title={project.title} desc={project.desc} tech={project.tech} />
+                <Project
+                  title={project.title}
+                  desc={project.desc}
+                  tech={project.tech}
+                  link={project.link}
+                />
               </div>
 
               {project.image && (

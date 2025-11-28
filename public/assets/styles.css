@@ -419,6 +419,29 @@ p {
   font-size: 16px;
 }
 
+.project-link-out {
+  margin: 12px 0 4px;
+}
+
+.project-link-out a {
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.project-link-out a:hover {
+  color: #f5546f;
+  border-color: #f5546f;
+}
+
+.case-image {
+  margin-top: 32px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 720px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+}
+
 .resouce-items {
   grid-column-gap: 64px;
   grid-row-gap: 64px;
