@@ -1,5 +1,6 @@
 ---
-const { title, desc, tech } = Astro.props;
+const { title, desc, tech, link, showLink = true } = Astro.props;
+const linkLabel = link ? new URL(link).hostname.replace(/^www\./, '') : '';
 ---
 
 <div class="single-item">
@@ -9,7 +10,14 @@ const { title, desc, tech } = Astro.props;
       {desc.map(item => <li>{item}</li>)}
     </ul>
   </div>
-  <div class="mini-label-white">Technologies &amp; tools</div>
+  {link && showLink && (
+    <div class="project-link-out">
+      <a href={link} target="_blank" rel="noopener noreferrer">
+        Visitar {linkLabel || 'proyecto'}
+      </a>
+    </div>
+  )}
+  <div class="mini-label-white">Tecnologías y herramientas</div>
   <div class="chips-container">
     {tech.map(techItem => <div class="single-chip">{techItem}</div>)}
   </div>

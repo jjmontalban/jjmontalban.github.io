@@ -2,40 +2,9 @@
 import Header from "../components/Header.astro";
 import Project from "../components/Project.astro";
 import Sidebar from "../components/Sidebar.astro";
+import { getCollection } from "astro:content";
 
-const projects=[
-  {
-    slug:'codecraft',
-    title:'CodeCraft',
-    desc:[
-      'Developed a large-scale e-commerce platform for indie game developers',
-      'Designed and implemented UI, backend, and database architecture',
-      'Contributed to RESTful API and GraphQL design',
-      'Led a team of three engineers for several months'
-    ],
-    tech:['React','Next.js','Node.js','MongoDB','Heroku']
-  },
-  {
-    slug:'cloudmason',
-    title:'CloudMason',
-    desc:[
-      'Contributed to microservices architecture design for email distribution system',
-      'Created a backend infrastructure with queues and an event bus',
-      'Designed to handle a high volume ~3 million emails per day'
-    ],
-    tech:['Node.js','RabbitMQ','Docker','Kubernetes']
-  },
-  {
-    slug:'sarah',
-    title:'Sarah (HealthEase.io)',
-    desc:[
-      'Contributed to Israel\'s largest telehealth platform for doctors and patients',
-      'Developed appointment and billing systems',
-      'Resolved live production bugs and server issues'
-    ],
-    tech:['React','Node.js','Express.js','MySQL','AWS']
-  }
-];
+const casos = (await getCollection("casos")).sort((a, b) => a.data.order - b.data.order);
 ---
 
 <!DOCTYPE html>
@@ -49,7 +18,7 @@ const projects=[
           <div class="back-nav-container">
             <a href="/" class="back-nav-button w-inline-block">
               <img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
-              <div>Back</div>
+              <div>Volver</div>
             </a>
           </div>
 
@@ -58,12 +27,13 @@ const projects=[
 
             <section class="items-container">
               <div class="resouce-items">
-                {projects.map(project=>(
-                  <a href={`/casos/${project.slug}`} class="project-link">
+                {casos.map(({ slug, data }) => (
+                  <a href={`/casos/${slug}`} class="project-link">
                     <Project
-                      title={project.title}
-                      desc={project.desc}
-                      tech={project.tech}
+                      title={data.title}
+                      desc={data.desc}
+                      tech={data.tech}
+                      showLink={false}
                     />
                   </a>
                 ))}
