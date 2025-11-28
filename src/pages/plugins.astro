@@ -1,6 +1,8 @@
 ---
 import Header from '../components/Header.astro';
 import Project from "../components/Project.astro";
+import Sidebar from "../components/Sidebar.astro";
+
 const projects = [
   {
     title: "NetCare",
@@ -39,6 +41,7 @@ const projects = [
   <body>
     <nav class="main">
       <div class="container">
+        <Sidebar selectedItem="plugins" />
         <div class="back-nav-container">
           <a href="/" class="back-nav-button w-inline-block"
             ><img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />

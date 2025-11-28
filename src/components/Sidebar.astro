@@ -2,24 +2,32 @@
 const { selectedItem } = Astro.props;
 ---
 
-<nav class="navbar">
+<aside
+  data-animation="default"
+  data-collapse="medium"
+  data-duration="400"
+  data-easing="ease"
+  data-easing2="ease"
+  role="banner"
+  class="sidebar w-nav"
+>
   <div class="nav-content">
-    <a href="/" class="nav-brand" aria-label="home">
+    <a href="/" class="w-nav-brand" aria-label="home">
       <div class="niv-data">
         <img
-          src="/assets/jj.png"
+          src="/assets/sam.jpg"
           loading="eager"
           alt="Profile picture"
           class="niv-image"
         />
         <div>
-          <div class="label-white">JJ Montalban</div>
+          <div class="label-white">Sam Bernstein</div>
           <div class="label-gray">Software Engineer</div>
         </div>
       </div>
     </a>
 
-    <div class="nav-links">
+    <nav role="navigation" class="w-nav-menu">
       <a
         href="/"
         class={`nav-link-container w-inline-block ${
@@ -79,6 +87,35 @@ const { selectedItem } = Astro.props;
         />
         <div>Contacto</div>
       </a>
+    </nav>
+
+    <div
+      class="navbar-icon-button w-nav-button"
+      style="-webkit-user-select: text;"
+      aria-label="menu"
+      role="button"
+      tabindex="0"
+    >
+      <img
+        src="/assets/menu.svg"
+        loading="eager"
+        alt=""
+        class="navbar-icon"
+      />
     </div>
   </div>
-</nav>
+
+  <script>
+    import { setupNav } from '../scripts/nav.js';
+
+    let cleanup;
+    document.addEventListener('astro:page-load', () => {
+      if (cleanup) cleanup();
+      cleanup = setupNav();
+    });
+
+    document.addEventListener('astro:before-swap', () => {
+      if (cleanup) cleanup();
+    });
+  </script>
+</aside>
