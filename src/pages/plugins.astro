@@ -2,41 +2,53 @@
 import Header from '../components/Header.astro';
 import Project from "../components/Project.astro";
 import Sidebar from "../components/Sidebar.astro";
-const projects = [
+
+const plugins = [
   {
-    title: "NetCare",
+    title: "Woo Product Quantity Settings",
     desc: [
-      "Built an infrastructure for a telemedicine startup focusing on remote patient monitoring",
-      "Created Azure environment from scratch using Terraform as a IaC tool",
-      "Developed a comprehensive CI/CD pipeline for mobile app deployment",
+      "Permite definir cantidad mínima, máxima o rangos en productos de WooCommerce",
+      "Configura restricciones por producto sin escribir código",
     ],
-    tech: ["Terraform", "Azure", "Docker", "Nginx", "GitLab CI/CD"]
+    tech: ["WordPress", "WooCommerce", "PHP", "JavaScript"],
+    link: "https://wordpress.org/plugins/product-quantity-settings/",
   },
   {
-    title: "DataMesh",
+    title: "Simple EU VAT Number",
     desc: [
-      "Built an infrastructure for a data analytics platform",
-      "Configured VMs and deployed a multi-node Kubernetes cluster on AWS",
-      "Designed to handle a high volume of ~5 million data points per day",
-      "Integrated Grafana and Prometheus for monitoring",
+      "Gestiona el IVA intracomunitario en tiendas WooCommerce",
+      "Valida números de IVA y ajusta impuestos automáticamente",
     ],
-    tech: ["Docker", "Kubernetes", "AWS", "Node.js", "RabbitMQ"]
+    tech: ["WordPress", "WooCommerce", "PHP", "JavaScript"],
+    link: "https://wordpress.org/plugins/eu-vat-number/",
   },
   {
-    title: "CloudEase",
+    title: "Idealista Feed",
     desc: [
-      "Migrated a cloud-based CRM system from one provider to another",
-      "Built the new GCP infrastructure using Terraform as a IaC tool",
-      "Deployed logging and monitoring tools in GKE cluster",
+      "Exporta propiedades desde WordPress a Idealista mediante feed automático",
+      "Mantiene disponibilidad y precios sincronizados sin tareas manuales",
     ],
-    tech: ["GCP", "Terraform", "Kubernetes", "GitLab"]
-  }
+    tech: ["WordPress", "PHP", "WP REST API", "XML"],
+    link: "https://wordpress.org/plugins/idealista-feed-pro/",
+  },
 ];
+
+const personalProject = {
+  title: "Filmder — Headless WordPress + Vue.js",
+  desc: [
+    "Game app experimental con Vue.js y WordPress como backend headless",
+    "Custom Post Type ‘Movies’, consumo de la API de TMDB y plugins para extender el WP REST API",
+    "Repositorios independientes para frontend y backend",
+  ],
+  tech: ["Vue.js", "WordPress (headless)", "WP REST API", "TMDB API", "PHP", "JavaScript"],
+  link: "https://github.com/jjmontalban/filmder-frontend",
+  showLink: true,
+};
 ---
 
 <!DOCTYPE html>
 <html>
-  <Header title="Plugins publicados | Sam Bernstein" />
+  <Header title="Plugins publicados | JJMontalban" />
   <body>
     <div class="content">
       <Sidebar selectedItem="plugins" />
@@ -45,20 +57,33 @@ const projects = [
           <div class="back-nav-container">
             <a href="/" class="back-nav-button w-inline-block"
               ><img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
-              <div>Back</div></a
+              <div>Volver</div></a
             >
           </div>
           <div class="content-container">
-            <h1>Plugins publicados</h1>
+            <h1>Plugins publicados en WordPress.org</h1>
             <section class="items-container">
               <div class="resouce-items">
-                {projects.map(project => (
+                {plugins.map(plugin => (
                   <Project
-                    title={project.title}
-                    desc={project.desc}
-                    tech={project.tech}
+                    title={plugin.title}
+                    desc={plugin.desc}
+                    tech={plugin.tech}
+                    link={plugin.link}
                   />
                 ))}
+              </div>
+            </section>
+
+            <h2>Proyecto personal destacado</h2>
+            <section class="items-container">
+              <div class="resouce-items">
+                <Project
+                  title={personalProject.title}
+                  desc={personalProject.desc}
+                  tech={personalProject.tech}
+                  link={personalProject.link}
+                />
               </div>
             </section>
           </div>

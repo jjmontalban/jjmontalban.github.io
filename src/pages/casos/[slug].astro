@@ -51,6 +51,61 @@ const project = caso.data;
               )}
             </section>
 
+            <section class="case-detail">
+              {project.companySector && (
+                <div class="case-detail-section">
+                  <div class="mini-label-white gray-color">Empresa / Sector</div>
+                  <p>{project.companySector}</p>
+                </div>
+              )}
+
+              {project.problem && (
+                <div class="case-detail-section">
+                  <h3>El problema</h3>
+                  <p>{project.problem}</p>
+                </div>
+              )}
+
+              {project.solution && (
+                <div class="case-detail-section">
+                  <h3>La solución</h3>
+                  <p>{project.solution}</p>
+                </div>
+              )}
+
+              {project.result && (
+                <div class="case-detail-section">
+                  <h3>Resultado</h3>
+                  <p>{project.result}</p>
+                </div>
+              )}
+
+              {project.quote && (
+                <div class="case-detail-section case-quote">
+                  <p class="case-quote-text">“{project.quote.text}”</p>
+                  <p class="case-quote-author">— {project.quote.author}</p>
+                </div>
+              )}
+
+              {project.contribution && (
+                <div class="case-detail-section">
+                  <h3>Mi aporte</h3>
+                  <p>{project.contribution}</p>
+                </div>
+              )}
+
+              {project.tech?.length > 0 && (
+                <div class="case-detail-section">
+                  <h3>Tecnologías</h3>
+                  <div class="chips-container">
+                    {project.tech.map(techItem => (
+                      <div class="single-chip">{techItem}</div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </section>
+
           </div>
 
         </div>

@@ -7,7 +7,18 @@ const casosCollection = defineCollection({
     link: z.string().url().optional(),
     desc: z.array(z.string()),
     tech: z.array(z.string()),
-    image: z.string().optional()
+    image: z.string().optional(),
+    companySector: z.string().optional(),
+    problem: z.string().optional(),
+    solution: z.string().optional(),
+    result: z.string().optional(),
+    quote: z
+      .object({
+        text: z.string(),
+        author: z.string()
+      })
+      .optional(),
+    contribution: z.string().optional()
   })
 });
 
