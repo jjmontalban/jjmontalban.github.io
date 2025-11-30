@@ -28,25 +28,42 @@ const { selectedItem } = Astro.props;
     </a>
 
     <nav role="navigation" class="w-nav-menu">
-      <a
-        href="/"
-        class={`nav-link-container w-inline-block ${
-          selectedItem === 'home' ? 'w--current' : ''
-        }`}
-      >
-        <img
-          src="/assets/home.svg"
-          loading="eager"
-          alt=""
-          class="nav-link-image"
-        />
-        <div>Home</div>
-      </a>
-      <a
-        href="/casos"
-        class={`nav-link-container w-inline-block ${
-          selectedItem === 'casos' ? 'w--current' : ''
-        }`}
+        <a
+          href="/"
+          class={`nav-link-container w-inline-block ${
+            selectedItem === 'home' ? 'w--current' : ''
+          }`}
+        >
+          <img
+            src="/assets/home.svg"
+            loading="eager"
+            alt=""
+            class="nav-link-image"
+          />
+          <div>Home</div>
+        </a>
+        <a
+          href="/servicios"
+          class={`nav-link-container w-inline-block ${
+            selectedItem === 'servicios' ? 'w--current' : ''
+          }`}
+          aria-current={
+            selectedItem === 'servicios' ? 'page' : undefined
+          }
+        >
+          <img
+            src="/assets/browser.svg"
+            loading="eager"
+            alt=""
+            class="nav-link-image"
+          />
+          <div>Servicios</div>
+        </a>
+        <a
+          href="/casos"
+          class={`nav-link-container w-inline-block ${
+            selectedItem === 'casos' ? 'w--current' : ''
+          }`}
         aria-current={
           selectedItem === 'casos' ? 'page' : undefined
         }

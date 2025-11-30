@@ -1,90 +1,102 @@
 ---
 import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import "../styles/global.css";
 ---
 
 <Header />
 
 <main id="content">
+  <!-- Intro -->
+  <section id="short" class="section-fade is-visible">
+    <div class="intro-wrapper">
+      <h1 class="intro-text">Desarrollo WordPress especializado para mejorar lo que ya tienes.</h1>
 
-    <!-- Intro -->
-    <section id="short" class="section-fade is-visible">
-        <div class="intro-wrapper">
-            <h1 class="intro-text">Hola, soy JJ</h1>
+      <h2 class="intro-subtext">
+        Funcionalidades a medida, rendimiento, seguridad e integraciones sin necesidad de rehacer tu web desde cero.
+      </h2>
 
-            <h2 class="intro-subtext">
-                Desarrollo de aplicaciones web con WordPress
-            </h2>
+      <a class="link-button work-button" href="/contacto">Hablemos de tu proyecto</a>
+    </div>
+  </section>
 
-            <p class="intro-paragraph">
-                Plugins personalizados, integraciones complejas y soluciones avanzadas para empresas que necesitan más que una web.
-            </p>
-
-            <p class="intro-paragraph">
-                Transformo WordPress en herramientas de negocio con soluciones a medida:
-                CRMs, sistemas de gestión integrados, reservas y más. Revisa algunos
-                <a class="link-button work-button" href="/casos">casos de éxito</a>.
-            </p>
-
-            <p class="intro-paragraph">
-                Además de proyectos para clientes, contribuyo activamente al ecosistema WordPress con
-                <a class="link-button contributions-button" href="/plugins">plugins publicados</a>
-                en el repositorio oficial y proyectos personales.
-            </p>
-        </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contact" class="section-fade is-visible">
-
-        <p class="contact-text">
-            Pincha en los links para encontrarme o envíame un email:
-            <a href="mailto:jjmontalban@gmail.com">click</a>
+  <!-- Servicios principales -->
+  <section class="section-fade is-visible">
+    <div class="intro-wrapper">
+      <h2 class="intro-subtext">Servicios principales</h2>
+      <div class="intro-paragraph">
+        <h3>Plugins WordPress a medida</h3>
+        <p>
+          Diseño e implemento funcionalidades específicas que complementan tu WordPress actual sin sustituir tu tema ni tus plugins.
+          Código limpio, mantenible y alineado con las buenas prácticas del ecosistema WordPress.
         </p>
+      </div>
+      <div class="intro-paragraph">
+        <h3>Mejoras sobre tu WordPress actual</h3>
+        <p>
+          No necesitas reconstruir tu sitio. Puedo adaptar y ampliar lo que ya tienes para que tu negocio pueda crecer sin fricciones técnicas.
+        </p>
+      </div>
+      <div class="intro-paragraph">
+        <h3>Integraciones y automatización</h3>
+        <p>
+          Conexiones con APIs externas, CRMs, plataformas inmobiliarias como Pisos.com, sincronización de datos y automatización de procesos.
+        </p>
+      </div>
+      <div class="intro-paragraph">
+        <h3>Rendimiento y seguridad</h3>
+        <p>
+          Optimización WPO, estabilización técnica, configuraciones CSP, mitigación de vulnerabilidades y mejoras orientadas a la fiabilidad.
+        </p>
+      </div>
+    </div>
+  </section>
 
-        <nav class="social-nav">
-            <ul>
-                <li>
-                    <a href="https://github.com/jjmontalban" target="_blank" title="Github">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
+  <!-- Sobre mí -->
+  <section class="section-fade is-visible">
+    <div class="intro-wrapper">
+      <h2 class="intro-subtext">Por qué trabajar conmigo</h2>
+      <p class="intro-paragraph">
+        Soy un desarrollador WordPress freelance con experiencia en proyectos corporativos, integraciones complejas y portales con necesidades técnicas avanzadas.
+      </p>
+      <p class="intro-paragraph">
+        Trabajo de forma incremental: mejoro tu plataforma actual sin obligarte a rehacerla desde cero.
+      </p>
+      <p class="intro-paragraph">
+        Mi enfoque combina desarrollo a medida, rendimiento, seguridad y escalabilidad.
+      </p>
+      <p class="intro-paragraph">
+        Comunicación directa, entregas rápidas y soluciones pensadas para durar.
+      </p>
+    </div>
+  </section>
 
-                <li>
-                    <a href="https://profiles.wordpress.org/jjmontalban/" target="_blank" title="WordPress">
-                        <i class="fa-brands fa-wordpress"></i>
-                    </a>
-                </li>
+  <!-- Plugins destacados -->
+  <section class="section-fade is-visible">
+    <div class="intro-wrapper">
+      <h2 class="intro-subtext">Plugins destacados</h2>
+      <p class="intro-paragraph">
+        He publicado diversos plugins que aportan soluciones reales a problemas habituales de WordPress.
+        Son una muestra de mi enfoque en estabilidad, rendimiento y control.
+        Puedes ver el listado completo en <a class="link-button contributions-button" href="/plugins">/plugins</a>.
+      </p>
+    </div>
+  </section>
 
-                <li>
-                    <a href="https://www.behance.net/jjmontalban" target="_blank" title="Behance">
-                        <i class="fab fa-behance"></i>
-                    </a>
-                </li>
+  <!-- Casos de éxito -->
+  <section class="section-fade is-visible">
+    <div class="intro-wrapper">
+      <h2 class="intro-subtext">Casos de éxito</h2>
+      <p class="intro-paragraph">
+        He trabajado en integraciones técnicas, portales corporativos y desarrollos especializados para WordPress.
+        Puedes ver resultados reales aquí: <a class="link-button work-button" href="/casos">/casos</a>.
+      </p>
+    </div>
+  </section>
 
-                <li>
-                    <a href="https://www.linkedin.com/in/jjmontalban/" target="_blank" title="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://unsplash.com/@jjmontalban" target="_blank" title="Unsplash">
-                        <i class="fa-brands fa-unsplash"></i>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.chess.com/member/jjmontalban" target="_blank" title="Chess">
-                        <i class="fas fa-chess-king"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-    </section>
-
+  <!-- CTA final -->
+  <section id="contact" class="section-fade is-visible">
+    <div class="intro-wrapper">
+      <p class="intro-paragraph">¿Quieres mejorar tu WordPress sin rehacerlo desde cero?</p>
+      <a class="link-button work-button" href="/contacto">Hablemos</a>
+    </div>
+  </section>
 </main>
-
-<Footer />
