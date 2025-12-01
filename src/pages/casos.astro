@@ -22,11 +22,16 @@ const casos = (await getCollection("casos")).sort((a, b) => a.data.order - b.dat
             </a>
           </div>
 
-          <div class="content-container">
-            <h1>Casos de éxito</h1>
+            <div class="content-container">
+              <h1>Casos de éxito</h1>
+              <p class="lead">
+                Aquí encontrarás proyectos reales en los que he trabajado: ampliaciones, integraciones, automatizaciones y mejoras técnicas desarrolladas sobre WordPress.
+                Cada caso detalla el problema, la solución aplicada y los resultados obtenidos.
+                Los testimonios asociados aparecen dentro del detalle de cada caso.
+              </p>
 
-            <section class="items-container">
-              <div class="resouce-items">
+              <section class="items-container">
+                <div class="resouce-items">
                 {casos.map(({ slug, data }) => (
                   <a href={`/casos/${slug}`} class="project-link">
                     <Project
