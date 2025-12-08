@@ -1,54 +1,57 @@
 ---
 import Header from "../components/Header.astro";
+import Project from "../components/Project.astro";
+import Sidebar from "../components/Sidebar.astro";
 ---
 
-<Header />
-
-<main id="content">
-  <!-- Intro -->
-  <section id="short" class="section-fade is-visible">
-    <div class="intro-wrapper">
-      <h1 class="intro-text">Desarrollo WordPress especializado para mejorar lo que ya tienes.</h1>
-
-      <h2 class="intro-subtext">
-        Funcionalidades a medida, rendimiento, seguridad e integraciones sin necesidad de rehacer tu web desde cero.
-      </h2>
-
-      <a class="link-button work-button" href="/contacto">Hablemos de tu proyecto</a>
-    </div>
-  </section>
-
-  <!-- Servicios principales -->
-  <section class="section-fade is-visible">
-    <div class="intro-wrapper">
-      <h2 class="intro-subtext">Servicios principales</h2>
-      <div class="intro-paragraph">
-        <h3>Plugins WordPress a medida</h3>
-        <p>
-          Diseño e implemento funcionalidades específicas que complementan tu WordPress actual sin sustituir tu tema ni tus plugins.
-          Código limpio, mantenible y alineado con las buenas prácticas del ecosistema WordPress.
-        </p>
-      </div>
-      <div class="intro-paragraph">
-        <h3>Mejoras sobre tu WordPress actual</h3>
-        <p>
-          No necesitas reconstruir tu sitio. Puedo adaptar y ampliar lo que ya tienes para que tu negocio pueda crecer sin fricciones técnicas.
-        </p>
-      </div>
-      <div class="intro-paragraph">
-        <h3>Integraciones y automatización</h3>
-        <p>
-          Conexiones con APIs externas, CRMs, plataformas inmobiliarias como Pisos.com, sincronización de datos y automatización de procesos.
-        </p>
-      </div>
-      <div class="intro-paragraph">
-        <h3>Rendimiento y seguridad</h3>
-        <p>
-          Optimización WPO, estabilización técnica, configuraciones CSP, mitigación de vulnerabilidades y mejoras orientadas a la fiabilidad.
-        </p>
-      </div>
-    </div>
-  </section>
+<!DOCTYPE html>
+<html
+>
+  <Header title="Sam Bernstein" />
+  <body>
+    <div class="content">
+      <Sidebar selectedItem="home" />
+      <nav class="main">
+        <div class="container">
+          <main class="fold-content-container">
+            <div class="fold-content">
+              <h1 class="intro-text">Desarrollo WordPress especializado para mejorar lo que ya tienes.</h1>
+              <h2 class="intro-subtext">
+                Funcionalidades a medida, rendimiento, seguridad e integraciones sin necesidad de rehacer tu web desde cero.
+              </h2>
+              <a class="link-button work-button" href="/contacto">Hablemos de tu proyecto</a>
+            </div>
+          </main>
+          <!-- Servicios principales -->
+          <div class="projects-section">
+              <h2 class="intro-subtext">Servicios principales</h2>
+              <div class="single-projects-category">
+                <h3>Plugins WordPress a medida</h3>
+                <p>
+                  Diseño e implemento funcionalidades específicas que complementan tu WordPress actual sin sustituir tu tema ni tus plugins.
+                  Código limpio, mantenible y alineado con las buenas prácticas del ecosistema WordPress.
+                </p>
+              </div>
+              <div class="single-projects-category">
+                <h3>Mejoras sobre tu WordPress actual</h3>
+                <p>
+                  No necesitas reconstruir tu sitio. Puedo adaptar y ampliar lo que ya tienes para que tu negocio pueda crecer sin fricciones técnicas.
+                </p>
+              </div>
+              <div class="single-projects-category">
+                <h3>Integraciones y automatización</h3>
+                <p>
+                  Conexiones con APIs externas, CRMs, plataformas inmobiliarias como Pisos.com, sincronización de datos y automatización de procesos.
+                </p>
+              </div>
+              <div class="single-projects-category">
+                <h3>Rendimiento y seguridad</h3>
+                <p>
+                  Optimización WPO, estabilización técnica, configuraciones CSP, mitigación de vulnerabilidades y mejoras orientadas a la fiabilidad.
+                </p>
+              </div>
+          </div>
+        </div>
 
   <!-- Sobre mí -->
   <section class="section-fade is-visible">
