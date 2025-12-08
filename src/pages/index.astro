@@ -5,8 +5,7 @@ import Sidebar from "../components/Sidebar.astro";
 ---
 
 <!DOCTYPE html>
-<html
->
+<html>
   <Header title="Sam Bernstein" />
   <body>
     <div class="content">
@@ -20,80 +19,74 @@ import Sidebar from "../components/Sidebar.astro";
             </div>
             <a class="button w-button" href="/contacto">Hablemos de tu proyecto</a>
           </main>
-          <!-- Servicios principales -->
+
           <div class="content-container">
-
             <section class="items-container">
-                <h3>Plugins WordPress a medida</h3>
-                <p>Diseño e implemento funcionalidades específicas que complementan tu WordPress actual sin sustituir tu tema ni tus plugins.
-                  Código limpio, mantenible y alineado con las buenas prácticas del ecosistema WordPress.</p>
-            </section>
-            
-            <section class="items-container">
-                <h3>Mejoras sobre tu WordPress actual</h3>
-                <p>No necesitas reconstruir tu sitio. Puedo adaptar y ampliar lo que ya tienes para que tu negocio pueda crecer sin fricciones técnicas.</p>
-            </section>
-           
-            <section class="items-container">
-                <h3>Integraciones y automatización</h3>
-                <p>Conexiones con APIs externas, CRMs, plataformas inmobiliarias como Pisos.com, sincronización de datos y automatización de procesos.</p>
+              <h3>Plugins WordPress a medida</h3>
+              <p class="project-desc">
+                Diseño e implemento funcionalidades específicas que complementan tu WordPress actual sin sustituir tu tema ni tus plugins.
+                Código limpio, mantenible y alineado con las buenas prácticas del ecosistema WordPress.
+              </p>
             </section>
 
             <section class="items-container">
-                <h3>Rendimiento y seguridad</h3>
-                <p>Optimización WPO, estabilización técnica, configuraciones CSP, mitigación de vulnerabilidades y mejoras orientadas a la fiabilidad.</p>
+              <h3>Mejoras sobre tu WordPress actual</h3>
+              <p class="project-desc">No necesitas reconstruir tu sitio. Puedo adaptar y ampliar lo que ya tienes para que tu negocio pueda crecer sin fricciones técnicas.</p>
             </section>
 
+            <section class="items-container">
+              <h3>Integraciones y automatización</h3>
+              <p class="project-desc">Conexiones con APIs externas, CRMs, plataformas inmobiliarias como Pisos.com, sincronización de datos y automatización de procesos.</p>
+            </section>
+
+            <section class="items-container">
+              <h3>Rendimiento y seguridad</h3>
+              <p class="project-desc">Optimización WPO, estabilización técnica, configuraciones CSP, mitigación de vulnerabilidades y mejoras orientadas a la fiabilidad.</p>
+            </section>
+
+            <section class="items-container">
+              <h2>Por qué trabajar conmigo</h2>
+              <div class="case-detail-section">
+                <p class="project-desc">
+                  Soy un desarrollador WordPress freelance con experiencia en proyectos corporativos, integraciones complejas y portales con necesidades técnicas avanzadas.
+                </p>
+                <p class="project-desc">Trabajo de forma incremental: mejoro tu plataforma actual sin obligarte a rehacerla desde cero.</p>
+                <p class="project-desc">Mi enfoque combina desarrollo a medida, rendimiento, seguridad y escalabilidad.</p>
+                <p class="project-desc">Comunicación directa, entregas rápidas y soluciones pensadas para durar.</p>
+              </div>
+            </section>
+
+            <section class="items-container">
+              <h2>Plugins destacados</h2>
+              <div class="case-detail-section">
+                <p class="project-desc">
+                  He publicado diversos plugins que aportan soluciones reales a problemas habituales de WordPress. Son una muestra de mi enfoque en estabilidad, rendimiento y control.
+                </p>
+                <a class="button w-button" href="/plugins">Ver plugins publicados</a>
+              </div>
+            </section>
+
+            <section class="items-container">
+              <h2>Casos de éxito</h2>
+              <div class="case-detail-section">
+                <p class="project-desc">
+                  He trabajado en integraciones técnicas, portales corporativos y desarrollos especializados para WordPress. Puedes ver resultados reales aquí.
+                </p>
+                <a class="button" href="/casos">Ver casos</a>
+              </div>
+            </section>
+
+            <section id="contact" class="items-container">
+              <div class="case-detail-section">
+                <p class="project-desc">¿Quieres mejorar tu WordPress sin rehacerlo desde cero?</p>
+                <a class="button w-button" href="/contacto">Hablemos</a>
+              </div>
+            </section>
           </div>
         </div>
-
-  <!-- Sobre mí -->
-  <section class="section-fade is-visible">
-    <div class="intro-wrapper">
-      <h2 class="intro-subtext">Por qué trabajar conmigo</h2>
-      <p class="intro-paragraph">
-        Soy un desarrollador WordPress freelance con experiencia en proyectos corporativos, integraciones complejas y portales con necesidades técnicas avanzadas.
-      </p>
-      <p class="intro-paragraph">
-        Trabajo de forma incremental: mejoro tu plataforma actual sin obligarte a rehacerla desde cero.
-      </p>
-      <p class="intro-paragraph">
-        Mi enfoque combina desarrollo a medida, rendimiento, seguridad y escalabilidad.
-      </p>
-      <p class="intro-paragraph">
-        Comunicación directa, entregas rápidas y soluciones pensadas para durar.
-      </p>
+      </nav>
     </div>
-  </section>
 
-  <!-- Plugins destacados -->
-  <section class="section-fade is-visible">
-    <div class="intro-wrapper">
-      <h2 class="intro-subtext">Plugins destacados</h2>
-      <p class="intro-paragraph">
-        He publicado diversos plugins que aportan soluciones reales a problemas habituales de WordPress.
-        Son una muestra de mi enfoque en estabilidad, rendimiento y control.
-        Puedes ver el listado completo en <a class="link-button contributions-button" href="/plugins">/plugins</a>.
-      </p>
-    </div>
-  </section>
-
-  <!-- Casos de éxito -->
-  <section class="section-fade is-visible">
-    <div class="intro-wrapper">
-      <h2 class="intro-subtext">Casos de éxito</h2>
-      <p class="intro-paragraph">
-        He trabajado en integraciones técnicas, portales corporativos y desarrollos especializados para WordPress.
-        Puedes ver resultados reales aquí: <a class="link-button work-button" href="/casos">/casos</a>.
-      </p>
-    </div>
-  </section>
-
-  <!-- CTA final -->
-  <section id="contact" class="section-fade is-visible">
-    <div class="intro-wrapper">
-      <p class="intro-paragraph">¿Quieres mejorar tu WordPress sin rehacerlo desde cero?</p>
-      <a class="link-button work-button" href="/contacto">Hablemos</a>
-    </div>
-  </section>
-</main>
+    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+  </body>
+</html>
