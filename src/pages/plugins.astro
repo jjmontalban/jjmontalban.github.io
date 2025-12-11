@@ -1,7 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Project from "../components/Project.astro";
-import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
 
 const plugins = [
   {
@@ -49,9 +49,9 @@ const personalProject = {
 <!DOCTYPE html>
 <html>
   <Header title="Plugins publicados | JJMontalban" />
-  <body>
+  <body class="page-plugins">
     <div class="content">
-      <Sidebar selectedItem="plugins" />
+      <Navbar selectedItem="plugins" />
       <nav class="main">
         <div class="container">
           <div class="back-nav-container">

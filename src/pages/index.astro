@@ -1,26 +1,24 @@
 ---
 import Header from "../components/Header.astro";
-import Project from "../components/Project.astro";
-import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <!DOCTYPE html>
 <html>
-  <Header title="Sam Bernstein" />
-  <body>
-    <div class="content">
-      <Sidebar selectedItem="home" />
-      <nav class="main">
-        <div class="container">
-          <main class="fold-content-container">
+  <Header title="JJMöntalbân" />
+  <body class="page-home">
+    <Navbar selectedItem="home" />
+    <main class="main">
+      <div class="container">
+        <div class="fold-content-container">
             <div class="fold-content">
               <h1 class="intro-text">Desarrollo WordPress especializado para mejorar lo que ya tienes.</h1>
               <p class="lead">Funcionalidades a medida, rendimiento, seguridad e integraciones sin necesidad de rehacer tu web desde cero.</p>
             </div>
             <a class="button w-button" href="/contacto">Hablemos de tu proyecto</a>
-          </main>
+ 
 
-          <div class="content-container">
+
             <section class="items-container">
               <h3>Plugins WordPress a medida</h3>
               <p class="project-desc">
@@ -82,11 +80,11 @@ import Sidebar from "../components/Sidebar.astro";
                 <a class="button w-button" href="/contacto">Hablemos</a>
               </div>
             </section>
-          </div>
+
         </div>
       </nav>
     </div>
-
+    </main>
     <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
   </body>
 </html>

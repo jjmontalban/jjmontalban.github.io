@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Project from "../components/Project.astro";
-import Sidebar from "../components/Sidebar.astro";
+import Navbar from "../components/Navbar.astro";
 import { getCollection } from "astro:content";
 
 const casos = (await getCollection("casos")).sort((a, b) => a.data.order - b.data.order);
@@ -10,9 +10,9 @@ const casos = (await getCollection("casos")).sort((a, b) => a.data.order - b.dat
 <!DOCTYPE html>
 <html>
   <Header title="Casos de Éxito | JJ Montalban" />
-  <body>
+  <body class="page-casos">
     <div class="content">
-      <Sidebar selectedItem="casos" />
+      <Navbar selectedItem="casos" />
       <nav class="main">
         <div class="container">
           <div class="back-nav-container">

@@ -1,0 +1,30 @@
+---
+const { selectedItem } = Astro.props;
+---
+
+<header class="navbar">
+  <a href="/" class="brand">
+    <img src="/assets/jj.png" alt="Foto perfil" class="avatar" />
+  </a>
+
+  <button class="burger" id="burger" aria-label="Abrir menú">
+    &#9776;
+  </button>
+
+  <nav class="nav-links" id="nav">
+    <a href="/" class:selected={selectedItem === 'home'}>Inicio</a>
+    <a href="/servicios" class:selected={selectedItem === 'servicios'}>Servicios</a>
+    <a href="/casos" class:selected={selectedItem === 'casos'}>Casos de éxito</a>
+    <a href="/plugins" class:selected={selectedItem === 'plugins'}>Plugins</a>
+    <a href="/contacto" class:selected={selectedItem === 'contacto'}>Contacto</a>
+  </nav>
+
+  <script type="module">
+    const burger = document.getElementById("burger");
+    const nav = document.getElementById("nav");
+
+    burger?.addEventListener("click", () => {
+      nav.classList.toggle("open");
+    });
+  </script>
+</header>
