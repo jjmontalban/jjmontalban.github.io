@@ -34,12 +34,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 1rem 0;
 }
 
-.avatar {
-  width: 48px;
-  height: 48px;
-  margin-right: 12px;
-}
-
 /* ================================================================= */
 /*  ENLACES                                                          */
 /* ================================================================= */
@@ -138,7 +132,7 @@ body.page-casos {
 /* CONTACTO */
 body.page-contacto {
   background-color: #ffc300;
-  color: #111;
+  color: #111111;
 }
 
 /* PLUGINS */
@@ -537,3 +531,22 @@ img {
   line-height: 1.5;
   opacity: .85;
 }
+
+
+/* ========================================================= */
+/* LOGO                                                      */
+/* ========================================================= */
+
+.site-logo {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+/* Pages with dark background → invert logo */
+.page-servicios .site-logo,
+.page-casos .site-logo,
+.page-plugins .site-logo {
+  filter: invert(1);
+}
+
