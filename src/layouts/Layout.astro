@@ -38,6 +38,11 @@ const { title, page = "" } = Astro.props;
     <main class="main">
       <slot />
     </main>
-
+    <script>
+      document.documentElement.classList.remove("page-enter");
+      requestAnimationFrame(() => {
+        document.documentElement.classList.add("page-enter");
+      });
+    </script>
   </body>
 </html>

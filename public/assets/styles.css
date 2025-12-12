@@ -17,6 +17,8 @@ body {
   line-height: 1.6;
   max-width: 88%;
   margin: auto;
+
+  /* Only background + text color here */
   transition: background-color .35s ease, color .35s ease;
 }
 
@@ -46,17 +48,6 @@ a {
 
 a:hover {
   opacity: .7;
-}
-
-.nav-links a {
-  padding: 8px 12px;
-  transition: opacity .25s ease, border-color .25s ease;
-}
-
-.nav-links a.selected {
-  border-bottom: 2px solid currentColor;
-  opacity: 1;
-  font-weight: 600;
 }
 
 /* ================================================================= */
@@ -131,8 +122,8 @@ body.page-casos {
 
 /* CONTACTO */
 body.page-contacto {
-  background-color: #ffc300;
-  color: #111111;
+  background-color: #7f1d1d;
+  color: #ffffff;
 }
 
 /* PLUGINS */
@@ -141,11 +132,12 @@ body.page-plugins {
   color: #ffffff;
 }
 
-/* Todos los elementos heredan el color del body */
+/* Herencia controlada */
 body[class^="page-"] * {
   color: inherit;
   border-color: inherit;
 }
+
 
 /* ================================================================= */
 /*  NAVBAR Y MENÚ RESPONSIVE                                         */
@@ -165,6 +157,43 @@ body[class^="page-"] * {
   gap: 20px;
 }
 
+.nav-links a {
+  position: relative;
+  padding: 8px 12px;
+  font-weight: 400;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .25s ease;
+}
+
+.nav-links a.selected::after {
+  transform: scaleX(1);
+}
+
+.nav-links a.selected {
+  font-weight: 600;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Burger */
 .burger {
   display: none;
   background: none;
@@ -187,22 +216,34 @@ body[class^="page-"] * {
     flex-direction: column;
     padding: 20px;
   }
+
   .nav-links.open {
     display: flex;
   }
+
   .burger {
     display: block;
   }
 }
 
 /* ================================================================= */
-/*  LAYOUT GENERAL                                                   */
+/*  LAYOUT GENERAL + ENTRADA DE CONTENIDO                             */
 /* ================================================================= */
 
 .main {
   padding: 40px 0;
   min-height: 80vh;
-  transition: background-color .35s ease, color .35s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .container {
@@ -211,6 +252,9 @@ body[class^="page-"] * {
   display: flex;
   flex-direction: column;
   gap: 48px;
+
+  animation: fadeUp .35s ease both;
+  animation-delay: .35s;
 }
 
 /* ================================================================= */
@@ -546,7 +590,8 @@ img {
 /* Pages with dark background → invert logo */
 .page-servicios .site-logo,
 .page-casos .site-logo,
-.page-plugins .site-logo {
+.page-plugins .site-logo,
+.page-contacto .site-logo {
   filter: invert(1);
 }
 

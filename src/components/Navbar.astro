@@ -1,37 +1,24 @@
 ---
-// No necesita props
+const { current } = Astro.props;
 ---
+
 <nav class="navbar">
-  <a href="/" data-page="page-home">
-    <img class="site-logo" src="/assets/jj.png" alt="Avatar"/>
+  <a href="/">
+    <img class="site-logo" src="/assets/jj.png" alt="JJ" />
   </a>
 
-  <button class="burger" id="burger" aria-label="Abrir menú">☰</button>
+  <button class="burger" aria-label="Abrir menú">☰</button>
 
-  <div class="nav-links" id="nav-links">
-    <a href="/" data-page="page-home">Inicio</a>
-    <a href="/servicios" data-page="page-servicios">Servicios</a>
-    <a href="/casos" data-page="page-casos">Casos</a>
-    <a href="/plugins" data-page="page-plugins">Plugins</a>
-    <a href="/contacto" data-page="page-contacto">Contacto</a>
+  <div class="nav-links">
+    <a href="/" class:list={{ selected: current === "home" }}>Inicio</a>
+    <a href="/servicios" class:list={{ selected: current === "servicios" }}>Servicios</a>
+    <a href="/casos" class:list={{ selected: current === "casos" }}>Casos</a>
+    <a href="/plugins" class:list={{ selected: current === "plugins" }}>Plugins</a>
+    <a href="/contacto" class:list={{ selected: current === "contacto" }}>Contacto</a>
   </div>
 </nav>
 
 <script>
-  // Detect active page automatically
-  const currentPage = document.body.className.trim();
-  document.querySelectorAll("nav a[data-page]").forEach(a => {
-    const page = a.getAttribute("data-page");
-    if (page === currentPage) {
-      a.classList.add("selected");
-    }
-  });
-
-  // Mobile menu toggle
-  const burger = document.getElementById("burger");
-  const nav = document.getElementById("nav-links");
-
-  burger?.addEventListener("click", () => {
-    nav.classList.toggle("open");
-  });
+  document.body.classList.add("is-loaded");
 </script>
+
