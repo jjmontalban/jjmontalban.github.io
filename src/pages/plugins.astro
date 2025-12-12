@@ -1,101 +1,92 @@
 ---
-import Header from '../components/Header.astro';
-import Project from "../components/Project.astro";
+import Header from "../components/Header.astro";
 import Navbar from "../components/Navbar.astro";
 
 const plugins = [
   {
     title: "Woo Product Quantity Settings",
-    desc: [
-      "Permite definir cantidad mínima, máxima o rangos en productos de WooCommerce",
-      "Configura restricciones por producto sin escribir código",
-    ],
+    image: "/assets/plugins/quantity-settings.png",
+    desc: "Permite definir cantidades mínimas, máximas o rangos en productos WooCommerce sin escribir código.",
     tech: ["WordPress", "WooCommerce", "PHP", "JavaScript"],
+    github: null,
     link: "https://wordpress.org/plugins/product-quantity-settings/",
   },
   {
     title: "Simple EU VAT Number",
-    desc: [
-      "Gestiona el IVA intracomunitario en tiendas WooCommerce",
-      "Valida números de IVA y ajusta impuestos automáticamente",
-    ],
+    image: "/assets/plugins/eu-vat.png",
+    desc: "Gestión automática del IVA intracomunitario en WooCommerce con validación de VAT.",
     tech: ["WordPress", "WooCommerce", "PHP", "JavaScript"],
+    github: null,
     link: "https://wordpress.org/plugins/eu-vat-number/",
   },
   {
     title: "Idealista Feed",
-    desc: [
-      "Exporta propiedades desde WordPress a Idealista mediante feed automático",
-      "Mantiene disponibilidad y precios sincronizados sin tareas manuales",
-    ],
+    image: "/assets/plugins/idealista-feed.png",
+    desc: "Exporta inmuebles desde WordPress a Idealista mediante feed XML automático.",
     tech: ["WordPress", "PHP", "WP REST API", "XML"],
+    github: null,
     link: "https://wordpress.org/plugins/idealista-feed-pro/",
   },
 ];
-
-const personalProject = {
-  title: "Filmder — Headless WordPress + Vue.js",
-  desc: [
-    "Game app experimental con Vue.js y WordPress como backend headless",
-    "Custom Post Type ‘Movies’, consumo de la API de TMDB y plugins para extender el WP REST API",
-    "Repositorios independientes para frontend y backend",
-  ],
-  tech: ["Vue.js", "WordPress (headless)", "WP REST API", "TMDB API", "PHP", "JavaScript"],
-  link: "https://github.com/jjmontalban/filmder-frontend",
-  showLink: true,
-};
 ---
 
 <!DOCTYPE html>
 <html>
-  <Header title="Plugins publicados | JJMontalban" />
+  <Header title="Plugins publicados | JJ Montalban" />
   <body class="page-plugins">
-    <div class="content">
-      <Navbar selectedItem="plugins" />
-      <nav class="main">
-        <div class="container">
-          <div class="back-nav-container">
-            <a href="/" class="back-nav-button w-inline-block"
-              ><img src="/assets/back.svg" loading="lazy" alt="" class="back-nav-img" />
-              <div>Volver</div></a
-            >
-          </div>
-          <div class="content-container">
-            <h1>Plugins publicados en WordPress.org</h1>
-            <p class="lead">
-              Esta sección reúne mis plugins publicados y herramientas que he creado para resolver problemas reales en WordPress.
-              Muchos de ellos nacieron de necesidades concretas de clientes y ahora aportan valor a más usuarios.
-              Puedes ver el código, instalarlos o utilizarlos como referencia para desarrollos a medida.
-            </p>
-            <section class="items-container">
-              <div class="resouce-items">
-                {plugins.map(plugin => (
-                  <Project
-                    title={plugin.title}
-                    desc={plugin.desc}
-                    tech={plugin.tech}
-                    link={plugin.link}
-                  />
-                ))}
-              </div>
-            </section>
+    <Navbar />
 
-            <h2>Proyecto personal destacado</h2>
-            <section class="items-container">
-              <div class="resouce-items">
-                <Project
-                  title={personalProject.title}
-                  desc={personalProject.desc}
-                  tech={personalProject.tech}
-                  link={personalProject.link}
-                />
-              </div>
-            </section>
-          </div>
+    <main class="main">
+      <div class="container">
+
+        <div class="back-nav-container">
+          <a href="/" class="back-nav-button">
+            <img src="/assets/back.svg" alt="Volver" class="back-nav-img" />
+            <span>Volver</span>
+          </a>
         </div>
-      </nav>
-    </div>
 
-    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+        <section class="content-container">
+          <h1>Plugins publicados</h1>
+
+          <p class="lead">
+            Plugins desarrollados para resolver necesidades reales en WordPress y WooCommerce.
+            Código mantenible, estable y orientado a producción.
+          </p>
+
+          <div class="plugins-grid">
+            {plugins.map(plugin => (
+              <article class="plugin-card">
+                <img
+                  src={plugin.image}
+                  alt={plugin.title}
+                  class="plugin-image"
+                />
+
+                <div class="plugin-body">
+                  <h3>{plugin.title}</h3>
+
+                  <p class="plugin-tech">
+                    {plugin.tech.join(" · ")}
+                  </p>
+
+                  <p class="plugin-desc">
+                    {plugin.desc}
+                  </p>
+
+                  <div class="plugin-links">
+                    {plugin.github && (
+                      <a href={plugin.github} target="_blank">GitHub</a>
+                    )}
+                    <a href={plugin.link} target="_blank">WordPress.org</a>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+      </div>
+    </main>
   </body>
 </html>

@@ -22,6 +22,18 @@ const casosCollection = defineCollection({
   })
 });
 
+const otrosCasosCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    image: z.string(),
+    excerpt: z.string(),
+    link: z.string().url(),
+    order: z.number(),
+  }),
+});
+
 export const collections = {
-  casos: casosCollection
+  "casos": casosCollection,
+  "otros-casos": otrosCasosCollection,
 };
+
